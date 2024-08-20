@@ -5,6 +5,7 @@ import SimpleHeading from "@/components/simpleHeading/SimpleHeading";
 import Image from "next/image";
 import classes from "./page.module.css";
 import { Metadata } from "next";
+import PageHeading from "@/components/pageHeading/PageHeading";
 
 export const metadata: Metadata = {
   title: "CONESIEE | Nosotros",
@@ -31,13 +32,10 @@ const page = () => {
   ];
   return (
     <div className={`container ${classes.container}`}>
-      <div>
-        <h1 className={classes.title}>Nosotros</h1>
-        <p className={classes.description}>
-          Somos una organización sin fines de lucro que busca fomentar el
-          desarrollo de la ingeniería eléctrica y electrónica en Guatemala.
-        </p>
-      </div>
+      <PageHeading
+        title="Nosotros"
+        description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
+      />
       <div className={classes.box}>
         <SimpleHeading
           title="Misión"

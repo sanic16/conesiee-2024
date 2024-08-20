@@ -2,7 +2,11 @@
   display: inline-block;
   width: 8rem;
   height: 0.2rem;
-  background-color: var(--primary-hover);
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--primary-hover)
+  );
   margin-bottom: 1.2rem;
 }
 
