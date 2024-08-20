@@ -1,0 +1,49 @@
+.title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.description {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.box {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.box .simpleHeading {
+  text-align: right;
+}
+
+.box:nth-of-type(3) .simpleHeading {
+  order: 2;
+  text-align: left;
+}
+
+.simpleHeading {
+  padding: 2rem;
+}
+
+.img__wrapper {
+  width: 400px;
+  height: 250px;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.img__wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.img__wrapper:hover img {
+  transform: scale(1.1);
+}

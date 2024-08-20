@@ -1,0 +1,7 @@
+.heading__line {
+  display: inline-block;
+  width: 8rem;
+  height: 0.2rem;
+  background-color: var(--primary-hover);
+  margin-bottom: 2rem;
+}
