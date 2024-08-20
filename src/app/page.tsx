@@ -1,9 +1,10 @@
 import Banner from "@/sections/banner/Banner";
 import { Metadata } from "next";
 
-export const metadat: Metadata = {
+export const metadata: Metadata = {
   title: "CONESIEE 2024 - Inicio",
-  description: "",
+  description:
+    "Bienvenido a la página principal del CONESIEE 2024. Descubre los detalles del evento más importante para estudiantes y profesionales de ingeniería eléctrica, electrónica y mecatrónica en Guatemala.",
 };
 
 export default function HomePage() {
