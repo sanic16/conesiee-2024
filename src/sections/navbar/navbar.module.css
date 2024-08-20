@@ -39,7 +39,7 @@
 }
 
 .social__link svg:hover {
-  color: var(--primary-transitions);
+  color: var(--primary-hover);
 }
 
 /* auth */
@@ -132,7 +132,7 @@
   color: white;
 }
 
-.menu__link.active {
+.menu__item .menu__link.active {
   background-color: var(--primary-hover);
   color: white;
 }
@@ -143,7 +143,7 @@
     color: var(--secondary-color);
   }
 
-  .menu__link.active {
+  .menu__item .menu__link.active {
     background-color: transparent;
     color: var(--primary-hover);
   }
