@@ -56,3 +56,69 @@
 .img__wrapper:hover img {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 1024px) {
+  .description {
+    margin-bottom: 3rem;
+  }
+  .box {
+    margin-top: 1.5rem;
+  }
+  .img__wrapper {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    margin-bottom: 2rem;
+  }
+  .box {
+    grid-template-columns: 1fr;
+  }
+  .simpleHeading {
+    text-align: center !important;
+  }
+
+  .box .simpleHeading {
+    order: -1;
+  }
+
+  .box:nth-of-type(3) .simpleHeading {
+    order: -1;
+  }
+
+  .box .img__wrapper {
+    justify-self: center;
+    margin: 0;
+  }
+
+  .box:nth-of-type(3) .img__wrapper {
+    justify-self: center;
+    margin: 0;
+  }
+
+  .img__wrapper {
+    width: 350px;
+    height: 200px;
+    border-radius: 5rem 5rem 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    margin-top: 1rem;
+  }
+  .img__wrapper {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .img__wrapper {
+    width: 250px;
+    height: 150px;
+  }
+}
