@@ -34,17 +34,30 @@ const Navbar = () => {
       {/* Social Networks */}
       <ul className={classes.social}>
         <li className={classes.social__item}>
-          <a href="https://www.facebook.com/" className={classes.social__link}>
+          <a
+            href="https://www.facebook.com/CONESIEEGT/"
+            className={classes.social__link}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <FaFacebook />
           </a>
         </li>
         <li className={classes.social__item}>
-          <a href="https://www.instagram.com/" className={classes.social__link}>
+          <a
+            href="https://www.instagram.com/conesiee_usac/"
+            className={classes.social__link}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <FaInstagram />
           </a>
         </li>
         <li className={classes.social__item}>
-          <a href="https://www.whatsapp.com/" className={classes.social__link}>
+          <a
+            href="https://whatsapp.com/channel/0029Vak7Zt6JkK7Gv9nQh92R"
+            className={classes.social__link}
+          >
             <FaWhatsapp />
           </a>
         </li>
