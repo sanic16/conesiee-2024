@@ -13,6 +13,7 @@
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   align-items: center;
   justify-items: center;
 }
@@ -33,8 +34,16 @@
 .img__wrapper {
   width: 400px;
   height: 250px;
-  border-radius: 5rem;
+  border-radius: 5rem 0 5rem 0;
   overflow: hidden;
+  justify-self: left;
+  margin-left: 1rem;
+}
+
+.box:nth-of-type(3) .img__wrapper {
+  justify-self: right;
+  margin-right: 1rem;
+  border-radius: 0 5rem 0 5rem;
 }
 
 .img__wrapper img {
