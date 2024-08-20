@@ -8,7 +8,7 @@ interface InfoTextProps {
 
 const InfoText: React.FC<InfoTextProps> = ({ className }) => {
   const { 0: text } = useTypewriter({
-    words: ["Chixoy", "31 de agosto del 2024"],
+    words: ["Chixoy", "31 de agosto"],
     loop: 0,
     deleteSpeed: 50,
     typeSpeed: 100,

@@ -4,6 +4,7 @@
   --primary-color: #1c1c1c;
   --secondary-color: rgb(75, 112, 132);
   --primary-hover: goldenrod;
+  --dark-blue: #1e3a8a;
 
   --transition: all 300ms ease-in-out;
 }
