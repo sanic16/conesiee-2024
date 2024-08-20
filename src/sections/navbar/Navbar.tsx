@@ -1,9 +1,4 @@
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import classes from "./navbar.module.css";
 import logo from "@/../public/images/logo.png";
 import Image from "next/image";
@@ -47,13 +42,8 @@ const Navbar = () => {
           </a>
         </li>
         <li className={classes.social__item}>
-          <a href="https://www.linkden.com/" className={classes.social__link}>
-            <FaLinkedin />
-          </a>
-        </li>
-        <li className={classes.social__item}>
-          <a href="https://www.twitter.com/" className={classes.social__link}>
-            <FaTwitter />
+          <a href="https://www.whatsapp.com/" className={classes.social__link}>
+            <FaWhatsapp />
           </a>
         </li>
       </ul>
@@ -63,9 +53,6 @@ const Navbar = () => {
         <div className={classes.auth}>
           <Link href="/login" className={classes.auth__link}>
             Iniciar Sesión
-          </Link>
-          <Link href="/register" className={classes.auth__link}>
-            Registrarse
           </Link>
         </div>
       </nav>
