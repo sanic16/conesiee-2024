@@ -4,6 +4,13 @@ import aboutImg3 from "@/../public/images/about_img_3.jpeg";
 import SimpleHeading from "@/components/simpleHeading/SimpleHeading";
 import Image from "next/image";
 import classes from "./page.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CONESIEE | Nosotros",
+  description: "Más sobre nosotros",
+};
+
 const page = () => {
   const objectives = [
     {
