@@ -34,7 +34,6 @@ const SimpleHeading: React.FC<SimpleHeadingProps> = ({
         <div className={classes.heading__line} />
         {content}
       </div>
-      <div></div>
     </div>
   );
 };

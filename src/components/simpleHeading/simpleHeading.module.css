@@ -3,5 +3,9 @@
   width: 8rem;
   height: 0.2rem;
   background-color: var(--primary-hover);
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.description__list li {
+  margin-bottom: 1rem;
 }
