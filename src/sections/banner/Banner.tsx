@@ -4,6 +4,7 @@ import bannerImg1 from "@/../public/images/banner_1.jpeg";
 import bannerImg2 from "@/../public/images/banner_2.jpg";
 import bannerImg3 from "@/../public/images/banner_3.jpg";
 import Image from "next/image";
+import BannerText from "./BannerText";
 
 const Banner = () => {
   return (
@@ -11,14 +12,16 @@ const Banner = () => {
       <div className={classes.banner__content}>
         <div className={classes.banner__right}>
           <h1>
-            CONESIEE 2024 - Congreso Nacional de Estudiantes de Ingeniería
-            Eléctrica y Electrónica
+            <span>CONESIEE 2024</span>
           </h1>
+          <h3>
+            Congreso Nacional de Estudiantes de Ingeniería{" "}
+            <span>Eléctrica </span>y <span>Electrónica</span>
+          </h3>
+          <BannerText className={classes["banner__right-text"]} />
         </div>
-        <div className={classes.banner__btn}>
-          <button>
-            <Link href="/inscripciones">Inscripciones</Link>
-          </button>
+        <div className={classes["banner__btn-wrapper"]}>
+          <Link href="/inscripciones">Regístrate</Link>
         </div>
       </div>
       <div className={classes.slideshow}>

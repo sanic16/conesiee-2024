@@ -12,7 +12,9 @@ const Navbar = () => {
     <div className={`container ${classes.container}`}>
       {/* Logo */}
       <div className={classes.logo}>
-        <Image src={logo} alt="logo" width={338} height={396.67} />
+        <Link href="/">
+          <Image src={logo} alt="logo" width={338} height={396.67} />
+        </Link>
       </div>
 
       {/* Search */}
