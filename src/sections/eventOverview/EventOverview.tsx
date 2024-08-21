@@ -5,7 +5,9 @@ import HomeSubHeading from "@/components/homeSubHeading/HomeSubHeading";
 import Image from "next/image";
 import hotelImg1 from "@/../public/images/hotel_1.jpeg";
 import hotelImg2 from "@/../public/images/hotel_2.jpeg";
-import MyCalendar from "./MyCalendar";
+import horusImg from "@/../public/images/horus.jpg";
+import sanAntonioImg from "@/../public/images/san_antonio.jpg";
+import guateSur from "@/../public/images/guate_sur.jpg";
 
 const EventOverview = () => {
   return (
@@ -35,7 +37,7 @@ const EventOverview = () => {
             contribuyendo al éxito del evento.
           </p>
         </div>
-        <div className={classes.image__container}>
+        <div className={`${classes.image__container} ${classes.flex}`}>
           <div className={classes.image__wrapper}>
             <Image
               src={hotelImg1}
@@ -56,33 +58,38 @@ const EventOverview = () => {
       </div>
 
       {/* Sede */}
-      <div className={classes.section__container}>
-        <HomeSubHeading title="Enfoque" position="center" icon={FaStar} />
-        <p>
-          En los congresos de ingeniería eléctrica y electrónica en Guatemala
-          para 2024, se destacan tres temas clave que están impulsando el
-          desarrollo del sector.
-        </p>
-        <p>
-          <strong>Inteligencia Artificial:</strong> Se presentarán avances en la
-          aplicación de IA para mejorar la automatización de sistemas
-          eléctricos, permitiendo un control más eficiente y preciso de redes de
-          distribución y equipos electrónicos.
-        </p>
-        <p>
-          <strong>Brecha tecnológica post pandemia:</strong> La pandemia aceleró
-          la adopción de tecnologías digitales en la educación y en la
-          industria. Los congresos abordarán cómo ingenieros pueden adaptarse a
-          nuevas herramientas y tecnologías para cerrar esta brecha y mantenerse
-          actualizados en un entorno cambiante.
-        </p>
-        <p>
-          <strong>Energías limpias y renovables:</strong> Con el creciente
-          enfoque en la sostenibilidad, se explorarán los avances en energías
-          renovables, como la solar y eólica, y su integración en los sistemas
-          eléctricos del país, con un énfasis en mejorar la eficiencia y el
-          almacenamiento energético.
-        </p>
+      <div className={`${classes.section__container} ${classes.grid2}`}>
+        <div className={`${classes.image__container} ${classes.gridImg}`}>
+          <div className={classes.image__wrapper}>
+            <Image src={horusImg} alt="Hotel Horus" width={150} />
+          </div>
+          <div className={classes.image__wrapper}>
+            <Image src={sanAntonioImg} alt="Hotel Horus" width={150} />
+          </div>
+          <div className={classes.image__wrapper}>
+            <Image src={guateSur} alt="Hotel Horus" width={150} />
+          </div>
+        </div>
+        <div className={classes.content__container}>
+          <HomeSubHeading title="Enfoque" position="center" icon={FaStar} />
+          <p>
+            Los congresos y talleres se enfocarán en tres áreas principales:
+          </p>
+          <p>
+            <strong>Inteligencia Artificial:</strong> Se discutirán aplicaciones
+            de IA en la automatización y optimización de sistemas eléctricos.
+          </p>
+          <p>
+            <strong>Brecha tecnológica post pandemia:</strong> Se analizarán los
+            desafíos tecnológicos en la educación y el trabajo en ingeniería
+            eléctrica post pandemia.
+          </p>
+          <p>
+            <strong>Energías limpias y renovables:</strong> Se explorarán
+            avances en el uso de energías renovables dentro del sector
+            eléctrico.
+          </p>
+        </div>
       </div>
     </section>
   );
