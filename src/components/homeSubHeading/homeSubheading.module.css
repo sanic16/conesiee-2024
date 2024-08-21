@@ -21,3 +21,11 @@
 .heading svg {
   font-size: 1.3rem;
 }
+
+@media screen and (max-width: 568px) {
+  .heading.left,
+  .heading.right,
+  .heading.center {
+    justify-content: left;
+  }
+}

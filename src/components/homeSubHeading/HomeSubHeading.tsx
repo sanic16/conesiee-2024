@@ -24,7 +24,7 @@ const HomeSubHeading: React.FC<HomeSubHeadingProps> = ({
             : classes.left
         }`}
       >
-        {React.createElement(icon)} {title}
+        <span>{React.createElement(icon)}</span> {title}
       </h2>
     </div>
   );

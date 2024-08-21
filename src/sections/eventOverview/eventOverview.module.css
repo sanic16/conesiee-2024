@@ -60,13 +60,13 @@
   border: 0.25rem solid var(--primary-hover);
   border-radius: 0.5rem;
   overflow: hidden;
-  margin-top: 1rem;
 }
 
 .visitas {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
+  margin-top: 2rem;
   justify-items: center;
 }
 
@@ -115,5 +115,10 @@
 @media screen and (max-width: 568px) {
   .section__container.grid .image__container .image__wrapper:first-child {
     display: none;
+  }
+
+  .visitas {
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-auto-rows: 1fr;
   }
 }
