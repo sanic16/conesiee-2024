@@ -64,6 +64,10 @@ img {
   object-fit: cover;
 }
 
+section {
+  padding-block: 2rem;
+}
+
 .container {
   width: 84%;
   max-width: 1280px;

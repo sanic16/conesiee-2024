@@ -1,0 +1,32 @@
+.section__container {
+  margin-bottom: 3rem;
+}
+
+.section__container.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.section__container p {
+  margin-bottom: 1rem;
+}
+
+.image__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.image__container img {
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.image__wrapper {
+  width: 100%;
+  height: 20rem;
+  border: 0.35rem solid var(--primary-hover);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.heading.left {
+  justify-content: flex-start;
+}
+
+.heading.right {
+  justify-content: flex-end;
+}
+
+.heading.center {
+  justify-content: center;
+}
+
+.heading svg {
+  font-size: 1.3rem;
+}
