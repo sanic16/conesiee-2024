@@ -5,6 +5,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "conesiee.s3.amazonaws.com",
+        pathname: "/",
       },
     ],
   },

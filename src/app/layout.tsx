@@ -27,10 +27,6 @@ export const metadata: Metadata = {
     type: "website",
     countryName: "Guatemala",
     siteName: "CONESIEE 2024",
-    title:
-      "CONESIEE 2024 - Congreso Nacional de Estudiantes de Ingeniería Eléctrica y Electrónica",
-    description:
-      "Bienvenido a la página principal del CONESIEE 2024. Descubre los detalles del evento más importante para estudiantes y profesionales de ingeniería eléctrica, electrónica y mecatrónica en Guatemala.",
     images: [
       {
         hostname: "conesiee.s3.amazonaws.com",
