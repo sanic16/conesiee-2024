@@ -27,5 +27,6 @@
   .heading.right,
   .heading.center {
     justify-content: left;
+    align-items: flex-start;
   }
 }
