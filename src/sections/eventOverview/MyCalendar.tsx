@@ -35,10 +35,10 @@ const MyCalendar = () => {
         max={new Date(2024, 0, 1, 18, 0)} // Set end time at 6 PM
         step={60} // Interval for the time slots
         timeslots={1}
-        formats={{
-          timeGutterFormat: (date, culture, localizer) =>
-            localizer.format(date, "h:mm A", culture),
-        }}
+        // formats={{
+        //   timeGutterFormat: (date, culture, localizer) =>
+        //     localizer.format(date, "h:mm A", culture),
+        // }}
         onView={() => console.log("View changed")}
         onSelectEvent={(event) => alert(`Event: ${event.title}`)}
       />
