@@ -8,7 +8,7 @@ interface InfoTextProps {
 
 const BannerText: React.FC<InfoTextProps> = ({ className }) => {
   const { 0: text } = useTypewriter({
-    words: ["del 23 al 28 de septiembre del 2024", "Hotel Holiday Inn"],
+    words: ["del 23 al 28 de septiembre", "Hotel Holiday Inn"],
     loop: 0,
     deleteSpeed: 50,
     typeSpeed: 100,
