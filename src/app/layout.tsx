@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "CONESIEE 2024",
     images: [
       {
-        hostname: "conesiee.s3.amazonaws.com",
+        hostname: "conesiee-static.codielectro.com",
         url: "http://conesiee-static.codielectro.com/openGraph/conesiee.jpg",
         width: 1080,
         height: 810,
