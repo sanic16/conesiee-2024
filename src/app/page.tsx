@@ -1,6 +1,7 @@
 import Banner from "@/sections/banner/Banner";
 import Counter from "@/sections/counter/Counter";
 import EventOverview from "@/sections/eventOverview/EventOverview";
+import Scope from "@/sections/scope/Scope";
 import Sponsors from "@/sections/sponsors/Sponsors";
 import { Metadata } from "next";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Banner />
       <Counter />
       <EventOverview />
+      <Scope />
       <Sponsors />
     </>
   );

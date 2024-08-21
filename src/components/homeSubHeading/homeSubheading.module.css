@@ -3,7 +3,7 @@
   align-items: center;
   gap: 0.2rem;
   margin-bottom: 1rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .heading.left {
