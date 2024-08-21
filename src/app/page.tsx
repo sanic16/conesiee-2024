@@ -1,5 +1,6 @@
 import Banner from "@/sections/banner/Banner";
 import Counter from "@/sections/counter/Counter";
+import Sponsors from "@/sections/sponsors/Sponsors";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function HomePage() {
     <>
       <Banner />
       <Counter />
+      <Sponsors />
     </>
   );
 }

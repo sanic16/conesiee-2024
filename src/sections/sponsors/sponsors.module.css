@@ -1,0 +1,30 @@
+.container {
+  padding-block: 2rem;
+}
+
+.diamond__sponsor,
+.gold__sponsor,
+.silver__sponsor,
+.bronze__sponsor {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.diamond__sponsor img {
+  width: 400px;
+}
+
+.gold__sponsor img {
+  width: 250px;
+}
+
+.silver__sponsor svg {
+  width: 200px;
+}
+
+.bronze__sponsor img {
+  width: 150px;
+}

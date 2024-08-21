@@ -1,0 +1,17 @@
+.title {
+  color: var(--secondary-color);
+}
+
+.divider {
+  width: 15rem;
+  height: 0.2rem;
+  background: var(--primary-hover);
+  margin-bottom: 0.5rem;
+}
+
+.divider__big {
+  width: 20rem;
+  height: 0.2rem;
+  background: var(--primary-hover);
+  margin-bottom: 2rem;
+}
