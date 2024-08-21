@@ -1,10 +1,10 @@
 .container {
   margin-top: 1rem;
-  border-top: 0.1rem solid var(--primary-color);
-  border-bottom: 0.1rem solid var(--primary-color);
-  height: 22rem;
+  height: 9rem;
   display: flex;
   align-items: center;
+  padding-inline: 2rem;
+  background-color: var(--secondary-color);
 }
 
 .container > div {
@@ -12,118 +12,59 @@
   width: 100%;
 }
 
-.container h1 span {
-  color: whitesmoke;
-}
-
 .event__time {
   display: grid;
   gap: 2rem;
   grid-template-columns: auto auto 1fr;
-  font-size: 3.5rem;
+  font-size: 1.7rem;
   justify-items: start;
   line-height: 1.1;
-  color: var(--secondary-color);
+  color: whitesmoke;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .days {
-  font-size: 9.5rem;
+  font-size: 4.5rem;
   line-height: 1.1;
   color: var(--primary-hover);
-}
-
-@media screen and (max-width: 1250px) {
-  .container {
-    height: 20rem;
-  }
-
-  .days {
-    font-size: 8.5rem;
-  }
-
-  .event__time {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .days {
-    font-size: 7.5rem;
-  }
-
-  .event__time {
-    font-size: 2.5rem;
-    gap: 4rem;
-  }
-
-  .hours,
-  .minutes,
-  .seconds {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    height: 18rem;
-  }
-
   .days {
-    font-size: 6.5rem;
-  }
-
-  .event__time {
-    font-size: 2rem;
-    gap: 3rem;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .container {
-    height: 16rem;
-  }
-
-  .days {
-    font-size: 5.5rem;
+    font-size: 3.5rem;
   }
 
   .event__time {
     font-size: 1.5rem;
-    gap: 2rem;
   }
 }
 
-@media screen and (max-width: 458px) {
+@media screen and (max-width: 600px) {
   .container {
-    height: 14rem;
+    height: 9rem;
   }
 
-  .days {
-    font-size: 4.5rem;
+  .event__time > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+}
 
+@media screen and (max-width: 450px) {
   .event__time {
+    gap: 1rem;
     font-size: 1.2rem;
-    gap: 1.5rem;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .container {
-    height: 12rem;
-  }
-
+@media screen and (max-width: 350px) {
   .days {
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
-
   .event__time {
     font-size: 1rem;
-    gap: 1rem;
   }
 }

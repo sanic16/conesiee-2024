@@ -13,7 +13,7 @@ const Sponsors = () => {
   return (
     <section className={`container ${classes.container}`} id="patrocinadores">
       <HomeHeading
-        title="Nuestros patrocinadores"
+        title="Nuestros Patrocinadores"
         description="Estos son los patrocinadores del CONESIEE 2024 que hacen posible la realización de este evento."
       />
       <div className={classes.logos}>
