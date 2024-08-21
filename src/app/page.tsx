@@ -1,11 +1,7 @@
 import Banner from "@/sections/banner/Banner";
+import Counter from "@/sections/counter/Counter";
 import Sponsors from "@/sections/sponsors/Sponsors";
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
-
-const Counter = dynamic(() => import("@/sections/counter/Counter"), {
-  ssr: false,
-});
 
 export const metadata: Metadata = {
   title: "CONESIEE 2024 - Inicio",

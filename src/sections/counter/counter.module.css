@@ -4,7 +4,11 @@
   display: flex;
   align-items: center;
   padding-inline: 2rem;
-  background-color: var(--secondary-color);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 
 .container > div {
