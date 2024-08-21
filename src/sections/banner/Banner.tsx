@@ -19,6 +19,9 @@ const Banner = () => {
             <span>Eléctrica </span>y <span>Electrónica</span>
           </h3>
           <BannerText className={classes["banner__right-text"]} />
+          {/* <p className={classes["banner__right-text"]}>
+            Del 25 al 27 de septiembre.
+          </p> */}
         </div>
         <div className={classes["banner__btn-wrapper"]}>
           <Link href="/inscripciones">Regístrate</Link>
