@@ -28,3 +28,83 @@
 .bronze__sponsor img {
   width: 150px;
 }
+
+@media screen and (max-width: 1024px) {
+  .diamond__sponsor img {
+    width: 300px;
+  }
+
+  .gold__sponsor img {
+    width: 200px;
+  }
+
+  .silver__sponsor svg {
+    width: 150px;
+  }
+
+  .bronze__sponsor img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .diamond__sponsor img {
+    width: 200px;
+  }
+
+  .gold__sponsor img {
+    width: 150px;
+  }
+
+  .silver__sponsor svg {
+    width: 100px;
+  }
+
+  .bronze__sponsor img {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .diamond__sponsor img {
+    width: 150px;
+  }
+
+  .gold__sponsor img {
+    width: 100px;
+  }
+
+  .silver__sponsor svg {
+    width: 75px;
+  }
+
+  .bronze__sponsor img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 458px) {
+  .diamond__sponsor,
+  .gold__sponsor,
+  .silver__sponsor,
+  .bronze__sponsor {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .diamond__sponsor img {
+    width: 125px;
+  }
+
+  .gold__sponsor img {
+    width: 100px;
+  }
+
+  .silver__sponsor svg {
+    width: 75px;
+  }
+
+  .bronze__sponsor img {
+    width: 50px;
+  }
+}
