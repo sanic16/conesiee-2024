@@ -64,3 +64,9 @@
     font-size: 2.5rem;
   }
 }
+
+@media screen and (max-width: 468px) {
+  .details__icons-title {
+    font-size: 0.8rem;
+  }
+}
