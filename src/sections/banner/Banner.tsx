@@ -24,7 +24,7 @@ const Banner = () => {
           </p>
         </div>
         <div className={classes["banner__btn-wrapper"]}>
-          <Link href="/inscripciones">Regístrate</Link>
+          <Link href="/inscripciones">Inscríbete</Link>
         </div>
       </div>
       <div className={classes.slideshow}>
