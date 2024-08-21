@@ -2,6 +2,7 @@
   margin-top: 1rem;
   height: 70vh;
   position: relative;
+  padding: 0;
 }
 .banner__content {
   position: absolute;
@@ -194,5 +195,11 @@
       rgba(0, 0, 0, 0.85),
       rgba(0, 0, 0, 0.3)
     );
+  }
+}
+
+@media screen and (max-width: 900px) and (max-height: 400px) {
+  .banner {
+    height: 80vh;
   }
 }

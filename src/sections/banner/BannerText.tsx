@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 interface InfoTextProps {
