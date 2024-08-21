@@ -8,6 +8,7 @@ import hotelImg2 from "@/../public/images/hotel_2.jpeg";
 import horusImg from "@/../public/images/horus.jpg";
 import sanAntonioImg from "@/../public/images/san_antonio.jpg";
 import guateSur from "@/../public/images/guate_sur.jpg";
+import Link from "next/link";
 
 const visitasTecnicas = [
   "Taller INTECAP",
@@ -103,7 +104,7 @@ const EventOverview = () => {
         </div>
       </div>
 
-      {/* Visitas Técnias */}
+      {/* Visitas Técnicas */}
       <div
         className={`${classes.section__container} ${classes.visitas__container}`}
       >
@@ -125,6 +126,10 @@ const EventOverview = () => {
           </div>
         </div>
       </div>
+      <p className={classes.info}>
+        Puedes ver el programa completo{" "}
+        <Link href="/congresos/calendario">aquí.</Link>
+      </p>
     </section>
   );
 };

@@ -66,7 +66,7 @@
 /* Visitas Tecnicas */
 
 .section__container.visitas__container {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .visitas {
@@ -92,6 +92,11 @@
   );
   color: white;
   font-weight: 600;
+}
+
+.info a {
+  color: var(--primary-hover);
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
