@@ -11,7 +11,7 @@ import guateSur from "@/../public/images/guate_sur.jpg";
 
 const EventOverview = () => {
   return (
-    <section className={`container`}>
+    <section className={`container ${classes.container}`}>
       <HomeHeading
         title="Detalles del evento"
         description="Descubre los detalles del evento más importante para estudiantes y profesionales de ingeniería eléctrica, electrónica y mecatrónica en Guatemala."
