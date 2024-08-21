@@ -60,6 +60,30 @@
   border: 0.25rem solid var(--primary-hover);
   border-radius: 0.5rem;
   overflow: hidden;
+  margin-top: 1rem;
+}
+
+.visitas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.visitas div {
+  max-width: 8rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  color: white;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1024px) {

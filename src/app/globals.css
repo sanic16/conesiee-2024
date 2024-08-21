@@ -74,6 +74,10 @@ section {
   margin: 0 auto;
 }
 
+.center {
+  text-align: center;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     width: 90%;

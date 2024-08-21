@@ -9,6 +9,17 @@ import horusImg from "@/../public/images/horus.jpg";
 import sanAntonioImg from "@/../public/images/san_antonio.jpg";
 import guateSur from "@/../public/images/guate_sur.jpg";
 
+const visitasTecnicas = [
+  "Taller INTECAP",
+  "Eólica San Antonio",
+  "Alimentos S.A.",
+  "Ingenio Santa Ana",
+  "Ingenio Magdalena",
+  "Ingenio Madre Tierra",
+  "Ingenio San Diego",
+  "Taller ITUGS",
+];
+
 const EventOverview = () => {
   return (
     <section className={`container ${classes.container}`}>
@@ -89,6 +100,27 @@ const EventOverview = () => {
             avances en el uso de energías renovables dentro del sector
             eléctrico.
           </p>
+        </div>
+      </div>
+
+      {/* Sede */}
+      <div className={`${classes.section__container}`}>
+        <div className={classes.content__container}>
+          <HomeSubHeading
+            title="Visitas Técnicas de Semana de Congresos"
+            position="center"
+            icon={FaStar}
+          />
+          <p className="center">
+            Durante la semana de congresos, se realizarán visitas técnicas a
+            empresas líderes en el sector eléctrico y electrónico en Guatemala.
+          </p>
+
+          <div className={classes.visitas}>
+            {visitasTecnicas.map((visita, index) => (
+              <div key={index}>{visita}</div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
