@@ -1,9 +1,10 @@
 .container {
   padding-top: 4rem;
+  font-size: 1rem;
 }
 
 .section__container {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .section__container.grid {
@@ -62,12 +63,19 @@
   overflow: hidden;
 }
 
+/* Visitas Tecnicas */
+
+.section__container.visitas__container {
+  margin-bottom: 1rem;
+}
+
 .visitas {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
   margin-top: 2rem;
   justify-items: center;
+  font-size: 0.9rem;
 }
 
 .visitas div {

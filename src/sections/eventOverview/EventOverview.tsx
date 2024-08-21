@@ -103,8 +103,10 @@ const EventOverview = () => {
         </div>
       </div>
 
-      {/* Sede */}
-      <div className={`${classes.section__container}`}>
+      {/* Visitas Técnias */}
+      <div
+        className={`${classes.section__container} ${classes.visitas__container}`}
+      >
         <div className={classes.content__container}>
           <HomeSubHeading
             title="Visitas Técnicas de Semana de Congresos"
