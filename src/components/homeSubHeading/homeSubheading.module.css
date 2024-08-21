@@ -22,7 +22,7 @@
   font-size: 1.3rem;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 1024px) {
   .heading.left,
   .heading.right,
   .heading.center {

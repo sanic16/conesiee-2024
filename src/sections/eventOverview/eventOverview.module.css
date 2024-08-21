@@ -78,6 +78,10 @@
   font-size: 0.9rem;
 }
 
+.visitas__container p {
+  text-align: center;
+}
+
 .visitas div {
   max-width: 8rem;
   text-align: center;
@@ -100,6 +104,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .section__container {
+    margin-bottom: 2rem;
+  }
+
   .section__container.grid {
     grid-template-columns: 100%;
     gap: 1.5rem;
@@ -112,6 +120,10 @@
 
   .section__container.grid2 .image__container {
     order: 1;
+  }
+
+  .visitas__container p {
+    text-align: left;
   }
 }
 

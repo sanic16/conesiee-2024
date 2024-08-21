@@ -39,11 +39,6 @@ const EventOverview = () => {
             congresos y conferencias.
           </p>
           <p>
-            La ubicación es accesible para estudiantes y profesionales de
-            ingeniería eléctrica y electrónica, con espacios adaptados para
-            charlas y talleres interactivos.
-          </p>
-          <p>
             Esta sede fue elegida para fomentar el intercambio de ideas,
             aprendizaje colaborativo y soluciones innovadoras en ingeniería,
             contribuyendo al éxito del evento.
@@ -114,7 +109,7 @@ const EventOverview = () => {
             position="center"
             icon={FaStar}
           />
-          <p className="center">
+          <p>
             Durante la semana de congresos, se realizarán visitas técnicas a
             empresas líderes en el sector eléctrico y electrónico en Guatemala.
           </p>
