@@ -4,8 +4,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "conesiee.s3.amazonaws.com",
-        pathname: "/",
+        hostname: "conesiee-static.codielectro.com",
+        pathname: "/*",
       },
     ],
   },

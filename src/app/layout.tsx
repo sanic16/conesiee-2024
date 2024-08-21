@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     images: [
       {
         hostname: "conesiee.s3.amazonaws.com",
-        url: "https://conesiee.s3.amazonaws.com/openGraph/conesiee.jpg",
+        url: "http://conesiee-static.codielectro.com/openGraph/conesiee.jpg",
         width: 1080,
         height: 810,
       },
