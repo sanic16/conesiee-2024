@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 768px) {
   .form {
-    padding-inline: 4rem;
+    padding-inline: 1rem;
     overflow: hidden;
   }
 }
