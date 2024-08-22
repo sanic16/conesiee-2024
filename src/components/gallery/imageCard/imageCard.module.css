@@ -13,6 +13,30 @@
   transition: var(--transition);
 }
 
+.card.visit {
+  background: radial-gradient(
+    circle,
+    var(--secondary-color) 70%,
+    var(--primary-color) 100%
+  );
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card.visit .card__img {
+  order: -1;
+  width: 100%;
+}
+
+.card.visit.no__congress {
+  background: radial-gradient(
+    circle,
+    var(--primary-hover) 20%,
+    var(--primary-color) 100%
+  );
+}
+
 .card__title {
   color: whitesmoke;
   margin-bottom: 0.7rem;
@@ -25,9 +49,26 @@
   text-align: justify;
 }
 
+.card.visit.card__content {
+  padding: 0.5rem;
+}
+
 .card__content {
   flex: 1;
   padding: 1rem;
+}
+
+.card.visit .card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.actions {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__date {
@@ -62,6 +103,7 @@
   .card__img {
     width: 100%;
     height: 200px;
+    order: -1;
   }
 
   .card__img img {

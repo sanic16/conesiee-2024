@@ -98,6 +98,11 @@ section {
   color: white;
 }
 
+.btn.gold {
+  background-color: goldenrod;
+  color: white;
+}
+
 .container {
   width: 84%;
   max-width: 1280px;
