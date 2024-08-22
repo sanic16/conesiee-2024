@@ -24,7 +24,8 @@
 
 .inputField {
   width: 100%;
-  padding: 0.3rem 0.75rem;
+  padding-block: 0.3rem;
+  padding-inline: 0.5rem 2rem;
   font-size: 0.9rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -70,7 +71,7 @@
 
 .error__message {
   margin-top: 0.5rem;
-  color: red;
+  color: #f36056;
   font-size: 0.875rem;
 }
 

@@ -21,7 +21,7 @@ const registrationPackage = [
   "Day Pass - Q. 200.00",
 ];
 
-const PaymentForm = () => {
+const StudentPaymentForm = () => {
   const [captcha, setCaptcha] = useState<string | null>(null);
 
   const [formState, action] = useFormState(
@@ -34,7 +34,7 @@ const PaymentForm = () => {
   return (
     <div className={`container ${classes.container}`}>
       <h1 className={classes.form__heading}>
-        Formulario de Inscripción CONESIEE 2024 <br />
+        Congresos <span>CONESIEE 2024</span> <br />
         Estudiantes Individuales
       </h1>
       <form action={action} className={classes.form}>
@@ -61,18 +61,7 @@ const PaymentForm = () => {
             formState.errors.name && formState.errors.name.join(", ").toString()
           }
         />
-        <FormInput
-          type="text"
-          label="Número de Carné"
-          placeholder="201900000"
-          id="studentId"
-          name="studentId"
-          icon={<FaIdCard />}
-          error={
-            formState.errors.studentId &&
-            formState.errors.studentId.join(", ").toString()
-          }
-        />
+
         <FormInput
           type="text"
           label="Número de DPI"
@@ -107,6 +96,19 @@ const PaymentForm = () => {
             formState.errors.career.join(", ").toString()
           }
         />
+
+        <FormInput
+          type="text"
+          label="Universidad"
+          placeholder="Universidad"
+          id="university"
+          name="university"
+          error={
+            formState.errors.university &&
+            formState.errors.university.join(", ").toString()
+          }
+        />
+
         <FormInput
           type="radio"
           label="Paquete de Inscripción"
@@ -143,8 +145,10 @@ const PaymentForm = () => {
         />
 
         <div>
-          {formState.errors._form &&
-            formState.errors._form.join(", ").toString()}
+          <p className={classes.error__message}>
+            {formState.errors._form &&
+              formState.errors._form.join(", ").toString()}
+          </p>
         </div>
 
         <div className={classes.contact__actions}>
@@ -159,4 +163,4 @@ const PaymentForm = () => {
   );
 };
 
-export default PaymentForm;
+export default StudentPaymentForm;

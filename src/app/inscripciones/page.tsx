@@ -1,9 +1,9 @@
-import PaymentForm from "@/components/forms/conesieeRegistration/PaymentForm";
+import StudentPaymentForm from "@/components/forms/conesieeRegistration/PaymentStudentForm";
 
-const PaymentPage = async () => {
+const PaymentPage = () => {
   return (
     <div>
-      <PaymentForm />
+      <StudentPaymentForm />
     </div>
   );
 };

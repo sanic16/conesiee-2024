@@ -5,9 +5,13 @@
 .form__heading {
   color: var(--secondary-color);
 
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2.1rem;
   margin-bottom: 1rem;
+}
+
+.form__heading span {
+  color: var(--primary-hover);
 }
 
 .form {
@@ -19,6 +23,12 @@
   color: white !important;
   padding-inline: 2rem;
   padding-block: 2rem;
+}
+
+.error__message {
+  margin-top: 0.5rem;
+  color: #f36056;
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 768px) {

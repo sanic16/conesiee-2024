@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: "conesiee-static.codielectro.com",
         pathname: "/*",
       },
+      {
+        protocol: "https",
+        hostname: "conesiee-static.codielectro.com",
+      },
     ],
   },
 };

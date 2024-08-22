@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --primary-color: #1c1c1c;
-  --secondary-color: rgb(75, 112, 132);
+  --secondary-color: rgb(27, 62, 82);
   --primary-hover: goldenrod;
   --dark-blue: #1e3a8a;
 
@@ -67,6 +67,37 @@ section {
   padding-block: 2rem;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.btn.primary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: var(--secondary-color);
+  opacity: 0.9;
+}
+
+.btn.whitesmoke {
+  background-color: whitesmoke;
+  color: goldenrod;
+  font-weight: 600;
+}
+
+.btn.whitesmoke:hover {
+  background-color: goldenrod;
+  color: white;
+}
+
 .container {
   width: 84%;
   max-width: 1280px;
@@ -84,6 +115,9 @@ section {
 }
 
 @media screen and (max-width: 458px) {
+  body {
+    font-size: 0.9rem;
+  }
   h1 {
     font-size: 2rem;
   }
