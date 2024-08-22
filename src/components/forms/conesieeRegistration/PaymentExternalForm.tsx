@@ -103,10 +103,10 @@ const StudentPaymentForm = () => {
           placeholder="Universidad"
           id="university"
           name="university"
-          error={
-            formState.errors.university &&
-            formState.errors.university.join(", ").toString()
-          }
+          // error={
+          //   // formState.errors.university &&
+          //   // formState.errors.university.join(", ").toString()
+          // }
         />
 
         <FormInput
