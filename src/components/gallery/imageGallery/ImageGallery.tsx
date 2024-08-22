@@ -10,10 +10,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
     <div className={`${classes.gallery}`}>
       {images.map((img) => (
         <div key={img} className={classes.image}>
-          <Image
+          <img
             src={`https://conesiee-static.codielectro.com${img}`}
             alt="gallery"
-            fill
           />
         </div>
       ))}
