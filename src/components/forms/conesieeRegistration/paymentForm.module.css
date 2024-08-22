@@ -1,0 +1,29 @@
+.container {
+  padding-block: 2rem;
+}
+
+.form__heading {
+  color: var(--secondary-color);
+
+  font-weight: 500;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  background: radial-gradient(
+    circle,
+    var(--secondary-color) 5%,
+    var(--primary-color) 100%
+  );
+  color: white !important;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding-inline: 4rem;
+    overflow: hidden;
+  }
+}

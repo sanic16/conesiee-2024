@@ -1,7 +1,11 @@
-import React from "react";
+import PaymentForm from "@/components/forms/conesieeRegistration/PaymentForm";
 
-const page = () => {
-  return <div>page</div>;
+const PaymentPage = async () => {
+  return (
+    <div>
+      <PaymentForm />
+    </div>
+  );
 };
 
-export default page;
+export default PaymentPage;

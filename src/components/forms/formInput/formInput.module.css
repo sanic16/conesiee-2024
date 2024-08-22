@@ -1,0 +1,86 @@
+.inputField__wrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  /* color: #333; */
+  color: whitesmoke;
+}
+
+.required {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.inputField__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: whitesmoke;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.inputField__container:has(.radioOption) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  gap: 0.5rem;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.error {
+  border-color: red;
+}
+
+.error__message {
+  margin-top: 0.5rem;
+  color: red;
+  font-size: 0.875rem;
+}
+
+.helperText {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.875rem;
+}
+
+.inputField[disabled] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
