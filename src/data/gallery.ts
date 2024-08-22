@@ -58,11 +58,11 @@ const galleryData: GalleryInfo = {
       images: horusImages,
     },
     {
-      title: "Reunión en el auditorio Francisco Vela",
-      slug: generateSlug("Reunion en el auditorio Francisco Vela"),
+      title: "Flujo de diseño de circuitos integrados digitales",
+      slug: generateSlug("Flujo de diseno de circuitos integrados digitales"),
       description:
-        "Se realizó una reunión en el auditorio Francisco Vela, en la cual se discutieron los planes para el congreso de 2024. Se presentaron las actividades que se llevarán a cabo y se discutieron los detalles logísticos. Se espera que el congreso de 2024 sea un evento exitoso que atraiga a estudiantes de ingeniería eléctrica y electrónica de todo el país.",
-      date: "2024-08-02",
+        "El Ing. Victor Grimblat presentó una charla detallada sobre el flujo de diseño de circuitos integrados digitales en el auditorio Francisco Vela. Durante la reunión, se abordaron las etapas cruciales del diseño, desde la concepción hasta la implementación y prueba de los circuitos. La sesión incluyó una discusión sobre las herramientas y técnicas avanzadas utilizadas en el diseño de circuitos, proporcionando a los asistentes una visión completa del proceso y sus desafíos.",
+      date: "2024-07-23",
       images: franciscoVelaOneImages,
     },
   ],
