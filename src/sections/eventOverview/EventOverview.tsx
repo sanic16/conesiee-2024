@@ -9,6 +9,10 @@ import horusImg from "@/../public/images/horus.jpg";
 import sanAntonioImg from "@/../public/images/san_antonio.jpg";
 import guateSur from "@/../public/images/guate_sur.jpg";
 import Link from "next/link";
+import {
+  technicalConferenceVisits,
+  technicalVisits,
+} from "@/data/technical-visits";
 
 const visitasTecnicas = [
   "Taller INTECAP",
@@ -115,8 +119,10 @@ const EventOverview = () => {
           </p>
 
           <div className={classes.visitas}>
-            {visitasTecnicas.map((visita, index) => (
-              <div key={index}>{visita}</div>
+            {technicalConferenceVisits.visits.map((visit) => (
+              <Link key={visit.slug} href={`/visitas/${visit.slug}`}>
+                {visit.title}
+              </Link>
             ))}
           </div>
         </div>
