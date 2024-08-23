@@ -1,0 +1,88 @@
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+
+.profile {
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  padding: 1.5rem;
+  border-radius: 3rem 0 3rem 0;
+  transition: all 0.3s;
+}
+
+.profile:nth-of-type(odd) {
+  flex-direction: row-reverse;
+  border-radius: 0 3rem 0 3rem;
+  text-align: right;
+}
+
+.profile:hover {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition: all 0.3s;
+}
+
+.profile__image {
+  width: 150px;
+  min-width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 0 3rem 0 3rem;
+  overflow: hidden;
+}
+
+.profile:nth-of-type(even) .profile__image {
+  border-radius: 3rem 0 3rem 0 !important;
+}
+
+.profile__info p:nth-of-type(1) {
+  font-weight: 700;
+}
+
+.profile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: whitesmoke;
+}
+
+.profile__info h3 {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  line-height: 1.1;
+  color: var(--primary-hover);
+}
+
+@media screen and (max-width: 1200px) {
+  .members {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .profile:nth-of-type(odd) {
+    flex-direction: row;
+  }
+}

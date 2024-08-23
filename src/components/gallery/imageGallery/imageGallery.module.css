@@ -6,6 +6,12 @@
   grid-gap: 1rem;
 }
 
+.image__link {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
 .image {
   width: 100%;
   max-width: 250px;

@@ -6,6 +6,8 @@ import Image from "next/image";
 import classes from "./page.module.css";
 import { Metadata } from "next";
 import PageHeading from "@/components/pageHeading/PageHeading";
+import HomeHeading from "@/components/homeHeading/HomeHeading";
+import Organization from "./Organization";
 
 export const metadata: Metadata = {
   title: "CONESIEE | Nosotros",
@@ -85,6 +87,8 @@ ingeniería mecánica eléctrica.
           />
         </div>
       </div>
+
+      <Organization />
     </div>
   );
 };

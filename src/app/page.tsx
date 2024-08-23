@@ -3,6 +3,7 @@ import Counter from "@/sections/counter/Counter";
 import EventOverview from "@/sections/eventOverview/EventOverview";
 import Scope from "@/sections/scope/Scope";
 import Sponsors from "@/sections/sponsors/Sponsors";
+import { cloudinaryUrl } from "@/utils/constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
