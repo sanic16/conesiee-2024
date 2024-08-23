@@ -39,7 +39,7 @@ const page = () => {
       <BannerCongress
         title="Nosotros"
         description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
-        image="conesiee/congress/h9gslw4piovk5j32jmqi"
+        image="conesiee/congress/jvnrrwip3brwjtwlptco"
       />
       <div className={`container ${classes.container}`}>
         {/* <PageHeading
