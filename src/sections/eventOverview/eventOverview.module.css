@@ -71,7 +71,9 @@
 .visitas {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+  gap: 2rem;
   margin-top: 2rem;
   justify-items: center;
   font-size: 0.9rem;
@@ -135,6 +137,10 @@
 
   .image__container.gridImg .image__wrapper {
     height: 6rem;
+  }
+
+  .visitas {
+    gap: 1rem;
   }
 }
 
