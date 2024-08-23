@@ -7,6 +7,7 @@ interface GalleryData {
   description: string;
   date: string;
   slug: string;
+  path: string;
   images: string[];
 }
 
@@ -15,6 +16,7 @@ const ImageCard: React.FC<GalleryData> = ({
   description,
   date,
   slug,
+  path,
   images,
 }) => {
   return (
@@ -29,7 +31,7 @@ const ImageCard: React.FC<GalleryData> = ({
       </div>
       <div className={classes.card__img}>
         <img
-          src={`https://conesiee-static.codielectro.com${images[0]}`}
+          src={`https://conesiee-static.codielectro.com${path}${images[0]}`}
           alt="gallery"
         />
       </div>

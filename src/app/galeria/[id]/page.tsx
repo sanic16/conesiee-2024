@@ -22,7 +22,11 @@ export default function GalleryImageIdPage({
       <Link href="/galeria" className="btn primary">
         Regresar
       </Link>
-      <ImageGallery images={event?.images!} />
+      <ImageGallery
+        images={event?.images!}
+        path={event?.path!}
+        href={`/galeria/${event?.slug}`}
+      />
     </div>
   );
 }
