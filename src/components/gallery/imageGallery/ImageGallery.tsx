@@ -12,7 +12,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, path, href }) => {
   return (
     <div className={`${classes.gallery}`}>
       {images.map((img) => (
-        <Link key={img} href={`${href}/${img}`}>
+        <Link key={img} href={`${href}/${img}`} className={classes.image__link}>
           <div className={classes.image}>
             <img
               src={`https://conesiee-static.codielectro.com${path}${img}`}

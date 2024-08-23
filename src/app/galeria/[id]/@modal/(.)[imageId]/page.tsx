@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import galleryData from "@/data/gallery";
 import { useRouter } from "next/navigation";
+import { FaTimes } from "react-icons/fa";
 
 const InterceptedImagePage = ({
   params,
@@ -42,6 +43,7 @@ const InterceptedImagePage = ({
           />
         </div>
       </dialog>
+      <FaTimes className={classes.close__icon} onClick={() => router.back()} />
     </>
   );
 };
