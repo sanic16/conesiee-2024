@@ -18,10 +18,14 @@
 }
 
 .gold__sponsor img {
-  width: 250px;
+  width: 350px;
 }
 
 .silver__sponsor svg {
+  width: 200px;
+}
+
+.silver__sponsor img {
   width: 200px;
 }
 

@@ -27,7 +27,6 @@ const Sponsors = () => {
           <Image src={energiaActivaLogo} alt="Energía Activa" />
         </div>
         <div className={classes.gold__sponsor}>
-          <Image src={esinsaLogo} alt="ESINSA" />
           <Image
             src={eegsaLogo}
             alt="EEGSA"
@@ -36,6 +35,7 @@ const Sponsors = () => {
           />
         </div>
         <div className={classes.silver__sponsor}>
+          <Image src={esinsaLogo} alt="ESINSA" />
           <TecnoLogo />
         </div>
         <div className={classes.bronze__sponsor}>
