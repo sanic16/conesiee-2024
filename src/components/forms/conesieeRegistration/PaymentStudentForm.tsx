@@ -30,13 +30,8 @@ const StudentPaymentForm = () => {
       errors: {},
     }
   );
-  console.log(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
   return (
     <div className={`container ${classes.container}`}>
-      <h1 className={classes.form__heading}>
-        Congresos <span>CONESIEE 2024</span> <br />
-        Estudiantes Individuales
-      </h1>
       <form action={action} className={classes.form}>
         <FormInput
           type="email"

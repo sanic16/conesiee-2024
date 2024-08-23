@@ -1,0 +1,33 @@
+.banner {
+  position: relative;
+  height: 50vh;
+  margin-top: 1rem;
+}
+
+.banner__background {
+  height: 100%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .banner__background {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 458px) {
+  .banner {
+    height: 35vh;
+  }
+}

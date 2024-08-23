@@ -10,12 +10,14 @@ export const metadata: Metadata = {
 
 export default function SponsorsPage() {
   return (
-    <div className="container">
-      <PageHeading
-        title="Patrocinadores"
-        description="Conoce a las empresas que hacen posible el congreso."
-      />
-      <Sponsors />
-    </div>
+    <>
+      <div className="container">
+        <PageHeading
+          title="Patrocinadores"
+          description="Conoce a las empresas que hacen posible el congreso."
+        />
+        <Sponsors />
+      </div>
+    </>
   );
 }

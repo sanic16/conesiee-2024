@@ -1,10 +1,16 @@
+import BannerCongress from "@/components/bannerCongress/BannerCongress";
 import StudentPaymentForm from "@/components/forms/conesieeRegistration/PaymentStudentForm";
 
 const PaymentPage = () => {
   return (
-    <div>
+    <>
+      <BannerCongress
+        title="Inscripción"
+        description="Asegura tu lugar en el congreso."
+        image="conesiee/congress/ec5l16pt1fj9ac1lmntl"
+      />
       <StudentPaymentForm />
-    </div>
+    </>
   );
 };
 

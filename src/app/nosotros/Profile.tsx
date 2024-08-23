@@ -22,9 +22,7 @@ const Profile: React.FC<ProfileProps> = ({
         <Image src={image} alt="profile" fill />
       </div>
       <div className={classes.profile__info}>
-        <h3>
-          {name} - {userId}
-        </h3>
+        <h3>{name}</h3>
         <p>{position}</p>
         <p>{career}</p>
       </div>

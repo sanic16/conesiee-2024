@@ -107,15 +107,6 @@ const Navbar = () => {
           </li>
           <li className={classes.menu__item}>
             <NavLink
-              href="/visitas"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Visitas Técnicas
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
               href="/inscripciones"
               className={classes.menu__link}
               activeClassName={classes.active}
@@ -125,11 +116,11 @@ const Navbar = () => {
           </li>
           <li className={classes.menu__item}>
             <NavLink
-              href="/patrocinadores"
+              href="/visitas"
               className={classes.menu__link}
               activeClassName={classes.active}
             >
-              Patrocinadores
+              Visitas Técnicas
             </NavLink>
           </li>
           <li className={classes.menu__item}>
@@ -139,6 +130,15 @@ const Navbar = () => {
               activeClassName={classes.active}
             >
               Congreso
+            </NavLink>
+          </li>
+          <li className={classes.menu__item}>
+            <NavLink
+              href="/patrocinadores"
+              className={classes.menu__link}
+              activeClassName={classes.active}
+            >
+              Patrocinadores
             </NavLink>
           </li>
         </ul>

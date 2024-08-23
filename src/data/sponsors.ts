@@ -24,7 +24,6 @@ interface Sponsor {
     | "Patrocinador Plata"
     | "Patrocinador Bronce";
 }
-console.log(sterenLogo);
 const sponsors: Sponsor[] = [
   {
     name: "Steren",
