@@ -6,9 +6,9 @@ import classes from "./organization.module.css";
 
 const Organization = () => {
   return (
-    <div>
+    <div className={classes.organization}>
       <HomeHeading
-        title="Organigrama"
+        title="Organizadores"
         description="Conoce a nuestro equipo de trabajo"
       />
 
