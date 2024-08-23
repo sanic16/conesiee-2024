@@ -4,3 +4,9 @@
   aspect-ratio: 8/5;
   margin-inline: auto;
 }
+
+@media screen and (max-width: 992px) {
+  .itinerario__content {
+    width: 100%;
+  }
+}

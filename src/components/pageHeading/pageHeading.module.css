@@ -2,6 +2,7 @@
   text-align: center;
   margin-top: 2rem;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
   background: linear-gradient(
     to right,
     var(--primary-color),
