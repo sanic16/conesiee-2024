@@ -1,0 +1,6 @@
+.itinerario__content {
+  position: relative;
+  width: 50rem;
+  aspect-ratio: 8/5;
+  margin-inline: auto;
+}

@@ -39,10 +39,14 @@
   }
 
   .gold__sponsor img {
-    width: 200px;
+    width: 250px;
   }
 
   .silver__sponsor svg {
+    width: 150px;
+  }
+
+  .silver__sponsor img {
     width: 150px;
   }
 
@@ -53,6 +57,28 @@
 
 @media screen and (max-width: 768px) {
   .diamond__sponsor img {
+    width: 250px;
+  }
+
+  .gold__sponsor img {
+    width: 200px;
+  }
+
+  .silver__sponsor svg {
+    width: 100px;
+  }
+
+  .silver__sponsor img {
+    width: 100px;
+  }
+
+  .bronze__sponsor img {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .diamond__sponsor img {
     width: 200px;
   }
 
@@ -64,22 +90,8 @@
     width: 100px;
   }
 
-  .bronze__sponsor img {
-    width: 75px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .diamond__sponsor img {
-    width: 150px;
-  }
-
-  .gold__sponsor img {
+  .silver__sponsor img {
     width: 100px;
-  }
-
-  .silver__sponsor svg {
-    width: 75px;
   }
 
   .bronze__sponsor img {

@@ -125,11 +125,11 @@ const Navbar = () => {
           </li>
           <li className={classes.menu__item}>
             <NavLink
-              href="/contacto"
+              href="/patrocinadores"
               className={classes.menu__link}
               activeClassName={classes.active}
             >
-              Contacto
+              Patrocinadores
             </NavLink>
           </li>
           <li className={classes.menu__item}>
