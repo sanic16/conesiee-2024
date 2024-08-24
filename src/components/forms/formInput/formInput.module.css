@@ -48,9 +48,11 @@
 
 .radioOption {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-right: 1rem;
   gap: 0.5rem;
+  background-color: red;
 }
 
 .textarea {

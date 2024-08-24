@@ -233,6 +233,7 @@ interface CreateStudentPaymentState {
 
 export async function createSingleStudentPaymentAction(
   { captcha }: { captcha: string | null },
+  
   formState: CreateStudentPaymentState,
   formData: FormData
 ): Promise<CreateStudentPaymentState> {
@@ -467,6 +468,7 @@ interface CreateComboPaymentState {
 
 export async function createComboPaymentAction(
   { captcha }: { captcha: string | null },
+  { registrationPackage }: { registrationPackage: string },
   formState: CreateComboPaymentState,
   formData: FormData
 ): Promise<CreateComboPaymentState> {
@@ -504,7 +506,7 @@ export async function createComboPaymentAction(
   const ticketNumberPerson3 = formData.get("ticketNumberPerson3") as string;
   const paymentProofImagePerson3 = formData.get("paymentProofPerson3") as File;
 
-  const result = validateSingleStudentPaymentSchema.safeParse({
+  const result = validateComboPaymentSchema.safeParse({
     namePerson1,
     emailPerson1,
     studentIdPerson1,
@@ -539,23 +541,51 @@ export async function createComboPaymentAction(
   }
 
   // Validate image
-  if (!paymentProofImage || paymentProofImage.size === 0) {
+  if (!paymentProofImagePerson1 || paymentProofImagePerson1.size === 0) {
     return {
       errors: {
-        paymentProofImage: ["Debe subir una imagen del comprobante de pago"],
+        paymentProofImagePerson1: ["Debe subir una imagen del comprobante de pago"],
+      },
+    };
+  }else if(!paymentProofImagePerson2 || paymentProofImagePerson2.size === 0){
+    return {
+      errors: {
+        paymentProofImagePerson2: ["Debe subir una imagen del comprobante de pago"],
+      },
+    };
+  }else if(!paymentProofImagePerson3 || paymentProofImagePerson3.size === 0){
+    return {
+      errors: {
+        paymentProofImagePerson3: ["Debe subir una imagen del comprobante de pago"],
       },
     };
   }
 
   // Validate image type
-  if (!allowedImageTypes.includes(paymentProofImage.type)) {
+  if (!allowedImageTypes.includes(paymentProofImagePerson1.type)) {
     return {
       errors: {
-        paymentProofImage: ["Tipo de imagen no permitido"],
+        paymentProofImagePerson1: ["Tipo de imagen no permitido"],
       },
     };
   }
-  console.log(captcha);
+
+  if (!allowedImageTypes.includes(paymentProofImagePerson2.type)) {
+    return {
+      errors: {
+        paymentProofImagePerson2: ["Tipo de imagen no permitido"],
+      },
+    };
+  }
+
+  if (!allowedImageTypes.includes(paymentProofImagePerson3.type)) {
+    return {
+      errors: {
+        paymentProofImagePerson3: ["Tipo de imagen no permitido"],
+      },
+    };
+  }
+
   // Validate captcha
   if (captcha === null) {
     return {
@@ -579,16 +609,32 @@ export async function createComboPaymentAction(
     };
   }
 
-  const fileBuffer = await paymentProofImage.arrayBuffer();
-  const buffer = Buffer.from(fileBuffer);
+  const fileBufferPerson1 = await paymentProofImagePerson1.arrayBuffer();
+  const buffer = Buffer.from(fileBufferPerson1);
 
-  const imageName = `vouchers/${studentId}-${Date.now()}-comprobante.${
-    paymentProofImage.type.split("/")[1]
+  const imageNamePerson1 = `vouchers/${studentIdPerson1}-${Date.now()}-comprobante.${
+    paymentProofImagePerson1.type.split("/")[1]
+  }`;
+
+  const fileBufferPerson2 = await paymentProofImagePerson2.arrayBuffer();
+  const buffer2 = Buffer.from(fileBufferPerson2);
+
+  const imageNamePerson2 = `vouchers/${studentIdPerson2}-${Date.now()}-comprobante.${
+    paymentProofImagePerson2.type.split("/")[1]
+  }`;
+
+  const fileBufferPerson3 = await paymentProofImagePerson3.arrayBuffer();
+  const buffer3 = Buffer.from(fileBufferPerson3);
+
+  const imageNamePerson3 = `vouchers/${studentIdPerson3}-${Date.now()}-comprobante.${
+    paymentProofImagePerson3.type.split("/")[1]
   }`;
 
   // Upload Image
   try {
-    await uploadObject(buffer, imageName, paymentProofImage.type);
+    await uploadObject(buffer, imageNamePerson1, paymentProofImagePerson1.type);
+    await uploadObject(buffer2, imageNamePerson2, paymentProofImagePerson2.type);
+    await uploadObject(buffer3, imageNamePerson3, paymentProofImagePerson3.type);
   } catch (error: unknown) {
     if (error instanceof Error) {
       return {
@@ -604,21 +650,51 @@ export async function createComboPaymentAction(
     };
   }
 
-  // Save student payment
+  // Save student 1 payment
   try {
     await prisma.studentPayment.create({
       data: {
-        email,
-        name,
-        studentId,
-        dpi,
-        phone,
-        career,
-        registrationPackage,
-        ticketNumber,
-        imageUrl: `https://conesiee-static.codielectro.com/${imageName}`,
+        email: emailPerson1,
+        name: namePerson1,
+        studentId: studentIdPerson1,
+        dpi: dpiPerson1,
+        phone: phonePerson1,
+        career: careerPerson1,
+        registrationPackage: registrationPackagePerson1,
+        ticketNumber: ticketNumberPerson1,
+        imageUrl: `https://conesiee-static.codielectro.com/${imageNamePerson1}`,
       },
     });
+
+    await prisma.studentPayment.create({
+      data: {
+        email: emailPerson2,
+        name: namePerson2,
+        studentId: studentIdPerson2,
+        dpi: dpiPerson2,
+        phone: phonePerson2,
+        career: careerPerson2,
+        registrationPackage: registrationPackagePerson2,
+        ticketNumber: ticketNumberPerson2,
+        imageUrl: `https://conesiee-static.codielectro.com/${imageNamePerson2}`,
+      }
+      });
+
+    await prisma.studentPayment.create({
+      data: {
+        email: emailPerson3,
+        name: namePerson3,
+        studentId: studentIdPerson3,
+        dpi: dpiPerson3,
+        phone: phonePerson3,
+        career: careerPerson3,
+        registrationPackage: registrationPackagePerson3,
+        ticketNumber: ticketNumberPerson3,
+        imageUrl: `https://conesiee-static.codielectro.com/${imageNamePerson3}`,
+      }
+    });
+
+
   } catch (error: unknown) {
     if (error instanceof Error) {
       return {

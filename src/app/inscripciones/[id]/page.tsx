@@ -1,4 +1,5 @@
 import IndividualPaymentForm from "@/components/forms/conesieeRegistration/IndividualPaymentForm";
+import ComboPaymentForm from "@/components/forms/conesieeRegistration/ComboPaymentForm";
 import PageHeading from "@/components/pageHeading/PageHeading";
 import { cards } from "@/data/payment";
 import { notFound } from "next/navigation";
@@ -17,6 +18,19 @@ export default function PaymentDetailsPage({
     (card) => card.link.split("/")[2] === params.id
   );
   if (!packageInfo) return notFound();
+  const comboFormData = ["usac-combo", "externos-combo"];
+
+  let form;
+
+  if(comboFormData.includes(params.id)) {
+    form = <ComboPaymentForm registrationPackage={params.id} />;
+  }else{
+    form = <IndividualPaymentForm registrationPackage={params.id} />;
+  }
+
+
+
+
 
   return (
     <div className="container">
@@ -25,7 +39,7 @@ export default function PaymentDetailsPage({
         description={`El costo de la inscripción es de ${packageInfo.price} Quetzales`}
       />
 
-      <IndividualPaymentForm registrationPackage={params.id} />
+      {form}
     </div>
   );
 }
