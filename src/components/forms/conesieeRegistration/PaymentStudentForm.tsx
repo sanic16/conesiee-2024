@@ -21,7 +21,7 @@ const registrationPackage = [
   "Day Pass - Q. 200.00",
 ];
 
-const StudentPaymentForm = () => {
+const PaymentStudentForm = () => {
   const [captcha, setCaptcha] = useState<string | null>(null);
 
   const [formState, action] = useFormState(
@@ -93,7 +93,7 @@ const StudentPaymentForm = () => {
         />
         <FormInput
           type="radio"
-          label="Carrera que estudias"
+          label="Carrera que estudias o estudiaste"
           id="career"
           name="career"
           options={careers}
@@ -156,4 +156,4 @@ const StudentPaymentForm = () => {
   );
 };
 
-export default StudentPaymentForm;
+export default PaymentStudentForm;

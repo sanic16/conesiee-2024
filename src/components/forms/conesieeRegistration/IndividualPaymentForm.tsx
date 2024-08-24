@@ -4,7 +4,7 @@ import FormInput from "../formInput/FormInput";
 import { FaMobileAlt, FaTicketAlt } from "react-icons/fa";
 import classes from "./paymentForm.module.css";
 import { useFormState } from "react-dom";
-import { createSingleStudentPaymentAction } from "@/actions/paymentActions";
+import { createIndividualPaymentAction } from "@/actions/paymentActions";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 
@@ -21,27 +21,32 @@ const registrationPackage = [
   "Day Pass - Q. 200.00",
 ];
 
-const StudentPaymentForm = () => {
+interface IndividualPaymentFormProps {
+  registrationPackage: string;
+}
+
+const IndividualPaymentForm: React.FC<IndividualPaymentFormProps> = ({
+  registrationPackage,
+}) => {
   const [captcha, setCaptcha] = useState<string | null>(null);
 
   const [formState, action] = useFormState(
-    createSingleStudentPaymentAction.bind(null, { captcha }),
+    createIndividualPaymentAction.bind(
+      null,
+      { captcha },
+      { registrationPackage }
+    ),
     {
       errors: {},
     }
   );
-  console.log(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
   return (
     <div className={`container ${classes.container}`}>
-      <h1 className={classes.form__heading}>
-        Congresos <span>CONESIEE 2024</span> <br />
-        Estudiantes Individuales
-      </h1>
       <form action={action} className={classes.form}>
         <FormInput
           type="email"
           label="Correo Electrónico"
-          placeholder="Correo electrónico"
+          placeholder="2320556340103@ingenieria.usac.edu.gt"
           id="email"
           name="email"
           icon={<FaEnvelope />}
@@ -61,7 +66,18 @@ const StudentPaymentForm = () => {
             formState.errors.name && formState.errors.name.join(", ").toString()
           }
         />
-
+        <FormInput
+          type="text"
+          label="Número de Carné"
+          placeholder="201900000"
+          id="studentId"
+          name="studentId"
+          icon={<FaIdCard />}
+          error={
+            formState.errors.studentId &&
+            formState.errors.studentId.join(", ").toString()
+          }
+        />
         <FormInput
           type="text"
           label="Número de DPI"
@@ -87,7 +103,7 @@ const StudentPaymentForm = () => {
         />
         <FormInput
           type="radio"
-          label="Carrera que estudias"
+          label="Carrera que estudias o estudiaste"
           id="career"
           name="career"
           options={careers}
@@ -97,29 +113,6 @@ const StudentPaymentForm = () => {
           }
         />
 
-        <FormInput
-          type="text"
-          label="Universidad"
-          placeholder="Universidad"
-          id="university"
-          name="university"
-          // error={
-          //   // formState.errors.university &&
-          //   // formState.errors.university.join(", ").toString()
-          // }
-        />
-
-        <FormInput
-          type="radio"
-          label="Paquete de Inscripción"
-          id="registrationPackage"
-          name="registrationPackage"
-          options={registrationPackage}
-          error={
-            formState.errors.registrationPackage &&
-            formState.errors.registrationPackage.join(", ").toString()
-          }
-        />
         <FormInput
           type="text"
           label="Número de Boleta"
@@ -163,4 +156,4 @@ const StudentPaymentForm = () => {
   );
 };
 
-export default StudentPaymentForm;
+export default IndividualPaymentForm;

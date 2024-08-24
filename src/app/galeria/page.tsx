@@ -11,19 +11,18 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <section className={`container ${classes.container}`}>
-      <div className={classes.container__bg}>
-        <PageHeading
-          title="Galería"
-          description="Imágenes de eventos pasados"
-        />
-        <div className={classes.gallery}>
-          {galleryData.events.map((event) => (
-            <ImageCard key={event.title} {...event} />
-          ))}
+    <>
+      <PageHeading title="Galería" description="Imágenes de eventos pasados" />
+      <section className={`container ${classes.container}`}>
+        <div className={classes.container__bg}>
+          <div className={classes.gallery}>
+            {galleryData.events.map((event) => (
+              <ImageCard key={event.title} {...event} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -10,14 +10,16 @@ export const metadata: Metadata = {
 
 export default function SponsorsPage() {
   return (
-    <section className={`container ${classes.container}`}>
-      <div className={classes.container__bg}>
-        <PageHeading
-          title="Patrocinadores"
-          description="Conoce a las empresas que hacen posible el congreso."
-        />
-        <Sponsors />
-      </div>
-    </section>
+    <>
+      <PageHeading
+        title="Patrocinadores"
+        description="Conoce a las empresas que hacen posible el congreso."
+      />
+      <section className={`container ${classes.container}`}>
+        <div className={classes.container__bg}>
+          <Sponsors />
+        </div>
+      </section>
+    </>
   );
 }

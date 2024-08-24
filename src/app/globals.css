@@ -124,6 +124,12 @@ section {
   }
 }
 
+@media screen and (max-width: 768px) {
+  section {
+    margin-block: 2rem !important;
+  }
+}
+
 @media screen and (max-width: 458px) {
   body {
     font-size: 0.9rem;
