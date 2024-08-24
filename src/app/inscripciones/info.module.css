@@ -14,7 +14,7 @@
   width: 320px;
   position: relative;
   background-color: white;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.7);
   background: url("../../../public/images/nuevo_logo.png") center center/cover
     no-repeat;
   border-radius: 0.5rem;
@@ -38,10 +38,10 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: calc(-100% + 5px);
+  bottom: calc(-100% + 2px);
   width: 100%;
   height: 100%;
-  background-color: rgb(27, 62, 82, 1);
+  background-color: white;
   z-index: 1;
   transition: 0.5s;
 }
@@ -56,10 +56,12 @@
   color: whitesmoke;
   z-index: 2;
   transition: 0.5s;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .content h3 {
@@ -80,7 +82,7 @@
 }
 
 .card:hover .content {
-  color: whitesmoke;
+  color: var(--primary-color);
 }
 
 .card:hover .content h3 {
@@ -90,4 +92,17 @@
 .card:hover .content a {
   background-color: var(--primary-hover);
   color: whitesmoke;
+}
+
+@media screen and (max-width: 400px) {
+  .info {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .card {
+    width: 100%;
+  }
+
+  .card__bg {
+    width: 100%;
+  }
 }
