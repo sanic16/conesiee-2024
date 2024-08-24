@@ -1,6 +1,11 @@
 import BannerCongress from "@/components/bannerCongress/BannerCongress";
-import StudentPaymentForm from "@/components/forms/conesieeRegistration/PaymentStudentForm";
 import Info from "./Info";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CONESIEE | Inscripción",
+  description: "Asegura tu lugar en el congreso.",
+};
 
 const PaymentPage = () => {
   return (

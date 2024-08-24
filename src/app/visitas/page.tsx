@@ -6,8 +6,12 @@ import {
   technicalVisits,
   technicalConferenceVisits,
 } from "@/data/technical-visits";
-import HomeSubHeading from "@/components/homeSubHeading/HomeSubHeading";
-import SimpleHeading from "@/components/simpleHeading/SimpleHeading";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CONESIEE | Visitas Técnicas",
+  description: "Visitas técnicas realizadas y programadas para los congresos.",
+};
 
 const page = () => {
   return (

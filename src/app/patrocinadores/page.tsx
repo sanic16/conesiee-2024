@@ -4,7 +4,7 @@ import classes from "./page.module.css";
 import Sponsors from "./Sponsors";
 
 export const metadata: Metadata = {
-  title: "Patrocinadores",
+  title: "CONESIEE | Patrocinadores",
   description: "Conoce a las empresas que hacen posible el congreso.",
 };
 

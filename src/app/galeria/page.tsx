@@ -2,6 +2,12 @@ import ImageCard from "@/components/gallery/imageCard/ImageCard";
 import PageHeading from "@/components/pageHeading/PageHeading";
 import galleryData from "@/data/gallery";
 import classes from "./page.module.css";
+import { Metadata } from "next";
+
+export const metadadta: Metadata = {
+  title: "CONESIEE | Galería",
+  description: "Imágenes de eventos pasados",
+};
 
 const page = () => {
   return (
