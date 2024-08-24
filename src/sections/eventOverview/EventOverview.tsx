@@ -24,7 +24,7 @@ const visitasTecnicas = [
 
 const EventOverview = () => {
   return (
-    <section className={`container ${classes.container}`}>
+    <div className={`container ${classes.container}`}>
       <div className={classes.container__bg}>
         <HomeHeading
           title="Detalles del evento"
@@ -132,7 +132,7 @@ const EventOverview = () => {
           <Link href="/congreso/itinerario">aquí.</Link>
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 
