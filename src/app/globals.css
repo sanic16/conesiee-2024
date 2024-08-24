@@ -79,7 +79,7 @@ section {
 
 .btn.primary {
   background-color: var(--secondary-color);
-  color: white;
+  color: whitesmoke;
 }
 
 .btn.primary:hover {
@@ -101,6 +101,11 @@ section {
 .btn.gold {
   background-color: goldenrod;
   color: white;
+}
+
+.btn.primary.inverse {
+  background-color: whitesmoke;
+  color: var(--secondary-color);
 }
 
 .container {

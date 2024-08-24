@@ -4,5 +4,90 @@
 
 .info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  width: 320px;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  background: url("../../../public/images/nuevo_logo.png") center center/cover
+    no-repeat;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card__bg {
+  padding: 2rem;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.9)
+  );
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 320px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(-100% + 5px);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(27, 62, 82, 1);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  bottom: 0;
+}
+
+.content {
+  position: relative;
+  text-transform: capitalize;
+  color: whitesmoke;
+  z-index: 2;
+  transition: 0.5s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+
+.content p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+.content a {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.card:hover .content {
+  color: whitesmoke;
+}
+
+.card:hover .content h3 {
+  color: var(--primary-hover);
+}
+
+.card:hover .content a {
+  background-color: var(--primary-hover);
+  color: whitesmoke;
 }
