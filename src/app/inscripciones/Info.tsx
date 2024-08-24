@@ -4,18 +4,18 @@ import Link from "next/link";
 
 const cards = [
   {
-    id: 1,
-    title: "Estudiantes USAC Simple",
-    description: "Sin Cena de Gala",
-    price: "Q400",
-    link: "/inscripciones/usac-simple",
-  },
-  {
     id: 2,
     title: "Estudiantes USAC Completo",
     description: "Con Cena de Gala",
     price: "Q500",
     link: "/inscripciones/usac-completo",
+  },
+  {
+    id: 1,
+    title: "Estudiantes USAC Simple",
+    description: "Sin Cena de Gala",
+    price: "Q400",
+    link: "/inscripciones/usac-simple",
   },
   {
     id: 3,
@@ -32,19 +32,20 @@ const cards = [
     link: "/inscripciones/usac-day-pass",
   },
   {
-    id: 5,
-    title: "Externos Simple",
-    description: "Sin Cena de Gala",
-    price: "Q500",
-    link: "/inscripciones/externos-simple",
-  },
-  {
     id: 6,
     title: "Externos Completo",
     description: "Con Cena de Gala",
     price: "Q600",
     link: "/inscripciones/externos-completo",
   },
+  {
+    id: 5,
+    title: "Externos Simple",
+    description: "Sin Cena de Gala",
+    price: "Q500",
+    link: "/inscripciones/externos-simple",
+  },
+
   {
     id: 7,
     title: "Combo Externos",
@@ -62,13 +63,23 @@ const cards = [
 ];
 
 const Info = () => {
+  const goldOptionId = 2;
+  const silverOptionId = 1;
+  const bronzeOptionId = 3;
   return (
     <div className={classes.info__container}>
       {/* <HomeHeading title="Información de inscripción" description="" /> */}
       <div className={classes.info}>
         {cards.map((card) => {
           return (
-            <div key={card.id} className={classes.card}>
+            <div
+              key={card.id}
+              className={`${classes.card} ${
+                goldOptionId === card.id ? classes.gold : ""
+              } ${silverOptionId === card.id ? classes.silver : ""} ${
+                bronzeOptionId === card.id ? classes.bronze : ""
+              }`}
+            >
               <div className={classes.card__bg}>
                 <div className={classes.content}>
                   <h3>{card.title}</h3>
