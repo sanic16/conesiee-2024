@@ -46,58 +46,59 @@ const page = () => {
         title="Nosotros"
         description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
       /> */}
-
-        <div className={classes.box}>
-          <SimpleHeading
-            title="Misión"
-            description="Realizar un congreso en el cual los participantes amplíen sus conocimientos e
+        <div className={classes.container__bg}>
+          <div className={classes.box}>
+            <SimpleHeading
+              title="Misión"
+              description="Realizar un congreso en el cual los participantes amplíen sus conocimientos e
 interés en pro del medio ambiente y desarrollo tecnológico."
-            className={classes.simpleHeading}
-          />
-          <div className={classes.img__wrapper}>
-            <Image
-              src={aboutImg1}
-              alt="about image 3"
-              width={aboutImg1.width / 2}
-              height={aboutImg1.height / 2}
+              className={classes.simpleHeading}
             />
+            <div className={classes.img__wrapper}>
+              <Image
+                src={aboutImg1}
+                alt="about image 3"
+                width={aboutImg1.width / 2}
+                height={aboutImg1.height / 2}
+              />
+            </div>
           </div>
-        </div>
 
-        <div className={classes.box}>
-          <SimpleHeading
-            title="Visión"
-            description="Excelencia como comité organizador de congresos de la escuela de
+          <div className={classes.box}>
+            <SimpleHeading
+              title="Visión"
+              description="Excelencia como comité organizador de congresos de la escuela de
 ingeniería mecánica eléctrica.
 "
-            className={classes.simpleHeading}
-          />
-          <div className={classes.img__wrapper}>
-            <Image
-              src={aboutImg2}
-              alt="about image 2"
-              width={aboutImg2.width / 2}
-              height={aboutImg2.height / 2}
+              className={classes.simpleHeading}
             />
+            <div className={classes.img__wrapper}>
+              <Image
+                src={aboutImg2}
+                alt="about image 2"
+                width={aboutImg2.width / 2}
+                height={aboutImg2.height / 2}
+              />
+            </div>
           </div>
-        </div>
-        <div className={classes.box}>
-          <SimpleHeading
-            title="Objetivos"
-            description={objectives}
-            className={classes.simpleHeading}
-          />
-          <div className={classes.img__wrapper}>
-            <Image
-              src={aboutImg3}
-              alt="about image 3"
-              width={aboutImg3.width / 2}
-              height={aboutImg3.height / 2}
+          <div className={classes.box}>
+            <SimpleHeading
+              title="Objetivos"
+              description={objectives}
+              className={classes.simpleHeading}
             />
+            <div className={classes.img__wrapper}>
+              <Image
+                src={aboutImg3}
+                alt="about image 3"
+                width={aboutImg3.width / 2}
+                height={aboutImg3.height / 2}
+              />
+            </div>
           </div>
-        </div>
 
-        <Organization />
+          <Organization />
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,17 @@
 .container {
-  padding-top: 4rem;
+  margin-top: 4rem;
+  background: #fff url("../../../public/images/background/home_bg_1.png") center
+    center/cover no-repeat;
+  padding-block: 0;
+  margin-bottom: 2rem;
+}
+
+.container__bg {
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.45) 20%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
 }
 
 .section__container {

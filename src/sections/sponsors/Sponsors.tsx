@@ -12,34 +12,36 @@ import TecnoLogo from "./TecnoLogo";
 const Sponsors = () => {
   return (
     <section className={`container ${classes.container}`} id="patrocinadores">
-      <HomeHeading
-        title="Nuestros Patrocinadores"
-        description="Estos son los patrocinadores del CONESIEE 2024 que hacen posible la realización de este evento."
-      />
-      <div className={classes.logos}>
-        <div className={classes.diamond__sponsor}>
-          <Image
-            src={sterenLogo}
-            alt="Steren"
-            width={sterenLogo.width / 5}
-            height={sterenLogo.height / 5}
-          />
-          <Image src={energiaActivaLogo} alt="Energía Activa" />
-        </div>
-        <div className={classes.gold__sponsor}>
-          <Image
-            src={eegsaLogo}
-            alt="EEGSA"
-            width={eegsaLogo.width / 3}
-            height={eegsaLogo.height / 3}
-          />
-        </div>
-        <div className={classes.silver__sponsor}>
-          <Image src={esinsaLogo} alt="ESINSA" />
-          <TecnoLogo />
-        </div>
-        <div className={classes.bronze__sponsor}>
-          <Image src={proelcaLogo} alt="Proelca" />
+      <div className={classes.container__bg}>
+        <HomeHeading
+          title="Nuestros Patrocinadores"
+          description="Estos son los patrocinadores del CONESIEE 2024 que hacen posible la realización de este evento."
+        />
+        <div className={classes.logos}>
+          <div className={classes.diamond__sponsor}>
+            <Image
+              src={sterenLogo}
+              alt="Steren"
+              width={sterenLogo.width / 5}
+              height={sterenLogo.height / 5}
+            />
+            <Image src={energiaActivaLogo} alt="Energía Activa" />
+          </div>
+          <div className={classes.gold__sponsor}>
+            <Image
+              src={eegsaLogo}
+              alt="EEGSA"
+              width={eegsaLogo.width / 3}
+              height={eegsaLogo.height / 3}
+            />
+          </div>
+          <div className={classes.silver__sponsor}>
+            <Image src={esinsaLogo} alt="ESINSA" />
+            <TecnoLogo />
+          </div>
+          <div className={classes.bronze__sponsor}>
+            <Image src={proelcaLogo} alt="Proelca" />
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,17 @@
 .container {
-  padding-top: 4rem;
+  padding-block: 0;
+  margin-block: 4rem;
+  background: url("../../../public/images/background/home_bg_4.png") center
+    center/cover no-repeat;
+  /* filter: invert(1); */
+}
+
+.container__bg {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.9) 20%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
 }
 
 .diamond__sponsor,
