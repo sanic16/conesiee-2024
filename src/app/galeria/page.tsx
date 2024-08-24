@@ -5,12 +5,17 @@ import classes from "./page.module.css";
 
 const page = () => {
   return (
-    <section className={`container`}>
-      <PageHeading title="Galería" description="Imágenes de eventos pasados" />
-      <div className={classes.gallery}>
-        {galleryData.events.map((event) => (
-          <ImageCard key={event.title} {...event} />
-        ))}
+    <section className={`container ${classes.container}`}>
+      <div className={classes.container__bg}>
+        <PageHeading
+          title="Galería"
+          description="Imágenes de eventos pasados"
+        />
+        <div className={classes.gallery}>
+          {galleryData.events.map((event) => (
+            <ImageCard key={event.title} {...event} />
+          ))}
+        </div>
       </div>
     </section>
   );

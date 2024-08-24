@@ -4,7 +4,6 @@ import sterenLogo from "@/../public/images/sponsor_logos/steren_logo.png";
 import energiaActivaLogo from "@/../public/images/sponsor_logos/energia_activa_logo.png";
 import esinsaLogo from "@/../public/images/sponsor_logos/esinsa.png";
 import eegsaLogo from "@/../public/images/sponsor_logos/eegsa_logo.jpg";
-import tecnoLogo from "@/../public/images/sponsor_logos/tecno_logo.png";
 import proelcaLogo from "@/../public/images/sponsor_logos/proelca_logo.png";
 import Image from "next/image";
 import TecnoLogo from "./TecnoLogo";

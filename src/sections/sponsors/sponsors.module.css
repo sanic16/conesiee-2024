@@ -8,10 +8,15 @@
 
 .container__bg {
   background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.9) 20%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
+      to right bottom,
+      rgba(255, 255, 255, 0.9) 20%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.7) 20%,
+      rgba(255, 255, 255, 0.9) 100%
+    );
 }
 
 .diamond__sponsor,
