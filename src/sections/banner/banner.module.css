@@ -1,8 +1,6 @@
 .banner {
-  margin-top: 1rem;
   height: 70vh;
   position: relative;
-  padding: 0;
 }
 .banner__content {
   position: absolute;

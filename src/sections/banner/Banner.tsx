@@ -8,7 +8,7 @@ import BannerText from "./BannerText";
 
 const Banner = () => {
   return (
-    <section className={`container ${classes.banner}`}>
+    <div className={`container ${classes.banner}`}>
       <div className={classes.banner__content}>
         <div className={classes.banner__right}>
           <h1>
@@ -40,7 +40,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

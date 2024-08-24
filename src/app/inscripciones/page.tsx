@@ -10,9 +10,9 @@ const PaymentPage = () => {
         description="Asegura tu lugar en el congreso."
         image="conesiee/congress/ec5l16pt1fj9ac1lmntl"
       />
-      <div className="container">
+      <section className="container">
         <Info />
-      </div>
+      </section>
     </>
   );
 };

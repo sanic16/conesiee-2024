@@ -11,7 +11,7 @@ import SimpleHeading from "@/components/simpleHeading/SimpleHeading";
 
 const page = () => {
   return (
-    <div className={`container`}>
+    <section className={`container`}>
       <PageHeading
         title="Visitas Técnicas"
         description="A continuación se detallan las visitas técnicas realizadas y las programadas tanto para congresos como para visitas pre-congreso:"
@@ -39,7 +39,7 @@ const page = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -41,7 +41,7 @@ const page = () => {
         description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
         image="conesiee/congress/jvnrrwip3brwjtwlptco"
       />
-      <div className={`container ${classes.container}`}>
+      <section className={`container ${classes.container}`}>
         {/* <PageHeading
         title="Nosotros"
         description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
@@ -99,7 +99,7 @@ ingeniería mecánica eléctrica.
 
           <Organization />
         </div>
-      </div>
+      </section>
     </>
   );
 };

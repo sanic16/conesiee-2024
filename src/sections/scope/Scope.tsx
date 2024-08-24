@@ -5,7 +5,7 @@ import classes from "./scope.module.css";
 
 const Scope = () => {
   return (
-    <section className={`container ${classes.details__icons}`}>
+    <div className={`container ${classes.details__icons}`}>
       <div className={classes.details__icon}>
         <FaUsers />
         <div className={classes["details__icons-amount"]}>+ 150</div>
@@ -29,7 +29,7 @@ const Scope = () => {
         <div className={classes["details__icons-amount"]}>+9</div>
         <h4 className={classes["details__icons-title"]}>Talleres</h4>
       </div>
-    </section>
+    </div>
   );
 };
 

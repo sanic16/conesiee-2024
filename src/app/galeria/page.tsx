@@ -5,14 +5,14 @@ import classes from "./page.module.css";
 
 const page = () => {
   return (
-    <div className={`container`}>
+    <section className={`container`}>
       <PageHeading title="Galería" description="Imágenes de eventos pasados" />
       <div className={classes.gallery}>
         {galleryData.events.map((event) => (
           <ImageCard key={event.title} {...event} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

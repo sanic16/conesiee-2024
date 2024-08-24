@@ -11,7 +11,7 @@ import TecnoLogo from "./TecnoLogo";
 
 const Sponsors = () => {
   return (
-    <section className={`container ${classes.container}`} id="patrocinadores">
+    <div className={`container ${classes.container}`} id="patrocinadores">
       <div className={classes.container__bg}>
         <HomeHeading
           title="Nuestros Patrocinadores"
@@ -44,7 +44,7 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
