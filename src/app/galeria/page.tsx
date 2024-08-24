@@ -4,7 +4,7 @@ import galleryData from "@/data/gallery";
 import classes from "./page.module.css";
 import { Metadata } from "next";
 
-export const metadadta: Metadata = {
+export const metadata: Metadata = {
   title: "CONESIEE | Galería",
   description: "Imágenes de eventos pasados",
 };
