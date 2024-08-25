@@ -45,7 +45,7 @@ export const navbar: Navbar[] = [
 export const authNavbar: Navbar[] = [
   {
     id: 1,
-    url: "/admin",
+    url: "/admin/perfil",
     title: "Perfil",
   },
   {
