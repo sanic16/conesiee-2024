@@ -15,7 +15,6 @@ import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const session = useSession();
-  const router = useRouter();
   return (
     <div className={`container ${classes.container}`}>
       {/* Logo */}
@@ -79,7 +78,6 @@ const Navbar = () => {
               action={async () => {
                 await signOutAction();
                 await signOut();
-                router.push("/");
               }}
             >
               <button className={classes.auth__link}>Cerrar Sesión</button>

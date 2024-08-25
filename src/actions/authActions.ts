@@ -27,5 +27,8 @@ export async function signInAction() {
 }
 
 export async function signOutAction() {
-  return auth.signOut();
+  return auth.signOut({
+    redirect: true,
+    redirectTo: "/",
+  });
 }
