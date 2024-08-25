@@ -21,7 +21,9 @@ export default auth((req) => {
   console.log("NEXT URL: ", nextUrl.pathname);
 
   const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
-  const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
+  const isPublicRoute = publicRoutes.some((route) =>
+    nextUrl.pathname.startsWith(route)
+  );
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
 
   console.log("IS API AUTH ROUTE: ", isApiAuthRoute);
