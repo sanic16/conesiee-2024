@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import classes from "./navbar.module.css";
@@ -9,11 +9,11 @@ import { FaSearch } from "react-icons/fa";
 import InfoText from "./InfoText";
 import NavLink from "./NavLink";
 import { authNavbar, navbar } from "@/data/navbar";
-import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut, signIn } from "next-auth/react";
 import { signInAction, signOutAction } from "@/actions/authActions";
 
 const Navbar = () => {
-  const session = useSession()
+  const session = useSession();
   return (
     <div className={`container ${classes.container}`}>
       {/* Logo */}
@@ -71,7 +71,7 @@ const Navbar = () => {
 
       {/* Auth */}
       <nav className={classes.auth__wrapper}>
-        <div className={classes.auth}>         
+        <div className={classes.auth}>
           {session && session.data ? (
             <form
               action={async () => {
@@ -79,9 +79,7 @@ const Navbar = () => {
                 await signOut();
               }}
             >
-              <button className={classes.auth__link}>
-                Cerrar Sesión
-              </button>
+              <button className={classes.auth__link}>Cerrar Sesión</button>
             </form>
           ) : (
             <form
@@ -89,9 +87,7 @@ const Navbar = () => {
                 await signInAction();
               }}
             >
-              <button className={classes.auth__link}>
-                Iniciar Sesión
-              </button>
+              <button className={classes.auth__link}>Iniciar Sesión</button>
             </form>
           )}
         </div>
@@ -103,33 +99,29 @@ const Navbar = () => {
       {/* Menu */}
       <nav className={classes.menu}>
         <ul className={classes.menu__list}>
-          {
-            session && session.data ?  (
-              authNavbar.map(item => (
+          {session && session.data
+            ? authNavbar.map((item) => (
                 <li className={classes.menu__item} key={item.id}>
-              <NavLink
-                href={item.url}
-                className={classes.menu__link}
-                activeClassName={classes.active}
-              >
-                {item.title}
-              </NavLink>
-            </li>
+                  <NavLink
+                    href={item.url}
+                    className={classes.menu__link}
+                    activeClassName={classes.active}
+                  >
+                    {item.title}
+                  </NavLink>
+                </li>
               ))
-            ) : (
-              navbar.map(item => (
+            : navbar.map((item) => (
                 <li className={classes.menu__item} key={item.id}>
-              <NavLink
-                href={item.url}
-                className={classes.menu__link}
-                activeClassName={classes.active}
-              >
-                {item.title}
-              </NavLink>
-            </li>
-              ))
-            )
-          }
+                  <NavLink
+                    href={item.url}
+                    className={classes.menu__link}
+                    activeClassName={classes.active}
+                  >
+                    {item.title}
+                  </NavLink>
+                </li>
+              ))}
         </ul>
       </nav>
     </div>

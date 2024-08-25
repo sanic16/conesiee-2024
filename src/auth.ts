@@ -2,6 +2,7 @@ import type { NextAuthConfig } from "next-auth";
 import NextAuth from "next-auth";
 import prisma from "./lib/prisma";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { PrismaAdapter } from "@auth/prisma-adapter";
 
 const credentialsConfig = CredentialsProvider({
   name: "Credenciales",
@@ -28,7 +29,7 @@ const credentialsConfig = CredentialsProvider({
       },
       select: {
         id: true,
-        fullName: true,
+        name: true,
         email: true,
       },
     });
@@ -37,7 +38,7 @@ const credentialsConfig = CredentialsProvider({
       return {
         id: user.id,
         email: user.email,
-        name: user.fullName,
+        name: user.name,
       };
     } else {
       return null;
@@ -45,9 +46,13 @@ const credentialsConfig = CredentialsProvider({
   },
 });
 
-const config = {
+export const config = {
   providers: [credentialsConfig],
   trustHost: true,
+  adapter: PrismaAdapter(prisma),
+  session: {
+    strategy: "jwt",
+  },
 } satisfies NextAuthConfig;
 
 export const {
