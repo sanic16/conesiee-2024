@@ -1,8 +1,7 @@
 .profile {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
-  background-color: var(--primary-color);
   color: var(--primary-color);
   padding: 2rem;
 }
@@ -10,10 +9,10 @@
 .profile__image {
   width: 200px;
   height: 200px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
-  border: 0.3rem solid var(--primary-hover);
+  border: 0.2rem solid var(--primary-color);
   transition: border-width 0.3s;
 }
 
@@ -29,7 +28,6 @@
   gap: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: var(--primary-hover);
 }
 
 .profile__user {
@@ -57,4 +55,23 @@
 .profile__email {
   font-size: 1rem;
   color: var(--primary-color);
+}
+
+@media screen and (max-width: 992px) {
+  .profile__image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .profile__info {
+    padding: 0rem;
+  }
 }

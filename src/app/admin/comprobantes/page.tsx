@@ -1,7 +1,6 @@
-import React from 'react'
+import prisma from "@/lib/prisma";
 
-export default function ComprobantesPage() {
-  return (
-    <div>page</div>
-  )
+export default async function ComprobantesPage() {
+  const payments = await prisma.studentPayment.findMany({});
+  return <div className="container"></div>;
 }
