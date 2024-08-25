@@ -4,7 +4,6 @@ import bannerImg1 from "@/../public/images/banner_1.jpeg";
 import bannerImg2 from "@/../public/images/banner_2.jpg";
 import bannerImg3 from "@/../public/images/banner_3.jpg";
 import Image from "next/image";
-import BannerText from "./BannerText";
 
 const Banner = () => {
   return (
