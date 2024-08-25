@@ -77,7 +77,10 @@ const Navbar = () => {
             <form
               action={async () => {
                 await signOutAction();
-                await signOut();
+                await signOut({
+                  redirect: true,
+                  callbackUrl: "/",
+                });
               }}
             >
               <button className={classes.auth__link}>Cerrar Sesión</button>
