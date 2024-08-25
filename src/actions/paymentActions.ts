@@ -478,9 +478,6 @@ export async function createComboPaymentAction(
   const dpiPerson1 = formData.get("dpiPerson1") as string;
   const phonePerson1 = formData.get("phonePerson1") as string;
   const careerPerson1 = formData.get("careerPerson1") as string;
-  const registrationPackagePerson1 = formData.get(
-    "registrationPackagePerson1"
-  ) as string;
   const ticketNumberPerson1 = formData.get("ticketNumberPerson1") as string;
   const paymentProofImagePerson1 = formData.get("paymentProofPerson1") as File;
   const namePerson2 = formData.get("namePerson2") as string;
@@ -489,9 +486,6 @@ export async function createComboPaymentAction(
   const dpiPerson2 = formData.get("dpiPerson2") as string;
   const phonePerson2 = formData.get("phonePerson2") as string;
   const careerPerson2 = formData.get("careerPerson2") as string;
-  const registrationPackagePerson2 = formData.get(
-    "registrationPackagePerson2"
-  ) as string;
   const ticketNumberPerson2 = formData.get("ticketNumberPerson2") as string;
   const paymentProofImagePerson2 = formData.get("paymentProofPerson2") as File;
   const namePerson3 = formData.get("namePerson3") as string;
@@ -500,9 +494,6 @@ export async function createComboPaymentAction(
   const dpiPerson3 = formData.get("dpiPerson3") as string;
   const phonePerson3 = formData.get("phonePerson3") as string;
   const careerPerson3 = formData.get("careerPerson3") as string;
-  const registrationPackagePerson3 = formData.get(
-    "registrationPackagePerson3"
-  ) as string;
   const ticketNumberPerson3 = formData.get("ticketNumberPerson3") as string;
   const paymentProofImagePerson3 = formData.get("paymentProofPerson3") as File;
 
@@ -513,7 +504,6 @@ export async function createComboPaymentAction(
     dpiPerson1,
     phonePerson1,
     careerPerson1,
-    registrationPackagePerson1,
     ticketNumberPerson1,
     namePerson2,
     emailPerson2,
@@ -521,7 +511,6 @@ export async function createComboPaymentAction(
     dpiPerson2,
     phonePerson2,
     careerPerson2,
-    registrationPackagePerson2,
     ticketNumberPerson2,
     namePerson3,
     emailPerson3,
@@ -529,7 +518,6 @@ export async function createComboPaymentAction(
     dpiPerson3,
     phonePerson3,
     careerPerson3,
-    registrationPackagePerson3,
     ticketNumberPerson3,
   });
 
@@ -660,7 +648,7 @@ export async function createComboPaymentAction(
         dpi: dpiPerson1,
         phone: phonePerson1,
         career: careerPerson1,
-        registrationPackage: registrationPackagePerson1,
+        registrationPackage: registrationPackage, 
         ticketNumber: ticketNumberPerson1,
         imageUrl: `https://conesiee-static.codielectro.com/${imageNamePerson1}`,
       },
@@ -674,7 +662,7 @@ export async function createComboPaymentAction(
         dpi: dpiPerson2,
         phone: phonePerson2,
         career: careerPerson2,
-        registrationPackage: registrationPackagePerson2,
+        registrationPackage: registrationPackage,
         ticketNumber: ticketNumberPerson2,
         imageUrl: `https://conesiee-static.codielectro.com/${imageNamePerson2}`,
       }
@@ -688,7 +676,7 @@ export async function createComboPaymentAction(
         dpi: dpiPerson3,
         phone: phonePerson3,
         career: careerPerson3,
-        registrationPackage: registrationPackagePerson3,
+        registrationPackage: registrationPackage,
         ticketNumber: ticketNumberPerson3,
         imageUrl: `https://conesiee-static.codielectro.com/${imageNamePerson3}`,
       }

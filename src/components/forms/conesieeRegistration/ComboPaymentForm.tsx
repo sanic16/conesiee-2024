@@ -36,7 +36,7 @@ const ComboPaymentForm: React.FC<IndividualPaymentFormProps> = ({
   );
   return (
     <div className={`container ${classes.container}`}>
-      <form className={classes.form}>
+      <form action={action} className={classes.form}>
         <FormInput
           type="email"
           label="Correo Electrónico Persona 1"
@@ -216,16 +216,6 @@ const ComboPaymentForm: React.FC<IndividualPaymentFormProps> = ({
           }
         />
 
-        <FormInput
-          type="file"
-          label="Comprobante de Pago Persona 2"
-          id="paymentProofPerson2"
-          name="paymentProofPerson2"
-          error={
-            formState.errors.paymentProofImagePerson2 &&
-            formState.errors.paymentProofImagePerson2.join(", ").toString()
-          }
-        />
 
         <FormInput
           type="file"
@@ -331,26 +321,7 @@ const ComboPaymentForm: React.FC<IndividualPaymentFormProps> = ({
             formState.errors.paymentProofImagePerson3.join(", ").toString()
           }
         />
-        <FormInput
-          type="file"
-          label="Comprobante de Pago Persona 3"
-          id="paymentProofPerson3"
-          name="paymentProofPerson3"
-          error={
-            formState.errors.paymentProofImagePerson3 &&
-            formState.errors.paymentProofImagePerson3.join(", ").toString()
-          }
-        />
-        <FormInput
-          type="file"
-          label="Comprobante de Pago Persona 3"
-          id="paymentProofPerson3"
-          name="paymentProofPerson3"
-          error={
-            formState.errors.paymentProofImagePerson3 &&
-            formState.errors.paymentProofImagePerson3.join(", ").toString()
-          } 
-        />
+       
 
         <div>
           <p className={classes.error__message}>

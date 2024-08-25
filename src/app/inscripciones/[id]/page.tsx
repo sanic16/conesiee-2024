@@ -22,6 +22,8 @@ export default function PaymentDetailsPage({
 
   let form;
 
+    console.log(params.id);
+
   if(comboFormData.includes(params.id)) {
     form = <ComboPaymentForm registrationPackage={params.id} />;
   }else{
