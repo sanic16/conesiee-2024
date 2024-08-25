@@ -30,12 +30,19 @@ const Counter = () => {
     return timeLeft;
   };
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const timerRef = React.useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
+    if (typeof window !== "undefined") {
+      timerRef.current = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+    }
+    return () => {
+      if (typeof window !== "undefined") {
+        clearInterval(timerRef.current as unknown as number);
+      }
+    };
   }, []);
 
   return (

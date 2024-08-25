@@ -60,10 +60,11 @@
 
 .auth__link {
   display: block;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   background-color: transparent;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 }
 
 /* search */
