@@ -1,3 +1,5 @@
+'use client'
+
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import classes from "./navbar.module.css";
 import logo from "@/../public/images/logo.png";
@@ -6,8 +8,12 @@ import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import InfoText from "./InfoText";
 import NavLink from "./NavLink";
+import { authNavbar, navbar } from "@/data/navbar";
+import { useSession, signOut } from "next-auth/react";
+import { signInAction, signOutAction } from "@/actions/authActions";
 
 const Navbar = () => {
+  const session = useSession()
   return (
     <div className={`container ${classes.container}`}>
       {/* Logo */}
@@ -65,10 +71,29 @@ const Navbar = () => {
 
       {/* Auth */}
       <nav className={classes.auth__wrapper}>
-        <div className={classes.auth}>
-          <Link href="/login" className={classes.auth__link}>
-            Iniciar Sesión
-          </Link>
+        <div className={classes.auth}>         
+          {session && session.data ? (
+            <form
+              action={async () => {
+                await signOutAction();
+                await signOut();
+              }}
+            >
+              <button className={classes.auth__link}>
+                Cerrar Sesión
+              </button>
+            </form>
+          ) : (
+            <form
+              action={async () => {
+                await signInAction();
+              }}
+            >
+              <button className={classes.auth__link}>
+                Iniciar Sesión
+              </button>
+            </form>
+          )}
         </div>
       </nav>
 
@@ -78,69 +103,33 @@ const Navbar = () => {
       {/* Menu */}
       <nav className={classes.menu}>
         <ul className={classes.menu__list}>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Inicio
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/nosotros"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Nosotros
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/galeria"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Galería
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/inscripciones"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Inscripciones
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/visitas"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Visitas Técnicas
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/congreso"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Congreso
-            </NavLink>
-          </li>
-          <li className={classes.menu__item}>
-            <NavLink
-              href="/patrocinadores"
-              className={classes.menu__link}
-              activeClassName={classes.active}
-            >
-              Patrocinadores
-            </NavLink>
-          </li>
+          {
+            session && session.data ?  (
+              authNavbar.map(item => (
+                <li className={classes.menu__item} key={item.id}>
+              <NavLink
+                href={item.url}
+                className={classes.menu__link}
+                activeClassName={classes.active}
+              >
+                {item.title}
+              </NavLink>
+            </li>
+              ))
+            ) : (
+              navbar.map(item => (
+                <li className={classes.menu__item} key={item.id}>
+              <NavLink
+                href={item.url}
+                className={classes.menu__link}
+                activeClassName={classes.active}
+              >
+                {item.title}
+              </NavLink>
+            </li>
+              ))
+            )
+          }
         </ul>
       </nav>
     </div>
