@@ -10,6 +10,9 @@ const nextConfig = {
         hostname: "conesiee-static.codielectro.com",
         pathname: "/visitas/horus/*",
       },
+      {
+        hostname: "avatars.githubusercontent.com",
+      },
     ],
   },
 };

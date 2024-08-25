@@ -1,0 +1,48 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--secondary-color);
+  color: whitesmoke;
+  padding: 2rem;
+}
+
+.profile__image {
+  width: 200px;
+  aspect-ratio: 3/4;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  border: 0.5rem solid var(--primary-hover);
+  transition: border-width 0.3s;
+}
+
+.profile__image:hover {
+  border-width: 0;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile__user {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.profile__user span {
+  color: var(--primary-hover);
+}
+
+.profile__name {
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+
+.profile__email {
+  font-size: 1rem;
+  color: whitesmoke;
+}

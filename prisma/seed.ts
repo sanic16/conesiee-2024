@@ -6,6 +6,7 @@ const userData: Prisma.UserCreateInput = {
   email: "julio.sanic.gt.256@gmail.com",
   password: "123456",
   name: "jsanic16",
+  fullName: "Julio Rubén Sanic Martínez",
   image: "https://avatars.githubusercontent.com/u/123691309?v=4",
 };
 
