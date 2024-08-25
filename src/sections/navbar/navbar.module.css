@@ -48,17 +48,22 @@
 .auth__wrapper {
   grid-column: 7 / 9;
   grid-row: 2 / 3;
-  grid: grid;
 }
 
 .auth {
   display: grid;
+  height: 100%;
   text-align: right;
+  justify-items: right;
+  align-items: center;
 }
 
 .auth__link {
   display: block;
   color: var(--primary-color);
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
 }
 
 /* search */

@@ -5,13 +5,16 @@ import classes from "./perfil.module.css";
 const Perfil = ({ user }: { user: User }) => {
   return (
     <div className={classes.profile}>
-      <div className={classes.profile__image}>
-        <Image src={user.image || ""} alt="Foto de perfil" fill />
+      <div>
+        <div className={classes.profile__image}>
+          <Image src={user.image || ""} alt="Foto de perfil" fill />
+        </div>
       </div>
       <div className={classes.profile__info}>
         <h1 className={classes.profile__user}>
           Usuario: <span>{user.name}</span>{" "}
         </h1>
+        <div className={classes.profile__divider} />
         <h2 className={classes.profile__name}>
           Nombre: <span>{user.fullName}</span>
         </h2>
