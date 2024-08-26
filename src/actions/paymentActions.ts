@@ -21,9 +21,10 @@ const validateIndividualPaymentSchema = z.object({
     .max(100, {
       message: "El nombre debe tener menos de 100 caracteres",
     }),
-  email: z.string().regex(/^[0-9]{13}@ingenieria\.usac\.edu\.gt$/, {
-    message: "Correo inválido, formato: 2320556340103@ingenieria.usac.edu.gt",
-  }),
+  // email: z.string().regex(/^[0-9]{13}@ingenieria\.usac\.edu\.gt$/, {
+  //   message: "Correo inválido, formato: 2320556340103@ingenieria.usac.edu.gt",
+  // }),
+  email: z.string().email({ message: "Correo inválido" }),
   studentId: z
     .string()
     .min(9, { message: "Carné inválido, formato: 201900000" })
