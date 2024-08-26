@@ -4,6 +4,9 @@ import PageHeading from "@/components/pageHeading/PageHeading";
 import { cards } from "@/data/payment";
 import { notFound } from "next/navigation";
 import React from "react";
+import Image from "next/image";
+import accountImg from "@/../public/images/cuenta.jpeg";
+import classes from "./page.module.css";
 
 export default function PaymentDetailsPage({
   params,
@@ -22,17 +25,13 @@ export default function PaymentDetailsPage({
 
   let form;
 
-    console.log(params.id);
+  console.log(params.id);
 
-  if(comboFormData.includes(params.id)) {
+  if (comboFormData.includes(params.id)) {
     form = <ComboPaymentForm registrationPackage={params.id} />;
-  }else{
+  } else {
     form = <IndividualPaymentForm registrationPackage={params.id} />;
   }
-
-
-
-
 
   return (
     <div className="container">
@@ -40,6 +39,17 @@ export default function PaymentDetailsPage({
         title={`Inscripción ${params.id.toLocaleUpperCase()}`}
         description={`El costo de la inscripción es de ${packageInfo.price} Quetzales`}
       />
+      <div className={classes.payment}>
+        <p>Puedes realizar el pago de la inscripción a la siguiente cuenta:</p>
+        <div className={classes.payment__image}>
+          <Image
+            src={accountImg}
+            alt="Cuenta"
+            width={accountImg.width / 2}
+            height={accountImg.height / 2}
+          />
+        </div>
+      </div>
 
       {form}
     </div>
