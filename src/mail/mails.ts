@@ -8,7 +8,7 @@ export async function sendMail({
   subject,
   body,
 }: {
-  to: string;
+  to: string | string[];
   subject: string;
   body: string;
 }) {
@@ -33,7 +33,7 @@ export async function sendMail({
   try {
     await transporter.sendMail({
       from: MAIL_DEFAULT_SENDER,
-      to: to,
+      to: (Array.isArray(to) ? to : [to]).join(", "),
       subject: subject,
       text: body,
       html: body,

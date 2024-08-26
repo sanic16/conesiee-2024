@@ -207,7 +207,10 @@ export async function createIndividualPaymentAction(
   const htmlStudentBody = compiledStudentTemplate(name);
   try {
     await sendMail({
-      to: process.env.MAIL_DEFAULT_ADMIN_2 as string,
+      to: [
+        process.env.MAIL_DEFAULT_ADMIN_2 as string,
+        "julio.sanic.gt.256@gmail.com",
+      ],
       subject: `Nuevo pago de ${name}`,
       body: htmlContactBody,
     });
@@ -614,7 +617,10 @@ export async function createComboPaymentAction(
 
   try {
     await sendMail({
-      to: process.env.MAIL_DEFAULT_ADMIN_2 as string,
+      to: [
+        process.env.MAIL_DEFAULT_ADMIN_2 as string,
+        "julio.sanic.gt.256@gmail.com",
+      ],
       subject: `Nuevo pago de ${namePerson1}`,
       body: htmlContactBodyPerson1,
     });
@@ -625,7 +631,10 @@ export async function createComboPaymentAction(
     });
 
     await sendMail({
-      to: process.env.MAIL_DEFAULT_ADMIN_2 as string,
+      to: [
+        process.env.MAIL_DEFAULT_ADMIN_2 as string,
+        "julio.sanic.gt.256@gmail.com",
+      ],
       subject: `Nuevo pago de ${namePerson2}`,
       body: htmlContactBodyPerson2,
     });
@@ -636,7 +645,10 @@ export async function createComboPaymentAction(
     });
 
     await sendMail({
-      to: process.env.MAIL_DEFAULT_ADMIN_2 as string,
+      to: [
+        process.env.MAIL_DEFAULT_ADMIN_2 as string,
+        "julio.sanic.gt.256@gmail.com",
+      ],
       subject: `Nuevo pago de ${namePerson3}`,
       body: htmlContactBodyPerson3,
     });
