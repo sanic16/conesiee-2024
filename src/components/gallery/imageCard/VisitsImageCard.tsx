@@ -38,7 +38,7 @@ const VisitsImageCard: React.FC<GalleryData> = ({
           <Link href={`/visitas/${slug}`} className="btn whitesmoke">
             Ver más
           </Link>
-          <Link href={`/visitas/${slug}`} className="btn gold">
+          <Link href={`/inscripciones`} className="btn gold">
             Inscribirse
           </Link>
         </div>
