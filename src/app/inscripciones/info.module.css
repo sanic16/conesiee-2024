@@ -69,9 +69,26 @@
   align-items: center;
 }
 
-.card__icon {
+.card .card__icon {
   font-size: 5.5rem;
   display: flex;
+  color: var(--secondary-color);
+}
+
+.card.silver .card__icon {
+  color: #c0c0c0;
+}
+
+.card.bronze .card__icon {
+  color: #cd7f32;
+}
+
+.card:hover .card__icon {
+  color: var(--primary-color);
+}
+
+.card:hover .card__btn {
+  color: var(--primary-color);
 }
 
 .card::before {
@@ -112,10 +129,6 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: whitesmoke;
-}
-
-.content p:nth-of-type(1) {
-  font-size: 1.1rem;
 }
 
 .card:hover .content {
