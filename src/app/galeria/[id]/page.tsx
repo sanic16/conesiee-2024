@@ -30,3 +30,12 @@ export default function GalleryImageIdPage({
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  const paths = galleryData.events.map((event) => ({
+    params: {
+      id: event.slug,
+    },
+  }));
+  return paths;
+}
