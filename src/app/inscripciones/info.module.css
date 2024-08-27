@@ -65,6 +65,23 @@
   width: 320px;
 }
 
+.card__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+}
+
+.card__icon {
+  font-size: 5.5rem;
+  display: flex;
+}
+
 .card::before {
   content: "";
   position: absolute;
@@ -97,7 +114,7 @@
 }
 
 .content h3 {
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
   margin-top: 0;
   line-height: 1.2;
   font-size: 1.3rem;
@@ -107,11 +124,6 @@
 
 .content p:nth-of-type(1) {
   font-size: 1.1rem;
-}
-
-.content a {
-  margin-top: 1rem;
-  align-self: flex-start;
 }
 
 .card:hover .content {
