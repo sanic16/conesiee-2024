@@ -33,3 +33,16 @@ const page = ({ params }: { params: { id: string; imageId: string } }) => {
 };
 
 export default page;
+
+export async function generateStaticParams() {
+  const paths = galleryData.events.map((event) => {
+    return event.images.map((image) => ({
+      params: {
+        id: event.slug,
+        imageId: image,
+      },
+    }));
+  });
+
+  return paths.flat();
+}

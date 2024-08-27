@@ -1,17 +1,12 @@
-"use client";
 import { notFound } from "next/navigation";
-import classes from "./page.module.css";
 import galleryData from "@/data/gallery";
-import { useRouter } from "next/navigation";
-import { FaTimes } from "react-icons/fa";
+import Modal from "./Modal";
 
 const InterceptedImagePage = ({
   params,
 }: {
   params: { id: string; imageId: string };
 }) => {
-  const router = useRouter();
-
   const imageSlug = decodeURIComponent(params.imageId);
   const isIdValid = galleryData.events
     .map((event) => event.slug)
@@ -27,25 +22,20 @@ const InterceptedImagePage = ({
     return notFound();
   }
 
-  return (
-    <>
-      <div
-        className={classes.modal__backdrop}
-        onClick={() => {
-          router.back();
-        }}
-      ></div>
-      <dialog className={classes.modal} open>
-        <div className={classes.fullscreen__image}>
-          <img
-            src={`https://conesiee-static.codielectro.com${event?.path}${imageSlug}`}
-            alt="gallery"
-          />
-        </div>
-      </dialog>
-      <FaTimes className={classes.close__icon} onClick={() => router.back()} />
-    </>
-  );
+  return <Modal path={event?.path || ""} imageSlug={imageSlug} />;
 };
 
 export default InterceptedImagePage;
+
+export async function generateStaticParams() {
+  const paths = galleryData.events.map((event) => {
+    return event.images.map((image) => ({
+      params: {
+        id: event.slug,
+        imageId: image,
+      },
+    }));
+  });
+
+  return paths.flat();
+}
