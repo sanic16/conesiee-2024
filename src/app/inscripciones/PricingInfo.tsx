@@ -19,8 +19,8 @@ const PricingInfo = () => {
           </tr>
           <tr className={`${classes.tableRow} ${classes.evenRow}`}>
             <td className={classes.tableData}>Completo (Con Cena de Gala)</td>
-            <td className={classes.tableData}>Q 400.00</td>
             <td className={classes.tableData}>Q 500.00</td>
+            <td className={classes.tableData}>Q 600.00</td>
           </tr>
           <tr className={`${classes.tableRow} ${classes.rowHover}`}>
             <td className={classes.tableData}>
