@@ -27,7 +27,12 @@ const Info = () => {
                   <p>
                     <strong>Precio:</strong> {card.price}
                   </p>
-                  <Link href={card.link} className="btn primary">
+                  <Link
+                    href={card.link}
+                    className="btn primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Inscribirse
                   </Link>
                 </div>

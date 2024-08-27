@@ -9,6 +9,11 @@
   margin-top: 1rem;
 }
 
+.details__content a {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
   .details__container {
     grid-template-columns: 1fr;

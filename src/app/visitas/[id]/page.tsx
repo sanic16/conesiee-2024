@@ -35,6 +35,20 @@ export default function VisitasPageId({ params }: { params: { id: string } }) {
         <div className={classes.details__content}>
           <p>{event?.description}</p>
           <p>
+            <strong>
+              Inscríbete :{" "}
+              <a
+                href={event?.registrationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {event?.registrationLink}
+              </a>
+            </strong>
+            . Antes de proceder a la visita técnica tienes que inscribirte al
+            congreso <Link href="/inscripciones">aquí.</Link>
+          </p>
+          <p>
             <strong>Fecha:</strong> {event?.date}
           </p>
         </div>
