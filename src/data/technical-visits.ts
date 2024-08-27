@@ -25,6 +25,8 @@ export const technicalVisits: TechnicalVisitInfo = {
         "/visitas/chixoy/image_1.jpeg",
         "/visitas/chixoy/image_2.jpeg",
       ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeCD5j68szX4jaTNOmR_NMzEKXZy3sGSjUyzUMziSUjL4JhuA/closedform",
     },
   ],
 };

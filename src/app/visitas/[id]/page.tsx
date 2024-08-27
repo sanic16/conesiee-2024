@@ -5,6 +5,7 @@ import {
   technicalConferenceVisits,
 } from "@/data/technical-visits";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function VisitasPageId({ params }: { params: { id: string } }) {
   console.log(params.id);
@@ -39,11 +40,12 @@ export default function VisitasPageId({ params }: { params: { id: string } }) {
           </p>
         </div>
         <div className={classes.details__image}>
-          <img
+          <Image
             src={`https://conesiee-static.codielectro.com${
               event?.images[1] || event?.images[0]
             }`}
-            alt={event?.title}
+            alt={event?.title || ""}
+            fill
           />
         </div>
       </div>
