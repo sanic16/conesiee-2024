@@ -136,17 +136,6 @@
   .logo {
     grid-column: 1 / 4;
   }
-  .search {
-    grid-column: 4 / 6;
-  }
-
-  .search__input {
-    grid-column: 2 / 11;
-  }
-
-  .search__button {
-    grid-column: 10 / 11;
-  }
 
   .container {
     grid-template-columns: repeat(8, minmax(min-content, 7.75rem));
@@ -159,18 +148,6 @@
   }
   .info {
     display: none;
-  }
-  .search {
-    grid-column: 1 / 5;
-    grid-row: 2 / 3;
-  }
-
-  .search__input {
-    grid-column: 1 / 9;
-  }
-
-  .search__button {
-    grid-column: 8 / 9;
   }
 
   .container {
@@ -185,12 +162,6 @@
 @media screen and (max-width: 576px) {
   .social {
     grid-column: 5 / 9;
-  }
-  .search__input {
-    grid-column: 1 / 10;
-  }
-  .search__button {
-    grid-column: 9 / 10;
   }
 }
 
