@@ -24,7 +24,7 @@ export const paymentOptions = [
     title: "Combo Cuates USAC/Externos",
     // description: "Sin Cena de Gala",
     // price: "Q400",
-    link: "https://forms.gle/SyLLjsCDJA3nLDw96",
+    link: "https://forms.gle/SbgJ7DsWCzsaS6mb7",
     icon: FaUsers,
   },
   {
@@ -32,7 +32,7 @@ export const paymentOptions = [
     title: "Inscripción Externos/Profesionales",
     // description: "3 personas + Cena de Gala",
     // price: "Q1350",
-    link: "https://forms.gle/SbgJ7DsWCzsaS6mb7",
+    link: "https://forms.gle/ZF8Trnx1GADvx7Gz6",
     icon: FaUserTie,
   },
   // {
