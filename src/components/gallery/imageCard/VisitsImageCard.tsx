@@ -7,6 +7,7 @@ interface GalleryData {
   date: string;
   slug: string;
   images: string[];
+  registrationLink?: string;
   noCongress?: boolean;
 }
 
@@ -17,6 +18,7 @@ const VisitsImageCard: React.FC<GalleryData> = ({
   slug,
   images,
   noCongress,
+  registrationLink,
 }) => {
   const now = new Date();
   const visitDate = new Date(date);
@@ -38,7 +40,12 @@ const VisitsImageCard: React.FC<GalleryData> = ({
           <Link href={`/visitas/${slug}`} className="btn whitesmoke">
             Ver más
           </Link>
-          <Link href={`/inscripciones`} className="btn gold">
+          <Link
+            href={registrationLink || ""}
+            className="btn gold"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             Inscribirse
           </Link>
         </div>

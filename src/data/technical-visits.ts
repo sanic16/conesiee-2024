@@ -6,6 +6,7 @@ interface TechnicalVisitInfo {
     shortDescription: string;
     date: string;
     images: string[];
+    registrationLink?: string;
   }[];
 }
 
@@ -39,6 +40,7 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
         "Explora el proceso de producción y control de calidad en Alimentos S.A.",
       date: "2024-09-23",
       images: ["/visitas/alimentos/logo.png", "/visitas/alimentos/image_1.jpg"],
+      registrationLink: "https://forms.gle/GCX6yBUcYpiSMsqQ8",
     },
     {
       title: "Parque Eólico San Antonio",
@@ -52,6 +54,7 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
         "/visitas/san_antonio/logo.png",
         "/visitas/san_antonio/image_1.jpg",
       ],
+      registrationLink: "https://forms.gle/sKDs8NoPbBY73ghS6",
     },
     {
       title: "Colgate",
@@ -62,6 +65,7 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
         "Descubre los procesos de fabricación y control de calidad en la planta de Colgate.",
       date: "2024-09-23",
       images: ["/visitas/colgate/logo.png"],
+      registrationLink: "https://forms.gle/ALNB5aKZQTiztwD69",
     },
     {
       title: "Administrador de Mercado Mayorista",
@@ -76,6 +80,7 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
         "/visitas/amm/image_1.webp",
         "/visitas/amm/image_2.webp",
       ],
+      registrationLink: "https://forms.gle/rzDPbPWR7dZuHbty6",
     },
     {
       title: "Planta Industrial Samboro",
@@ -86,6 +91,7 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
         "Observa los procesos industriales y tecnologías avanzadas en la Planta Samboro.",
       date: "2024-09-23",
       images: ["/visitas/samboro/logo.jpg", "/visitas/samboro/image_1.jpg"],
+      registrationLink: "https://forms.gle/KRsyAbN6AW51RvWH6",
     },
     {
       title: "Subestación Guatemala Sur",
@@ -99,6 +105,32 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
         "/visitas/guate_sur/logo.jpg",
         "/visitas/guate_sur/image_1.webp",
       ],
+      registrationLink: "https://forms.gle/WCLf8EDDrtkea8cx7",
+    },
+    {
+      title: "Subestación Guatemala Sur",
+      slug: "subestacion-guatemala-sur",
+      description:
+        "Visita técnica a la Subestación Guatemala Sur, una instalación crucial para la distribución de energía eléctrica en la región. La visita ofrecerá una visión detallada del funcionamiento de la subestación, incluyendo la gestión de cargas, la protección de sistemas y el mantenimiento de equipos.",
+      shortDescription:
+        "Explora el funcionamiento y la gestión de la Subestación Guatemala Sur.",
+      date: "2024-09-24",
+      images: [
+        "/visitas/guate_sur/logo.jpg",
+        "/visitas/guate_sur/image_1.webp",
+      ],
+      registrationLink: "https://forms.gle/MEE9XT2A1W7NKiFo7",
+    },
+    {
+      title: "Planta Industrial Samboro",
+      slug: "planta-industrial-samboro",
+      description:
+        "Visita técnica a la Planta Industrial Samboro, donde se examinarán los procesos de producción industrial avanzados. Los participantes podrán observar las líneas de producción, las tecnologías empleadas y los procedimientos de control de calidad en esta instalación clave para el sector industrial en Guatemala.",
+      shortDescription:
+        "Observa los procesos industriales y tecnologías avanzadas en la Planta Samboro.",
+      date: "2024-09-24",
+      images: ["/visitas/samboro/logo.jpg", "/visitas/samboro/image_1.jpg"],
+      registrationLink: "https://forms.gle/t6R1f1c7j9QsoRun6",
     },
   ],
 };

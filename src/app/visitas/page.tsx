@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description: "Visitas técnicas realizadas y programadas para los congresos.",
 };
 
+const orderedByDateTechnicalConferenceVisits =
+  technicalConferenceVisits.visits.sort(
+    (a, b) => new Date(a.date).getDate() - new Date(b.date).getDate()
+  );
+
 const page = () => {
   return (
     <>
@@ -36,7 +41,7 @@ const page = () => {
           <div>
             <h2 className={classes.heading}>Actividades para los congresos</h2>
             <div className={classes.gallery}>
-              {technicalConferenceVisits.visits.map((event) => (
+              {orderedByDateTechnicalConferenceVisits.map((event) => (
                 <VisitsImageCard
                   key={event.title}
                   {...event}
