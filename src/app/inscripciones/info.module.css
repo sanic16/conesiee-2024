@@ -21,14 +21,6 @@
   overflow: hidden;
 }
 
-.card.gold a {
-  background: var(--primary-hover);
-}
-
-.card.gold:hover .content a {
-  background: var(--primary-hover);
-}
-
 .card.silver a {
   background: #c0c0c0;
   color: var(--primary-color);
@@ -132,10 +124,6 @@
 
 .card:hover .content h3 {
   color: var(--primary-color);
-}
-
-.card:hover .content a {
-  background-color: var(--primary-color);
 }
 
 @media screen and (max-width: 400px) {
