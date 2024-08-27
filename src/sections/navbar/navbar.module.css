@@ -67,38 +67,6 @@
   cursor: pointer;
 }
 
-/* search */
-.search {
-  grid-column: 3 / 7;
-  grid-row: 1 / 2;
-  display: flex;
-  align-items: center;
-}
-
-.search__form {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(10, 10%);
-}
-
-.search__input {
-  grid-column: 3 / 8;
-  grid-row: 1 / 2;
-  padding: 3px 4px;
-  font-size: 0.9rem;
-  border: none;
-  border-bottom: 1px solid var(--primary-color);
-  outline: none;
-}
-
-.search__button {
-  grid-column: 7 / 8;
-  grid-row: 1 / 2;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 /* Info */
 .info {
   grid-column: 1 / 5;

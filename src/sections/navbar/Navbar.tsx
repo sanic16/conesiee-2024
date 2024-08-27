@@ -11,7 +11,8 @@ import NavLink from "./NavLink";
 import { authNavbar, navbar } from "@/data/navbar";
 import { useSession, signOut, signIn } from "next-auth/react";
 import { signInAction, signOutAction } from "@/actions/authActions";
-import { useRouter } from "next/navigation";
+import SearchInput from "@/components/ui/searchInput/SearchInput";
+import { Suspense } from "react";
 
 const Navbar = () => {
   const session = useSession();
@@ -25,18 +26,9 @@ const Navbar = () => {
       </div>
 
       {/* Search */}
-      <div className={classes.search}>
-        <form className={classes.search__form}>
-          <input
-            type="text"
-            className={classes.search__input}
-            placeholder="Buscar..."
-          />
-          <button className={classes.search__button}>
-            <FaSearch />
-          </button>
-        </form>
-      </div>
+      <Suspense>
+        <SearchInput />
+      </Suspense>
 
       {/* Social Networks */}
       <ul className={classes.social}>

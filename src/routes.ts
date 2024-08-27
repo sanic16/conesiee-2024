@@ -10,6 +10,7 @@ export const publicRoutes = [
   "/visitas",
   "/congreso",
   "/patrocinadores",
+  "/search",
 ];
 
 /**
