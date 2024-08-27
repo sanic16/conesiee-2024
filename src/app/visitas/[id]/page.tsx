@@ -50,3 +50,17 @@ export default function VisitasPageId({ params }: { params: { id: string } }) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  const ids: string[] = [];
+  technicalVisits.visits.forEach((visit) => {
+    ids.push(visit.slug);
+  });
+  technicalConferenceVisits.visits.forEach((visit) => {
+    ids.push(visit.slug);
+  });
+
+  return ids.map((id) => ({
+    id,
+  }));
+}

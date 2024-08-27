@@ -10,12 +10,19 @@ const userData: Prisma.UserCreateInput[] = [
     fullName: "Julio Rubén Sanic Martínez",
     image: "https://avatars.githubusercontent.com/u/123691309?v=4",
   },
+  // {
+  //   email: "angela@gmail.com",
+  //   password: "123456",
+  //   name: "angela",
+  //   fullName: "Angela Beatríz Canel Hernández",
+  //   image: `https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/organization-chart/tjysyvyzgalf31he8hke`,
+  // },
   {
-    email: "angela@gmail.com",
+    email: "congresoconesieeusac@ingenieria.usac.edu.gt",
     password: "123456",
-    name: "angela",
-    fullName: "Angela Beatríz Canel Hernández",
-    image: `https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/organization-chart/tjysyvyzgalf31he8hke`,
+    name: "admin",
+    fullName: "Administrador",
+    image: `https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/mydwxmoflyihk0yylln8`,
   },
   {
     email: "201903798@ingenieria.usac.edu.gt",

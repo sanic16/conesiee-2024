@@ -25,8 +25,6 @@ export default function PaymentDetailsPage({
 
   let form;
 
-  console.log(params.id);
-
   if (comboFormData.includes(params.id)) {
     form = <ComboPaymentForm registrationPackage={params.id} />;
   } else {
@@ -54,4 +52,9 @@ export default function PaymentDetailsPage({
       {form}
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  const ids = cards.map((card) => card.link.split("/").pop());
+  return ids.map((id) => ({ id }));
 }
