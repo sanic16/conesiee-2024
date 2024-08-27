@@ -1,6 +1,8 @@
 import BannerCongress from "@/components/bannerCongress/BannerCongress";
 import Info from "./Info";
 import { Metadata } from "next";
+import HomeHeading from "@/components/homeHeading/HomeHeading";
+import PricingInfo from "./PricingInfo";
 
 export const metadata: Metadata = {
   title: "CONESIEE | Inscripción",
@@ -17,6 +19,8 @@ const PaymentPage = () => {
       />
       <section className="container">
         <Info />
+        <HomeHeading title="Precios de inscripción" description="" />
+        <PricingInfo />
       </section>
     </>
   );
