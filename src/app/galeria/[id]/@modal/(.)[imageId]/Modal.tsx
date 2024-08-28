@@ -3,6 +3,7 @@
 import { FaTimes } from "react-icons/fa";
 import classes from "./page.module.css";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface ModalProps {
   path: string;
@@ -11,7 +12,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ path, imageSlug }) => {
   const router = useRouter();
-
+  console.log("process.env.CLOUDINARY_URL", process.env.CLOUDINARY_URL);
   return (
     <>
       <div
@@ -22,9 +23,10 @@ const Modal: React.FC<ModalProps> = ({ path, imageSlug }) => {
       ></div>
       <dialog className={classes.modal} open>
         <div className={classes.fullscreen__image}>
-          <img
-            src={`https://conesiee-static.codielectro.com${path}${imageSlug}`}
+          <Image
+            src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL}${path}${imageSlug}`}
             alt="gallery"
+            fill
           />
         </div>
       </dialog>

@@ -30,6 +30,7 @@
 .fullscreen__image {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .fullscreen__image img {

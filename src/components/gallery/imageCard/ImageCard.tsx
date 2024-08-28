@@ -30,9 +30,10 @@ const ImageCard: React.FC<GalleryData> = ({
         </Link>
       </div>
       <div className={classes.card__img}>
-        <img
-          src={`https://conesiee-static.codielectro.com${path}${images[0]}`}
+        <Image
+          src={`${process.env.CLOUDINARY_URL}${path}${images[0]}`}
           alt="gallery"
+          fill
         />
       </div>
     </article>

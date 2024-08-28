@@ -1,6 +1,5 @@
 import ImageGallery from "@/components/gallery/imageGallery/ImageGallery";
 import PageHeading from "@/components/pageHeading/PageHeading";
-import galleryData from "@/data/gallery";
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 
