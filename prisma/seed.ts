@@ -204,12 +204,47 @@ const galleryEventData: Prisma.GalleryEventCreateInput[] = [
   },
 ];
 
+const searchingRouteData: Prisma.RouteCreateInput[] = [
+  {
+    title: "Nosotros",
+    description: "Conoce más sobre CONESIEE 2024 y su equipo organizador.",
+    path: "/nosotros",
+  },
+  {
+    title: "Galería",
+    description:
+      "Explora las fotos de las visitas técnicas y eventos del congreso.",
+    path: "/galeria",
+  },
+  {
+    title: "Misión",
+    description: "La misión de CONESIEE 2024 es...",
+    path: "/nosotros#mision",
+  },
+  {
+    title: "Visión",
+    description: "La visión de CONESIEE 2024 es...",
+    path: "/nosotros#vision",
+  },
+  {
+    title: "Objetivos",
+    description: "Los objetivos de CONESIEE 2024 son...",
+    path: "/nosotros#objetivos",
+  },
+  {
+    title: "Organizadores",
+    description: "Conoce a nuestro equipo de trabajo.",
+    path: "/nosotros#organizadores",
+  },
+];
+
 async function main() {
   console.log("Clearing data...");
   await prisma.user.deleteMany({});
   await prisma.studentPayment.deleteMany({});
   await prisma.technicalVisitEvent.deleteMany({});
   await prisma.galleryEvent.deleteMany({});
+  await prisma.route.deleteMany({});
 
   for (const technicalVisit of technicalVisitData) {
     try {
@@ -231,6 +266,16 @@ async function main() {
     try {
       await prisma.galleryEvent.create({
         data: galleryEvent,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  for (const route of searchingRouteData) {
+    try {
+      await prisma.route.create({
+        data: route,
       });
     } catch (error) {
       console.log(error);

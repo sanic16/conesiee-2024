@@ -46,7 +46,7 @@ const page = () => {
         title="Nosotros"
         description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
       /> */}
-        <div className={classes.container__bg} id="mission">
+        <div className={classes.container__bg} id="mision">
           <div className={classes.box}>
             <SimpleHeading
               title="Misión"
@@ -81,7 +81,7 @@ ingeniería mecánica eléctrica.
               />
             </div>
           </div>
-          <div className={classes.box}>
+          <div className={classes.box} id="objetivos">
             <SimpleHeading
               title="Objetivos"
               description={objectives}

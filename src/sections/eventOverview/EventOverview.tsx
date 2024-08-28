@@ -24,7 +24,7 @@ const visitasTecnicas = [
 
 const EventOverview = () => {
   return (
-    <div className={`container ${classes.container}`}>
+    <div className={`container ${classes.container}`} id="detallesEvento">
       <div className={classes.container__bg}>
         <HomeHeading
           title="Detalles del evento"
