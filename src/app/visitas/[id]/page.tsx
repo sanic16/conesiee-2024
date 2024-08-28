@@ -1,29 +1,32 @@
 import PageHeading from "@/components/pageHeading/PageHeading";
 import classes from "./page.module.css";
-import {
-  technicalVisits,
-  technicalConferenceVisits,
-} from "@/data/technical-visits";
 import Link from "next/link";
+import prisma from "@/lib/prisma";
+import { TechnicalVisitEvent } from "@prisma/client";
 
-export default function VisitasPageId({ params }: { params: { id: string } }) {
-  console.log(params.id);
-  const eventIds = technicalVisits.visits.map((visit) => visit.slug);
-  eventIds.push(...technicalConferenceVisits.visits.map((visit) => visit.slug));
+export default async function VisitasPageId({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const eventSlugIds = await prisma.technicalVisitEvent.findMany({
+    select: {
+      slug: true,
+    },
+  });
+
+  const eventIds = eventSlugIds.map((event) => event.slug);
 
   if (!eventIds.includes(params.id)) {
     return <div>El evento no existe</div>;
   }
 
-  let event;
-
-  event = technicalVisits.visits.find((event) => event.slug === params.id);
-
-  if (!event) {
-    event = technicalConferenceVisits.visits.find(
-      (event) => event.slug === params.id
-    );
-  }
+  let event: TechnicalVisitEvent | null =
+    await prisma.technicalVisitEvent.findFirst({
+      where: {
+        slug: params.id,
+      },
+    });
 
   return (
     <div className="container">
@@ -49,7 +52,12 @@ export default function VisitasPageId({ params }: { params: { id: string } }) {
             congreso <Link href="/inscripciones">aquí.</Link>
           </p>
           <p>
-            <strong>Fecha:</strong> {event?.date}
+            <strong>Fecha:</strong>{" "}
+            {event?.date.toLocaleDateString("es-GT", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </p>
         </div>
         <div className={classes.details__image}>
@@ -66,15 +74,15 @@ export default function VisitasPageId({ params }: { params: { id: string } }) {
 }
 
 export async function generateStaticParams() {
-  const ids: string[] = [];
-  technicalVisits.visits.forEach((visit) => {
-    ids.push(visit.slug);
-  });
-  technicalConferenceVisits.visits.forEach((visit) => {
-    ids.push(visit.slug);
+  const ids = await prisma.technicalVisitEvent.findMany({
+    select: {
+      slug: true,
+    },
   });
 
-  return ids.map((id) => ({
-    id,
-  }));
+  return ids.map((id) => {
+    return {
+      id: id.slug,
+    };
+  });
 }

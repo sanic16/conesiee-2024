@@ -134,5 +134,21 @@ export const technicalConferenceVisits: TechnicalVisitInfo = {
       images: ["/visitas/samboro/logo.jpg", "/visitas/samboro/image_1.jpg"],
       registrationLink: "https://forms.gle/t6R1f1c7j9QsoRun6",
     },
+    {
+      title: "Hidroeléctrica Chixoy ",
+      slug: "hidroelectrica-chixoy",
+      description:
+        "Visita técnica a la Hidroeléctrica Chixoy, una de las principales plantas de generación de energía hidroeléctrica en Guatemala. Los participantes tendrán la oportunidad de explorar la infraestructura de la planta, incluyendo la presa, las turbinas y los sistemas de distribución de energía. Esta visita proporcionará una visión detallada de la generación de energía hidroeléctrica y su impacto en el medio ambiente.",
+      shortDescription:
+        "Explora la generación de energía hidroeléctrica en la Hidroeléctrica Chixoy.",
+      date: "2024-08-31",
+      images: [
+        "/visitas/chixoy/logo.jpg",
+        "/visitas/chixoy/image_1.jpeg",
+        "/visitas/chixoy/image_2.jpeg",
+      ],
+      registrationLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeCD5j68szX4jaTNOmR_NMzEKXZy3sGSjUyzUMziSUjL4JhuA/closedform",
+    },
   ],
 };
