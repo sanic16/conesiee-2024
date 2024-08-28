@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import classes from "./searchCard.module.css";
 
 interface SearchCardProps {
   title: string;
@@ -13,18 +13,13 @@ const SearchCard: React.FC<SearchCardProps> = ({
   link,
 }) => {
   return (
-    <div>
-      <div>
-        <h3>{title}</h3>
-        <div />
+    <Link href={link}>
+      <div className={classes.card}>
+        <h3 className={classes.card__title}>{title}</h3>
+        <div className={classes.divider} />
+        <p className={classes.card__description}>{description}</p>
       </div>
-      <div>
-        <p>{description}</p>
-        <Link href={link} className="btn">
-          Ver más
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 };
 

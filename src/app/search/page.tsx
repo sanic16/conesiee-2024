@@ -16,13 +16,13 @@ const SearchPage: React.FC<SearchPageProps> = async ({ searchParams }) => {
 
   if (searchResult.length === 0)
     return (
-      <div>
+      <section className="container">
         <h2>No se encontraron resultados para la búsqueda: {search}</h2>
-      </div>
+      </section>
     );
 
   return (
-    <div className="container">
+    <section className="container">
       {searchResult.map((result) => (
         <SearchCard
           key={result.id}
@@ -31,7 +31,7 @@ const SearchPage: React.FC<SearchPageProps> = async ({ searchParams }) => {
           link={result.path}
         />
       ))}
-    </div>
+    </section>
   );
 };
 
