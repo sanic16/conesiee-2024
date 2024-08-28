@@ -85,3 +85,14 @@ model TechnicalVisitEvent {
   registrationLink String
   isFromCongress Boolean @default(true)
 } 
+
+model GalleryEvent{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+   title String
+    slug String
+    description String
+    date DateTime
+    path String
+    images String[]
+}
+
