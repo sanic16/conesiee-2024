@@ -208,6 +208,8 @@ async function main() {
   console.log("Clearing data...");
   await prisma.user.deleteMany({});
   await prisma.studentPayment.deleteMany({});
+  await prisma.technicalVisitEvent.deleteMany({});
+  await prisma.galleryEvent.deleteMany({});
 
   for (const technicalVisit of technicalVisitData) {
     try {
