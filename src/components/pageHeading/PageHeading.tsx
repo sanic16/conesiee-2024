@@ -8,7 +8,7 @@ interface PageHeadingProps {
 
 const PageHeading: React.FC<PageHeadingProps> = ({ title, description }) => {
   return (
-    <div>
+    <div className="container">
       <h1 className={classes.title}>{title}</h1>
       <div className={classes.divider__small}></div>
       <div className={classes.divider}></div>
