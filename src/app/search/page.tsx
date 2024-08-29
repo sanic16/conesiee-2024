@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import React, { Suspense } from "react";
-import Search from "./Search";
+import Search from "./search/Search";
 import SquareRotatingLoader from "@/components/squareRotatingLoader/SquareRotatingLoader";
 
 interface SearchPageProps {

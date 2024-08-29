@@ -1,14 +1,22 @@
-import React from "react";
-import SearchCard from "./SearchCard";
-import { searchRoutes } from "@/queries/search";
-import classes from "./search.module.css";
+import SearchCard from "../searchCard/SearchCard";
+import classes from "./searchResult.module.css";
 
-interface SearchProps {
+interface SearchResultProps {
+  searchResult: {
+    id: string;
+    title: string;
+    description: string;
+    path: string;
+    createdAt: Date;
+    updatedAt: Date;
+  }[];
   search: string;
 }
 
-const Search: React.FC<SearchProps> = async ({ search }) => {
-  const searchResult = await searchRoutes(search);
+const SearchResult: React.FC<SearchResultProps> = ({
+  searchResult,
+  search,
+}) => {
   if (searchResult.length === 0)
     return (
       <section className={`container ${classes.container}`}>
@@ -30,4 +38,4 @@ const Search: React.FC<SearchProps> = async ({ search }) => {
   );
 };
 
-export default Search;
+export default SearchResult;

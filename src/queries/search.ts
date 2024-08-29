@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 
 export async function searchRoutes(searchTerm: string) {
+  // await new Promise((resolve) => setTimeout(resolve, 4000));
   return prisma.route.findMany({
     where: {
       OR: [
