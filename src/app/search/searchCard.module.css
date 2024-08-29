@@ -1,8 +1,9 @@
 .card {
-  padding: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
   color: var(--primary-color);
   background-color: transparent;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   border-radius: 0.25rem;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -20,6 +21,10 @@
 }
 
 .card__title {
+  color: var(--primary-color);
+}
+
+.card:hover .card__title {
   color: var(--primary-hover);
 }
 
