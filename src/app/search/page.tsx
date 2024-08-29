@@ -1,7 +1,7 @@
-import { searchRoutes } from "@/queries/search";
 import { redirect } from "next/navigation";
-import React from "react";
-import SearchCard from "./SearchCard";
+import React, { Suspense } from "react";
+import Search from "./Search";
+import SquareRotatingLoader from "@/components/squareRotatingLoader/SquareRotatingLoader";
 
 interface SearchPageProps {
   searchParams: {
@@ -12,26 +12,11 @@ interface SearchPageProps {
 const SearchPage: React.FC<SearchPageProps> = async ({ searchParams }) => {
   const { search } = searchParams;
   if (!search) redirect("/");
-  const searchResult = await searchRoutes(search);
-
-  if (searchResult.length === 0)
-    return (
-      <section className="container">
-        <h2>No se encontraron resultados para la búsqueda: {search}</h2>
-      </section>
-    );
 
   return (
-    <section className="container">
-      {searchResult.map((result) => (
-        <SearchCard
-          key={result.id}
-          title={result.title}
-          description={result.description}
-          link={result.path}
-        />
-      ))}
-    </section>
+    <Suspense fallback={<SquareRotatingLoader />}>
+      <Search search={search} />
+    </Suspense>
   );
 };
 

@@ -204,7 +204,30 @@ const galleryEventData: Prisma.GalleryEventCreateInput[] = [
   },
 ];
 
+const innerRouteData = async () => {
+  const technicaVisitsGalleryData = await prisma.technicalVisitEvent.findMany({
+    select: {
+      title: true,
+      description: true,
+      slug: true,
+    },
+  });
+
+  const technicalVisitsRoutes = technicaVisitsGalleryData.map((visit) => ({
+    title: `Visita Técnica a ${visit.title}`,
+    description: visit.description.slice(0, 100) + "...",
+    path: "/visitas/" + visit.slug,
+  }));
+
+  return technicalVisitsRoutes;
+};
+
 const searchingRouteData: Prisma.RouteCreateInput[] = [
+  {
+    title: "Detalles del Congreso",
+    description: "Conoce más sobre la sede y el enfoque del congreso.",
+    path: "/#detallesEvento",
+  },
   {
     title: "Nosotros",
     description: "Conoce más sobre CONESIEE 2024 y su equipo organizador.",
@@ -235,6 +258,26 @@ const searchingRouteData: Prisma.RouteCreateInput[] = [
     title: "Organizadores",
     description: "Conoce a nuestro equipo de trabajo.",
     path: "/nosotros#organizadores",
+  },
+  {
+    title: "Inscripciones",
+    description: "Regístrate para participar en las visitas técnicas.",
+    path: "/inscripciones",
+  },
+  {
+    title: "Patrocinadores",
+    description: "Conoce a las empresas que apoyan el congreso.",
+    path: "/patrocinadores",
+  },
+  {
+    title: "Detalles del Congreso",
+    description: "Información sobre las fechas y actividades del congreso.",
+    path: "/congreso",
+  },
+  {
+    title: "Itinerario de semana de congreso",
+    description: "Conoce el itinerario de actividades del congreso.",
+    path: "/congreso/itinerario",
   },
 ];
 
@@ -273,6 +316,19 @@ async function main() {
   }
 
   for (const route of searchingRouteData) {
+    try {
+      await prisma.route.create({
+        data: route,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const innerRoutes = await innerRouteData();
+
+  for (const route of innerRoutes) {
+    console.log(route);
     try {
       await prisma.route.create({
         data: route,
