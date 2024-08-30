@@ -223,6 +223,24 @@ const bannerData: Prisma.BannerCreateInput[] = [
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/cxgoc5jwj3yvli2szu1o",
     publicId: "conesiee/banner/cxgoc5jwj3yvli2szu1o",
   },
+  {
+    title: "Banner 4",
+    imageUrl:
+      "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/uqsrarbv9aacwuol9hwm",
+    publicId: "conesiee/banner/uqsrarbv9aacwuol9hwm",
+  },
+  {
+    title: "Banner 5",
+    imageUrl:
+      "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/dhfrcrtxu8kr7haexke9",
+    publicId: "conesiee/banner/dhfrcrtxu8kr7haexke9",
+  },
+  {
+    title: "Banner 6",
+    imageUrl:
+      "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/t4aim2uobzeufetbjcm0",
+    publicId: "conesiee/banner/t4aim2uobzeufetbjcm0",
+  },
 ];
 
 const technicalVisitRouteData = async () => {

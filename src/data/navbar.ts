@@ -50,7 +50,7 @@ export const authNavbar: Navbar[] = [
   },
   {
     id: 2,
-    url: "/admin/comprobantes",
-    title: "Comprobantes",
+    url: "/admin/banner",
+    title: "Banner",
   },
 ];

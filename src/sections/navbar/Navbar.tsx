@@ -5,7 +5,6 @@ import classes from "./navbar.module.css";
 import logo from "@/../public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { FaSearch } from "react-icons/fa";
 import InfoText from "./InfoText";
 import NavLink from "./NavLink";
 import { authNavbar, navbar } from "@/data/navbar";

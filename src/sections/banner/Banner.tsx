@@ -7,6 +7,9 @@ import prisma from "@/lib/prisma";
 const Banner = async () => {
   const bannerImages = await prisma.banner.findMany({
     take: 3,
+    orderBy: {
+      createdAt: "asc",
+    },
   });
   return (
     <div className={`container ${classes.banner}`}>

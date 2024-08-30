@@ -1,0 +1,19 @@
+/* BANNER FORM */
+
+.banner__form-wrapper {
+  margin-top: 2rem;
+}
+
+.banner__form-wrapper h2 {
+  margin-bottom: 1rem;
+}
+
+.banner__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.banner__form button {
+  align-self: flex-start;
+}
