@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.search.pending {
+  background-color: red;
+}
+
 .search__form {
   width: 100%;
   display: grid;

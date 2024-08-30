@@ -26,10 +26,10 @@ export default auth((req) => {
     nextUrl.pathname === "/";
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
 
-  console.log("IS API AUTH ROUTE: ", isApiAuthRoute);
-  console.log("IS PUBLIC ROUTE: ", isPublicRoute);
-  console.log("IS AUTH ROUTE: ", isAuthRoute);
-  console.log("IS LOGGED IN: ", isLoggedIn);
+  // console.log("IS API AUTH ROUTE: ", isApiAuthRoute);
+  // console.log("IS PUBLIC ROUTE: ", isPublicRoute);
+  // console.log("IS AUTH ROUTE: ", isAuthRoute);
+  // console.log("IS LOGGED IN: ", isLoggedIn);
 
   if (isApiAuthRoute) {
     return NextResponse.next();

@@ -8,9 +8,7 @@ export async function search(search: string) {
     redirect("/");
   }
 
-  console.log("searching for", search);
-
-  // revalidatePath("/search");
+  revalidatePath("/search");
   if (search) {
     redirect(`/search?search=${search}`);
   }

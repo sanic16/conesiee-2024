@@ -2,21 +2,23 @@ import { FaSearch } from "react-icons/fa";
 import classes from "./searchInput.module.css";
 import { useSearchParams } from "next/navigation";
 import * as actions from "@/actions";
-import { startTransition, useState } from "react";
+import { useTransition, useState } from "react";
 
 const SearchInput = () => {
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") || "");
+  const [pending, startTransition] = useTransition();
 
-  const handleSearch = () => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     startTransition(async () => {
       await actions.search(search);
     });
   };
 
   return (
-    <div className={classes.search}>
-      <form className={classes.search__form}>
+    <div className={`${classes.search} ${pending && classes.pending}`}>
+      <form className={classes.search__form} onSubmit={onSubmit}>
         <input
           type="text"
           className={classes.search__input}
@@ -26,11 +28,7 @@ const SearchInput = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button
-          type="button"
-          className={classes.search__button}
-          onClick={handleSearch}
-        >
+        <button className={classes.search__button}>
           <FaSearch />
         </button>
       </form>
