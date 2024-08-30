@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { searchRoutes } from "@/queries/search";
 import SearchResult from "../searchResult/SearchResult";
 

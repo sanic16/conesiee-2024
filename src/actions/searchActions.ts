@@ -1,13 +1,17 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-export async function search(formData: FormData) {
-  const search = formData.get("search");
-
+export async function search(search: string) {
   if (typeof search !== "string" || !search) {
     redirect("/");
   }
 
-  redirect(`/search?search=${search}`);
+  console.log("searching for", search);
+
+  // revalidatePath("/search");
+  if (search) {
+    redirect(`/search?search=${search}`);
+  }
 }
