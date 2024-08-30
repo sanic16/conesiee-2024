@@ -11,6 +11,7 @@ const SearchInput = () => {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (pending) return;
     startTransition(async () => {
       await actions.search(search);
     });
@@ -28,7 +29,7 @@ const SearchInput = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button className={classes.search__button}>
+        <button disabled={pending} className={classes.search__button}>
           <FaSearch />
         </button>
       </form>

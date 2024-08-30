@@ -6,14 +6,16 @@
   align-items: center;
 }
 
-.search.pending {
-  background-color: red;
-}
-
 .search__form {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(10, 10%);
+}
+
+.search.pending .search__input {
+  pointer-events: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-hover);
 }
 
 .search__input {
