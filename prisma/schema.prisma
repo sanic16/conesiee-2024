@@ -105,3 +105,11 @@ model Route{
   updatedAt DateTime @updatedAt
 }
 
+model Banner{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  imageUrl String
+  publicId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

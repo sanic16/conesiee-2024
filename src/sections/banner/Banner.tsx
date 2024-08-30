@@ -1,11 +1,13 @@
 import Link from "next/link";
 import classes from "./banner.module.css";
-import bannerImg1 from "@/../public/images/banner_1.jpeg";
-import bannerImg2 from "@/../public/images/banner_2.jpg";
-import bannerImg3 from "@/../public/images/banner_3.jpg";
-import Image from "next/image";
 
-const Banner = () => {
+import Image from "next/image";
+import prisma from "@/lib/prisma";
+
+const Banner = async () => {
+  const bannerImages = await prisma.banner.findMany({
+    take: 3,
+  });
   return (
     <div className={`container ${classes.banner}`}>
       <div className={classes.banner__content}>
@@ -19,7 +21,7 @@ const Banner = () => {
           </h3>
           {/* <BannerText className={classes["banner__right-text"]} /> */}
           <p className={classes["banner__right-text"]}>
-            Del 25 al 27 de septiembre.
+            Del 23 al 27 de septiembre.
           </p>
         </div>
         <div className={classes["banner__btn-wrapper"]}>
@@ -28,15 +30,11 @@ const Banner = () => {
       </div>
       <div className={classes.slideshow}>
         <div className={classes.slideshow__wrapper}>
-          <div className={classes.slide}>
-            <Image src={bannerImg2} alt="banner 1" />
-          </div>
-          <div className={classes.slide}>
-            <Image src={bannerImg3} alt="banner 1" />
-          </div>
-          <div className={classes.slide}>
-            <Image src={bannerImg1} alt="banner 1" />
-          </div>
+          {bannerImages.map((bannerImg) => (
+            <div className={classes.slide} key={bannerImg.id}>
+              <Image src={bannerImg.imageUrl} alt="banner 1" fill />
+            </div>
+          ))}
         </div>
       </div>
     </div>

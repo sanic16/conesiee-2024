@@ -204,8 +204,29 @@ const galleryEventData: Prisma.GalleryEventCreateInput[] = [
   },
 ];
 
-const innerRouteData = async () => {
-  const technicaVisitsGalleryData = await prisma.technicalVisitEvent.findMany({
+const bannerData: Prisma.BannerCreateInput[] = [
+  {
+    title: "Banner 1",
+    imageUrl:
+      "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/pnenvucwui1l8qm00vk7",
+    publicId: "conesiee/banner/pnenvucwui1l8qm00vk7",
+  },
+  {
+    title: "Banner 2",
+    imageUrl:
+      "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/se17b3jesgrqvg8ejzez",
+    publicId: "conesiee/banner/se17b3jesgrqvg8ejzez",
+  },
+  {
+    title: "Banner 3",
+    imageUrl:
+      "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/cxgoc5jwj3yvli2szu1o",
+    publicId: "conesiee/banner/cxgoc5jwj3yvli2szu1o",
+  },
+];
+
+const technicalVisitRouteData = async () => {
+  const technicalVisitsGalleryData = await prisma.technicalVisitEvent.findMany({
     select: {
       title: true,
       description: true,
@@ -213,13 +234,31 @@ const innerRouteData = async () => {
     },
   });
 
-  const technicalVisitsRoutes = technicaVisitsGalleryData.map((visit) => ({
+  const technicalVisitsRoutes = technicalVisitsGalleryData.map((visit) => ({
     title: `Visita Técnica a ${visit.title}`,
     description: visit.description.slice(0, 100) + "...",
     path: "/visitas/" + visit.slug,
   }));
 
   return technicalVisitsRoutes;
+};
+
+const galleryVisitRouteData = async () => {
+  const galleryEventsData = await prisma.galleryEvent.findMany({
+    select: {
+      title: true,
+      description: true,
+      slug: true,
+    },
+  });
+
+  const galleryRoutes = galleryEventsData.map((event) => ({
+    title: event.title,
+    description: event.description.slice(0, 100) + "...",
+    path: "/galeria/" + event.slug,
+  }));
+
+  return galleryRoutes;
 };
 
 const searchingRouteData: Prisma.RouteCreateInput[] = [
@@ -325,14 +364,42 @@ async function main() {
     }
   }
 
-  const innerRoutes = await innerRouteData();
+  const technicalVisitRoute = await technicalVisitRouteData();
+  const galleryRoute = await galleryVisitRouteData();
 
-  for (const route of innerRoutes) {
-    console.log(route);
+  for (const route of technicalVisitRoute) {
     try {
       await prisma.route.create({
         data: route,
       });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  for (const route of galleryRoute) {
+    try {
+      await prisma.route.create({
+        data: route,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  for (const banner of bannerData) {
+    try {
+      const bannerId = await prisma.banner.findFirst({
+        where: {
+          publicId: banner.publicId,
+        },
+      });
+      if (!bannerId) {
+        console.log(`Creating banner: ${banner.title} - ${banner.imageUrl}`);
+        await prisma.banner.create({
+          data: banner,
+        });
+      }
     } catch (error) {
       console.log(error);
     }
