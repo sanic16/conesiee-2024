@@ -351,7 +351,7 @@ async function main() {
   await prisma.technicalVisitEvent.deleteMany({});
   await prisma.galleryEvent.deleteMany({});
   await prisma.route.deleteMany({});
-  // await prisma.banner.deleteMany({});
+  await prisma.banner.deleteMany({});
 
   for (const technicalVisit of technicalVisitData) {
     try {

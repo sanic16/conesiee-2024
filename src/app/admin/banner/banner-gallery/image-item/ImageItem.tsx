@@ -15,6 +15,7 @@ interface ImageItemProps {
     publicId: string;
     createdAt: Date;
     updatedAt: Date;
+    order: number;
   };
 }
 const ImageItem: React.FC<ImageItemProps> = ({ bannerImage }) => {
@@ -52,6 +53,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ bannerImage }) => {
           onPointerDown={(event) => event.stopPropagation()}
         >
           <FaTrash />
+          {/* {bannerImage.order} */}
         </button>
       </div>
     </div>

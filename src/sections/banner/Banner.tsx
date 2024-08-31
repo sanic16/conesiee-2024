@@ -8,7 +8,7 @@ const Banner = async () => {
   const bannerImages = await prisma.banner.findMany({
     take: 3,
     orderBy: {
-      createdAt: "asc",
+      order: "asc",
     },
   });
   return (

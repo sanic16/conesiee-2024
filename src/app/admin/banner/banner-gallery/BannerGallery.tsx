@@ -24,7 +24,13 @@ interface BannerGalleryProps {
 }
 
 const BannerGallery: React.FC<BannerGalleryProps> = ({ bannerImgs }) => {
-  const [bannerImages, setBannerImages] = React.useState(bannerImgs);
+  const newBannerImages = bannerImgs.map((bannerImg, index) => {
+    return {
+      ...bannerImg,
+      order: index,
+    };
+  });
+  const [bannerImages, setBannerImages] = React.useState(newBannerImages);
   const [pending, startTransition] = useTransition();
 
   return (
@@ -33,15 +39,18 @@ const BannerGallery: React.FC<BannerGalleryProps> = ({ bannerImgs }) => {
       onDragEnd={(event) => {
         const { active, over } = event;
 
-        setBannerImages((bannerImages) => {
-          const oldIndex = bannerImages.findIndex(
+        setBannerImages((oldBannerImages) => {
+          const oldIndex = oldBannerImages.findIndex(
             (bannerImg) => bannerImg.id === active.id
           );
 
-          const newIndex = bannerImages.findIndex(
-            (person) => person.id === over!.id
+          const newIndex = oldBannerImages.findIndex(
+            (bannerImg) => bannerImg.id === over!.id
           );
-          return arrayMove(bannerImages, oldIndex, newIndex);
+
+          oldBannerImages[oldIndex].order = newIndex;
+          oldBannerImages[newIndex].order = oldIndex;
+          return arrayMove(oldBannerImages, oldIndex, newIndex);
         });
         startTransition(async () => {
           await bannerImageUpdateOrderAction(bannerImages);
@@ -52,6 +61,12 @@ const BannerGallery: React.FC<BannerGalleryProps> = ({ bannerImgs }) => {
         items={bannerImages}
         strategy={horizontalListSortingStrategy}
       >
+        {/* {JSON.stringify(
+          bannerImages.map((bannerImg) => ({
+            title: bannerImg.title,
+            order: bannerImg.order,
+          }))
+        )} */}
         <div className={classes.banner__gallery}>
           {bannerImages.map((bannerImg) => (
             <ImageItem key={bannerImg.id} bannerImage={bannerImg} />

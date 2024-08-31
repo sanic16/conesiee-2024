@@ -1,9 +1,6 @@
 "use server";
 
 import * as auth from "@/auth";
-import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
-import { AuthError } from "next-auth";
-import { redirect } from "next/navigation";
 
 export async function signInAction() {
   return auth.signIn();
