@@ -1,1 +1,1 @@
-export const cloudinaryUrl = process.env.CLOUDINARY_URL;
+export const cloudinaryUrl = process.env.CLOUD_IMAGE_URL;

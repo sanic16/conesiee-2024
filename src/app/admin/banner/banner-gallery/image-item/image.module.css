@@ -1,0 +1,23 @@
+.banner__image {
+  width: 200px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  position: relative;
+}
+
+.banner__image-wrapper.active {
+  border: 2px solid var(--primary-hover);
+}
+
+.banner__delete {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: whitesmoke;
+  display: flex;
+  cursor: pointer;
+}

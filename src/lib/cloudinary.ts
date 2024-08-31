@@ -1,8 +1,8 @@
 import { v2 as cloudinary } from "cloudinary";
 
-// if (!process.env.CLOUDINARY_CLOUD_NAME) {
-//   throw new Error("CLOUDINARY_CLOUD_NAME is not set");
-// }
+if (!process.env.CLOUDINARY_CLOUD_NAME) {
+  throw new Error("CLOUDINARY_CLOUD_NAME is not set");
+}
 
 if (!process.env.CLOUDINARY_API_KEY) {
   throw new Error("CLOUDINARY_API_KEY is not set");
@@ -25,7 +25,11 @@ export async function uploadImage(image: File) {
   const base64Data = Buffer.from(imageData).toString(encoding);
   const fileUri = `data:${mime};${encoding},${base64Data}`;
   const result = await cloudinary.uploader.upload(fileUri, {
-    folder: "nextjs-course-mutations",
+    folder: "conesiee/banner/",
+    use_filename: true,
+    invalidate: true,
+    resource_type: "image",
+    filename_override: image.name,
   });
   return result.secure_url;
 }

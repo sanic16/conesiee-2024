@@ -1,6 +1,7 @@
 import Link from "next/link";
 import classes from "./imageCard.module.css";
 import Image from "next/image";
+import { cloudinaryUrl } from "@/utils/constants";
 
 interface GalleryData {
   title: string;
@@ -30,11 +31,7 @@ const ImageCard: React.FC<GalleryData> = ({
         </Link>
       </div>
       <div className={classes.card__img}>
-        <Image
-          src={`${process.env.CLOUDINARY_URL}${path}${images[0]}`}
-          alt="gallery"
-          fill
-        />
+        <Image src={`${cloudinaryUrl}${path}${images[0]}`} alt="gallery" fill />
       </div>
     </article>
   );

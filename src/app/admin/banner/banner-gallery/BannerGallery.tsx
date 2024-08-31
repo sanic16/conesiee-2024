@@ -1,11 +1,13 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import { FaTrash } from "react-icons/fa6";
 import classes from "./bannerGallery.module.css";
-import { useTransition } from "react";
-import { start } from "repl";
-import { bannerImageDeleteAction } from "@/actions";
+import { closestCenter, DndContext } from "@dnd-kit/core";
+import {
+  arrayMove,
+  horizontalListSortingStrategy,
+  SortableContext,
+} from "@dnd-kit/sortable";
+import ImageItem from "./image-item/ImageItem";
 
 interface BannerGalleryProps {
   bannerImgs: {
@@ -19,35 +21,37 @@ interface BannerGalleryProps {
 }
 
 const BannerGallery: React.FC<BannerGalleryProps> = ({ bannerImgs }) => {
-  const [state, startTransition] = useTransition();
-
-  const handleDelete = (id: string) => {
-    startTransition(async () => {
-      await bannerImageDeleteAction(id);
-    });
-  };
+  const [bannerImages, setBannerImages] = React.useState(bannerImgs);
 
   return (
-    <div className={classes.banner__gallery}>
-      {bannerImgs.map((bannerImg, key) => (
-        <div
-          className={`${classes["banner__image-wrapper"]} ${
-            key < 3 ? classes.active : ""
-          }`}
-          key={bannerImg.id}
-        >
-          <div key={bannerImg.id} className={classes.banner__image}>
-            <Image src={bannerImg.imageUrl} alt={bannerImg.title} fill />
-            <button
-              className={classes.banner__delete}
-              onClick={() => handleDelete(bannerImg.id)}
-            >
-              <FaTrash />
-            </button>
-          </div>
+    <DndContext
+      collisionDetection={closestCenter}
+      onDragEnd={(event) => {
+        const { active, over } = event;
+
+        setBannerImages((bannerImages) => {
+          const oldIndex = bannerImages.findIndex(
+            (bannerImg) => bannerImg.id === active.id
+          );
+
+          const newIndex = bannerImages.findIndex(
+            (person) => person.id === over!.id
+          );
+          return arrayMove(bannerImages, oldIndex, newIndex);
+        });
+      }}
+    >
+      <SortableContext
+        items={bannerImages}
+        strategy={horizontalListSortingStrategy}
+      >
+        <div className={classes.banner__gallery}>
+          {bannerImages.map((bannerImg) => (
+            <ImageItem key={bannerImg.id} bannerImage={bannerImg} />
+          ))}
         </div>
-      ))}
-    </div>
+      </SortableContext>
+    </DndContext>
   );
 };
 

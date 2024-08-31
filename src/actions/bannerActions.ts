@@ -3,6 +3,7 @@ import prisma from "@/lib/prisma";
 import { uploadImage } from "@/lib/cloudinary";
 import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 const allowedImageTypes = ["image/jpeg", "image/png", "image/jpg"];
 
@@ -86,6 +87,7 @@ export async function bannerImageUploadAction(
 
   revalidatePath("/admin/banner");
   revalidatePath("/");
+  redirect("/admin/banner");
 
   return {
     errors: {},
