@@ -8,6 +8,8 @@ import {
   SortableContext,
 } from "@dnd-kit/sortable";
 import ImageItem from "./image-item/ImageItem";
+import { bannerImageUpdateOrderAction } from "@/actions/bannerActions";
+import { useTransition } from "react";
 
 interface BannerGalleryProps {
   bannerImgs: {
@@ -15,6 +17,7 @@ interface BannerGalleryProps {
     title: string;
     imageUrl: string;
     publicId: string;
+    order: number;
     createdAt: Date;
     updatedAt: Date;
   }[];
@@ -22,6 +25,7 @@ interface BannerGalleryProps {
 
 const BannerGallery: React.FC<BannerGalleryProps> = ({ bannerImgs }) => {
   const [bannerImages, setBannerImages] = React.useState(bannerImgs);
+  const [pending, startTransition] = useTransition();
 
   return (
     <DndContext
@@ -38,6 +42,9 @@ const BannerGallery: React.FC<BannerGalleryProps> = ({ bannerImgs }) => {
             (person) => person.id === over!.id
           );
           return arrayMove(bannerImages, oldIndex, newIndex);
+        });
+        startTransition(async () => {
+          await bannerImageUpdateOrderAction(bannerImages);
         });
       }}
     >

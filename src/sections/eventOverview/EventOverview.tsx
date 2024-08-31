@@ -120,7 +120,10 @@ const EventOverview = () => {
 
             <div className={classes.visitas}>
               {technicalConferenceVisits.visits.map((visit) => (
-                <Link key={visit.slug} href={`/visitas/${visit.slug}`}>
+                <Link
+                  key={`${visit.slug}-${visit.date}`}
+                  href={`/visitas/${visit.slug}`}
+                >
                   {visit.title}
                 </Link>
               ))}

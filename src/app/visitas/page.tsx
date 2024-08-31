@@ -43,7 +43,7 @@ const page = async () => {
           <div className={classes.gallery}>
             {technicalVisits.map((event) => (
               <VisitsImageCard
-                key={event.title}
+                key={event.id}
                 noCongress
                 title={event.title}
                 date={event.date.toLocaleDateString("es-GT", {

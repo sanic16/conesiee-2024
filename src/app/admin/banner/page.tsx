@@ -7,7 +7,7 @@ import BannerGallery from "./banner-gallery/BannerGallery";
 export default async function BannerAdminPage() {
   const bannerImgs = await prisma.banner.findMany({
     orderBy: {
-      createdAt: "asc",
+      order: "asc",
     },
   });
 
@@ -18,7 +18,6 @@ export default async function BannerAdminPage() {
         <BannerGallery bannerImgs={bannerImgs} />
         <BannerUpload />
       </section>
-      ;
     </>
   );
 }

@@ -100,6 +100,32 @@ export async function bannerImageUploadAction(
   };
 }
 
+interface BannerImages {
+  id: string;
+  title: string;
+  imageUrl: string;
+  order: number;
+  publicId: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export async function bannerImageUpdateOrderAction(
+  bannerImages: BannerImages[]
+): Promise<void> {
+  await Promise.all(
+    bannerImages.map((bannerImage) =>
+      prisma.banner.update({
+        where: { id: bannerImage.id },
+        data: { order: bannerImage.order },
+      })
+    )
+  );
+
+  revalidatePath("/admin/banner");
+  revalidatePath("/");
+}
+
 export async function bannerImageDeleteAction(id: string): Promise<void> {
   await prisma.banner.delete({
     where: {

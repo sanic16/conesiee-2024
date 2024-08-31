@@ -15,7 +15,6 @@ const Counter = () => {
       seconds: 0,
     };
 
-    // Time calculations for days, hours, minutes and seconds
     if (difference > 0) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -29,20 +28,23 @@ const Counter = () => {
 
     return timeLeft;
   };
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const timerRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      timerRef.current = setInterval(() => {
-        setTimeLeft(calculateTimeLeft());
-      }, 1000);
-    }
-    return () => {
-      if (typeof window !== "undefined") {
-        clearInterval(timerRef.current as unknown as number);
-      }
-    };
+    // Calculate time only after the component mounts on the client
+    setTimeLeft(calculateTimeLeft());
+
+    const timerRef = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timerRef);
   }, []);
 
   return (
