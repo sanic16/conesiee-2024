@@ -63,11 +63,17 @@ export async function bannerImageUploadAction(
   }
 
   try {
+    const lastBanner = await prisma.banner.findFirst({
+      orderBy: {
+        order: "desc",
+      },
+    });
     await prisma.banner.create({
       data: {
         imageUrl: imageUrl,
         title: image.name,
         publicId: imageUrl,
+        order: lastBanner ? lastBanner.order + 1 : 4,
       },
     });
   } catch (error: unknown) {
@@ -87,7 +93,7 @@ export async function bannerImageUploadAction(
 
   revalidatePath("/admin/banner");
   revalidatePath("/");
-  redirect("/admin/banner");
+  redirect("/admin/redirect-banner");
 
   return {
     errors: {},
@@ -103,4 +109,5 @@ export async function bannerImageDeleteAction(id: string): Promise<void> {
 
   revalidatePath("/admin/banner");
   revalidatePath("/");
+  redirect("/admin/redirect-banner");
 }

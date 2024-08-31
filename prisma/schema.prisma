@@ -107,6 +107,7 @@ model Route{
 
 model Banner{
   id String @id @default(auto()) @map("_id") @db.ObjectId
+  order Int
   title String
   imageUrl String
   publicId String

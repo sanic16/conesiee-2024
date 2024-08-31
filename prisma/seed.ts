@@ -210,36 +210,42 @@ const bannerData: Prisma.BannerCreateInput[] = [
     imageUrl:
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/pnenvucwui1l8qm00vk7",
     publicId: "conesiee/banner/pnenvucwui1l8qm00vk7",
+    order: 1,
   },
   {
     title: "Banner 2",
     imageUrl:
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/se17b3jesgrqvg8ejzez",
     publicId: "conesiee/banner/se17b3jesgrqvg8ejzez",
+    order: 2,
   },
   {
     title: "Banner 3",
     imageUrl:
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/cxgoc5jwj3yvli2szu1o",
     publicId: "conesiee/banner/cxgoc5jwj3yvli2szu1o",
+    order: 3,
   },
   {
     title: "Banner 4",
     imageUrl:
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/uqsrarbv9aacwuol9hwm",
     publicId: "conesiee/banner/uqsrarbv9aacwuol9hwm",
+    order: 4,
   },
   {
     title: "Banner 5",
     imageUrl:
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/dhfrcrtxu8kr7haexke9",
     publicId: "conesiee/banner/dhfrcrtxu8kr7haexke9",
+    order: 5,
   },
   {
     title: "Banner 6",
     imageUrl:
       "https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/banner/t4aim2uobzeufetbjcm0",
     publicId: "conesiee/banner/t4aim2uobzeufetbjcm0",
+    order: 6,
   },
 ];
 
@@ -345,6 +351,7 @@ async function main() {
   await prisma.technicalVisitEvent.deleteMany({});
   await prisma.galleryEvent.deleteMany({});
   await prisma.route.deleteMany({});
+  // await prisma.banner.deleteMany({});
 
   for (const technicalVisit of technicalVisitData) {
     try {

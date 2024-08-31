@@ -4,10 +4,8 @@ import Image from "next/image";
 import { FaTrash } from "react-icons/fa";
 import { useTransition } from "react";
 import { bannerImageDeleteAction } from "@/actions";
-import { useRouter } from "next/navigation";
 import { CSS } from "@dnd-kit/utilities";
 import { useSortable } from "@dnd-kit/sortable";
-import { transform } from "next/dist/build/swc";
 
 interface ImageItemProps {
   bannerImage: {
@@ -21,7 +19,6 @@ interface ImageItemProps {
 }
 const ImageItem: React.FC<ImageItemProps> = ({ bannerImage }) => {
   const [pending, startTransition] = useTransition();
-  const router = useRouter();
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({
       id: bannerImage.id,
@@ -36,8 +33,6 @@ const ImageItem: React.FC<ImageItemProps> = ({ bannerImage }) => {
     event.stopPropagation();
     startTransition(async () => {
       await bannerImageDeleteAction(id);
-      await new Promise((resolve) => setTimeout(resolve, 200));
-      if (!pending) router.refresh();
     });
   };
   return (
