@@ -93,7 +93,7 @@ export async function bannerImageUploadAction(
 
   revalidatePath("/admin/banner");
   revalidatePath("/");
-  redirect("/admin/profile");
+  redirect("/admin/perfil");
 
   return {
     errors: {},
@@ -135,5 +135,4 @@ export async function bannerImageDeleteAction(id: string): Promise<void> {
 
   revalidatePath("/admin/banner");
   revalidatePath("/");
-  redirect("/admin/profile");
 }

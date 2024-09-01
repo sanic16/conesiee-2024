@@ -34,6 +34,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ bannerImage }) => {
     event.stopPropagation();
     startTransition(async () => {
       await bannerImageDeleteAction(id);
+      window.location.reload();
     });
   };
   return (
