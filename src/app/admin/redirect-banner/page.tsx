@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default async function page() {
+export default function page() {
   redirect("/admin/banner");
   return null;
 }
