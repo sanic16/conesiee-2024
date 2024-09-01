@@ -3,6 +3,7 @@ import classes from "./page.module.css";
 import React from "react";
 import Image from "next/image";
 import { cloudinaryUrl } from "@/utils/constants";
+import BackButton from "@/components/ui/backButton/BackButton";
 
 export default function CongressCalendar() {
   return (
@@ -11,7 +12,10 @@ export default function CongressCalendar() {
         title="Itinerario"
         description="Descubre el itinerario del congreso y planifica tu participación."
       />
+
       <div className={classes.itinerario__container}>
+        <BackButton />
+
         <div className={classes.itinerario__content}>
           <Image
             src={`${cloudinaryUrl}/conesiee/congress/ghcs4gmdwksdazi2jwo6`}

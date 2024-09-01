@@ -1,8 +1,14 @@
+.itinerario__container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .itinerario__content {
   position: relative;
   width: 50rem;
   aspect-ratio: 8/5;
   margin-inline: auto;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 992px) {

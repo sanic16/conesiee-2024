@@ -3,6 +3,7 @@ import classes from "./page.module.css";
 import Link from "next/link";
 import prisma from "@/lib/prisma";
 import { TechnicalVisitEvent } from "@prisma/client";
+import BackButton from "@/components/ui/backButton/BackButton";
 
 export default async function VisitasPageId({
   params,
@@ -31,9 +32,7 @@ export default async function VisitasPageId({
   return (
     <div className="container">
       <PageHeading title={event?.title!} description={""} />
-      <Link href="/visitas" className="btn primary">
-        Regresar
-      </Link>
+      <BackButton />
       <div className={classes.details__container}>
         <div className={classes.details__content}>
           <p>{event?.description}</p>

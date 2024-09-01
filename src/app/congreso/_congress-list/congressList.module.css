@@ -1,0 +1,8 @@
+.congressList {
+  margin-top: 1rem;
+}
+
+.congressList a {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
