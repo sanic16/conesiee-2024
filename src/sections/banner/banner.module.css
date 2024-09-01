@@ -102,6 +102,7 @@
   height: 100%;
   position: relative;
   animation: slideshow 25s infinite;
+  animation-delay: 3s;
 }
 
 .slide {
