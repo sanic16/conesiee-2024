@@ -26,6 +26,10 @@ const images = [
     image: `https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/slideshow1/esbpwyxqg2zw1oms4kie`,
     alt: "Hotel Holiday Inn5",
   },
+  {
+    image: `https://res.cloudinary.com/dczuv9eyw/image/upload/v1723565061/conesiee/slideshow1/y53tzgka9e1b8n8j5ntb`,
+    alt: "Hotel Holiday Inn6",
+  },
 ];
 
 const ImageSlideshow = () => {
