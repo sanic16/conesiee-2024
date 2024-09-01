@@ -27,7 +27,7 @@ const OverviewSlider = () => {
         slidesPerView={1}
         loop
       >
-        {[img6, img2, img3, img4, img5, img1].map((img, index) => (
+        {[img4, img2, img3, img5, img1, img6].map((img, index) => (
           <SwiperSlide key={index}>
             <div className={classes.image__wrapper}>
               <Image

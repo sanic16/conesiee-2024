@@ -35,10 +35,15 @@
   text-align: center;
   text-wrap: balance;
   line-height: 1.5;
+  animation: anim 2s;
 }
 
 .banner__right h1 span:first-of-type {
-  color: var(--primary-hover);
+  background: linear-gradient(to right, white, var(--primary-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .banner__right h3 {
@@ -46,10 +51,17 @@
   font-size: 1.3rem;
   text-align: center;
   margin-top: 1rem;
+  animation: anim 1.5s 0.5s backwards;
 }
 
 .banner__right h3 span {
   color: var(--secondary-color);
+  font-weight: 700;
+  color: var(--primary-hover);
+}
+
+.banner__right p {
+  animation: anim 1s 1s backwards;
 }
 
 .banner__right-text {
@@ -65,19 +77,21 @@
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
+  animation: anim 0.5s 1.5s backwards;
 }
 
 .banner__btn-wrapper a {
   display: inline-block;
+  width: 13rem;
+  text-align: center;
   padding: 0.5rem 2rem;
   background: linear-gradient(
     to right,
     var(--primary-color),
-    var(--secondary-color)
+    var(--primary-hover)
   );
-  color: white;
-  text-transform: uppercase;
-  border-radius: 0.2rem;
+  color: whitesmoke;
+  border-radius: 5rem;
   outline: none;
   transition: var(--transition);
 }
@@ -85,9 +99,22 @@
 .banner__btn-wrapper a:hover {
   background: linear-gradient(
     to right,
-    var(--secondary-color),
+    var(--primary-hover),
     var(--primary-color)
   );
+}
+
+.banner__btn-wrapper a:active {
+  transform: scale(0.95);
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .slideshow {
