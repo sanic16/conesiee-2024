@@ -38,7 +38,7 @@ const ImageSlideshow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
