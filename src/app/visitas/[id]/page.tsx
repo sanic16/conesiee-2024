@@ -44,6 +44,7 @@ export default async function VisitasPageId({
                 href={event?.registrationLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={classes.details__link}
               >
                 {event?.registrationLink}
               </a>

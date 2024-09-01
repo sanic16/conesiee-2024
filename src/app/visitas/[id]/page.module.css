@@ -14,6 +14,13 @@
   text-decoration: underline;
 }
 
+.details__link {
+  word-wrap: break-word; /* Older browsers */
+  overflow-wrap: break-word; /* Modern browsers */
+  word-break: break-all; /* Ensures long URLs are broken at any character */
+  hyphens: auto; /* Optional: Adds hyphenation if necessary */
+}
+
 @media screen and (max-width: 768px) {
   .details__container {
     grid-template-columns: 1fr;
