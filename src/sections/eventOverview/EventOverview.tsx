@@ -7,17 +7,6 @@ import { technicalConferenceVisits } from "@/data/technical-visits";
 import ImageSlideshow from "@/components/imageSlideshow/ImageSlideshow";
 import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
 
-const visitasTecnicas = [
-  "Taller INTECAP",
-  "Eólica San Antonio",
-  "Alimentos S.A.",
-  "Ingenio Santa Ana",
-  "Ingenio Magdalena",
-  "Ingenio Madre Tierra",
-  "Ingenio San Diego",
-  "Taller ITUGS",
-];
-
 const EventOverview = () => {
   return (
     <div className={`container ${classes.container}`} id="detallesEvento">
@@ -99,7 +88,7 @@ const EventOverview = () => {
                   key={`${visit.slug}-${visit.date}`}
                   href={`/visitas/${visit.slug}`}
                 >
-                  {visit.title}
+                  {visit.title}  <span>{visit.date}</span>
                 </Link>
               ))}
             </div>

@@ -34,8 +34,8 @@ const OverviewSlider = () => {
                 src={img}
                 alt={`slide-${index}`}
                 objectFit="cover"
-                width={30 * 16}
-                height={20 * 16}
+                width={25 * 16}
+                height={12 * 16}
               />
             </div>
           </SwiperSlide>
