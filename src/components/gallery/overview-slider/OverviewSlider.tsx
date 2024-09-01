@@ -2,14 +2,18 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import img1 from "@/../public/images/guate_sur.jpg";
-import img2 from "@/../public/images/san_antonio.jpg";
+import img1 from "@/../public/images/virtual.webp";
+import img2 from "@/../public/images/chixoy.jpg";
 import img3 from "@/../public/images/horus.jpg";
+import img4 from "@/../public/images/jurun.png";
+import img5 from "@/../public/images/usac.jpg";
+import img6 from "@/../public/images/guatemala.png";
 import classes from "./overviewSlider.module.css";
 import Image from "next/image";
 import "swiper/css"; // Add Swiper's core styles
 import "swiper/css/navigation"; // Add Navigation styles
 import "swiper/css/pagination"; // Add Pagination styles
+import "./custom.css";
 
 const OverviewSlider = () => {
   return (
@@ -23,10 +27,16 @@ const OverviewSlider = () => {
         slidesPerView={1}
         loop
       >
-        {[img1, img2, img3].map((img, index) => (
+        {[img6, img2, img3, img4, img5, img1].map((img, index) => (
           <SwiperSlide key={index}>
             <div className={classes.image__wrapper}>
-              <Image src={img} alt={`slide-${index}`} objectFit="cover" />
+              <Image
+                src={img}
+                alt={`slide-${index}`}
+                objectFit="cover"
+                width={30 * 16}
+                height={20 * 16}
+              />
             </div>
           </SwiperSlide>
         ))}

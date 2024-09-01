@@ -49,6 +49,11 @@
   overflow: hidden;
 }
 
+.image__container.image__focus {
+  height: 12rem;
+  border: none;
+}
+
 /* Visitas Tecnicas */
 
 .section__container.visitas__container {
