@@ -3,13 +3,12 @@ import classes from "./eventOverview.module.css";
 import { FaStar } from "react-icons/fa6";
 import HomeSubHeading from "@/components/homeSubHeading/HomeSubHeading";
 import Image from "next/image";
-import hotelImg1 from "@/../public/images/hotel_1.jpeg";
-import hotelImg2 from "@/../public/images/hotel_2.jpeg";
 import horusImg from "@/../public/images/horus.jpg";
 import sanAntonioImg from "@/../public/images/san_antonio.jpg";
 import guateSur from "@/../public/images/guate_sur.jpg";
 import Link from "next/link";
 import { technicalConferenceVisits } from "@/data/technical-visits";
+import ImageSlideshow from "@/components/imageSlideshow/ImageSlideshow";
 
 const visitasTecnicas = [
   "Taller INTECAP",
@@ -48,20 +47,7 @@ const EventOverview = () => {
           </div>
           <div className={`${classes.image__container} ${classes.flex}`}>
             <div className={classes.image__wrapper}>
-              <Image
-                src={hotelImg1}
-                alt="Hotel Holiday Inn"
-                width={hotelImg1.width * (2 / 3)}
-                height={hotelImg1.height * (2 / 3)}
-              />
-            </div>
-            <div className={classes.image__wrapper}>
-              <Image
-                src={hotelImg2}
-                alt="Hotel Holiday Inn"
-                width={hotelImg2.width * (2 / 3)}
-                height={hotelImg2.height * (2 / 3)}
-              />
+              <ImageSlideshow />
             </div>
           </div>
         </div>
