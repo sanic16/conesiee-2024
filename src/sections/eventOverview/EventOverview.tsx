@@ -9,6 +9,7 @@ import guateSur from "@/../public/images/guate_sur.jpg";
 import Link from "next/link";
 import { technicalConferenceVisits } from "@/data/technical-visits";
 import ImageSlideshow from "@/components/imageSlideshow/ImageSlideshow";
+import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
 
 const visitasTecnicas = [
   "Taller INTECAP",
@@ -45,25 +46,17 @@ const EventOverview = () => {
               contribuyendo al éxito del evento.
             </p>
           </div>
-          <div className={`${classes.image__container} ${classes.flex}`}>
-            <div className={classes.image__wrapper}>
-              <ImageSlideshow />
-            </div>
+          <div className={classes.image__container}>
+            <ImageSlideshow />
           </div>
         </div>
 
-        {/* Sede */}
+        {/* focus */}
         <div className={`${classes.section__container} ${classes.grid2}`}>
-          <div className={`${classes.image__container} ${classes.gridImg}`}>
-            <div className={classes.image__wrapper}>
-              <Image src={horusImg} alt="Hotel Horus" width={150} />
-            </div>
-            <div className={classes.image__wrapper}>
-              <Image src={sanAntonioImg} alt="Hotel Horus" width={150} />
-            </div>
-            <div className={classes.image__wrapper}>
-              <Image src={guateSur} alt="Hotel Horus" width={150} />
-            </div>
+          <div
+            className={`${classes.image__container} ${classes.image__focus}`}
+          >
+            <OverviewSlider />
           </div>
           <div className={classes.content__container}>
             <HomeSubHeading title="Enfoque" position="center" icon={FaStar} />
