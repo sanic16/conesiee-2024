@@ -29,6 +29,9 @@ const page = async () => {
     where: {
       isFromCongress: true,
     },
+    orderBy: {
+      date: "asc",
+    },
   });
 
   return (

@@ -3,7 +3,6 @@ import classes from "./eventOverview.module.css";
 import { FaStar } from "react-icons/fa6";
 import HomeSubHeading from "@/components/homeSubHeading/HomeSubHeading";
 import Link from "next/link";
-import { technicalConferenceVisits } from "@/data/technical-visits";
 import ImageSlideshow from "@/components/imageSlideshow/ImageSlideshow";
 import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
 
@@ -11,10 +10,24 @@ import img2 from "@/../public/images/chixoy.jpg";
 import img3 from "@/../public/images/horus.jpg";
 import img4 from "@/../public/images/jurun.png";
 import img6 from "@/../public/images/guatemala.png";
+import prisma from "@/lib/prisma";
 
 const images = [img2, img3, img4, img6];
 
-const EventOverview = () => {
+const EventOverview = async () => {
+  const technicalConferenceVisits = await prisma.technicalVisitEvent.findMany({
+    where: {
+      isFromCongress: true,
+    },
+    select: {
+      title: true,
+      date: true,
+      slug: true,
+    },
+    orderBy: {
+      date: "asc",
+    },
+  });
   return (
     <div className={`container ${classes.container}`} id="detallesEvento">
       <div className={classes.container__bg}>
@@ -90,12 +103,19 @@ const EventOverview = () => {
             </p>
 
             <div className={classes.visitas}>
-              {technicalConferenceVisits.visits.map((visit) => (
+              {technicalConferenceVisits.map((visit) => (
                 <Link
                   key={`${visit.slug}-${visit.date}`}
                   href={`/visitas/${visit.slug}`}
                 >
-                  {visit.title} <span>{visit.date}</span>
+                  {visit.title}{" "}
+                  <span>
+                    {visit.date.toLocaleDateString("es-GT", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </span>
                 </Link>
               ))}
             </div>
