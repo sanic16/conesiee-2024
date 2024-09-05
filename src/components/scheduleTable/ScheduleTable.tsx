@@ -42,7 +42,22 @@ const ScheduleTable = () => {
           <div
             className={`${classes.cell} ${classes.rowspan} ${classes.green}`}
           >
-            TALLER - Internet de las cosas
+            TALLER UNIVERSIDAD GALILEO
+            <Link href="/congreso/talleres/talleres-universidad-galileo">
+              Taller Internet de las Cosas (IoT)
+            </Link>
+            <Link href="/congreso/talleres/talleres-universidad-galileo">
+              Taller Diseño Asistido por Computadora (CAD) e Impresión 3D
+            </Link>
+            <Link href="/congreso/talleres/talleres-universidad-galileo">
+              Taller Sistemas Operativos de Robots (ROS)
+            </Link>
+            <Link href="/congreso/talleres/talleres-universidad-galileo">
+              Taller Hackeo Ético
+            </Link>
+            <Link href="/congreso/talleres/talleres-universidad-galileo">
+              Taller Diseño de PCB´s en Altium
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.dark__green}`}>
             INGRESO HOTEL
@@ -50,7 +65,17 @@ const ScheduleTable = () => {
           <div
             className={`${classes.cell} ${classes.rowspan} ${classes.green}`}
           >
-            TALLER - Robótica
+            TALLER EN INTECAP
+            <Link href="/congreso/talleres/talleres-intecap">Robótica</Link>
+            <Link href="/congreso/talleres/talleres-intecap">
+              Industria 4.0
+            </Link>
+            <Link href="/congreso/talleres/talleres-intecap">
+              Procesos Industriales
+            </Link>
+            <Link href="/congreso/talleres/talleres-intecap">
+              Energía renovable
+            </Link>
           </div>
           <div
             className={`${classes.cell} ${classes.rowspan__9} ${classes.gray}`}

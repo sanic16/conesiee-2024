@@ -114,3 +114,16 @@ model Banner{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Workshop{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  slug String
+  portalDescription String
+  description String
+  date DateTime
+  registrationLink String
+  images String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

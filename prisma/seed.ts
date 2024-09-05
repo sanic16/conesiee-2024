@@ -204,6 +204,58 @@ const galleryEventData: Prisma.GalleryEventCreateInput[] = [
   },
 ];
 
+const workshops: Prisma.WorkshopCreateInput[] = [
+  {
+    title: "Talleres INTECAP",
+    slug: generateSlug("Talleres INTECAP"),
+    portalDescription:
+      "Participa en los talleres impartidos en INTECAP, sobre temas de interés para la ingeniería eléctrica y electrónica.",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLScpcOjcBqWAOVcz6yicssecRkB9wUhFazOKCsiobFilieq8TQ/viewform",
+    images: [
+      "conesiee/workshops/zcpjlzrizlasyvrqcour",
+      "conesiee/workshops/osweera1mtjrl9wndwbk",
+      "conesiee/workshops/okgc79m4tljznxuyhqt4",
+      "conesiee/workshops/pyliphvre1g7y8wniacs",
+      "conesiee/workshops/ltczxjo89zzmlq6pv6lf",
+    ],
+    date: new Date("2024-09-27"),
+    description: `<ul>
+  <li><strong>Robótica:</strong> Aprende sobre la programación y construcción de robots, desde la teoría hasta la implementación.</li>
+  <li><strong>Industria 4.0:</strong> Descubre cómo las nuevas tecnologías están revolucionando la industria y su impacto en la automatización.</li>
+  <li><strong>Procesos Industriales:</strong> Conoce los procesos de manufactura y control de calidad en la industria para optimizar la producción.</li>
+  <li><strong>Energía Renovable:</strong> Explora las energías limpias y cómo aplicarlas en el ámbito industrial para un futuro sostenible.</li>
+</ul>
+`,
+  },
+  {
+    title: "Talleres Universidad Galileo",
+    slug: generateSlug("Talleres Universidad Galileo"),
+    portalDescription:
+      "Participa en los talleres impartidos en la Universidad Galileo.",
+    registrationLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfc1f8WbGYpFHKnUwwsoa23heIHJ6pB-YsetjAIHIisuZ6umw/viewform",
+    images: [
+      "conesiee/workshops/xvrn7jvj3mvqbatxe0bw",
+      "conesiee/workshops/tsjrdd4pbfvxw1vmlrzy",
+      "conesiee/workshops/mscfkkludnlavjjyvhge",
+
+      "conesiee/workshops/djxr6c0pptpc1rzr8fiv",
+      "conesiee/workshops/mtsxb3ore1ujhq81v4mn",
+      "conesiee/workshops/b8phvvtujttfuvxt6bww",
+    ],
+    date: new Date("2024-09-25"),
+    description: `<ul>
+  <li><strong>Taller Internet de las Cosas (IoT):</strong> Aprende cómo conectar dispositivos electrónicos a internet y controlar sistemas de forma remota.</li>
+  <li><strong>Taller Diseño Asistido por Computadora (CAD) e Impresión 3D:</strong> Domina el uso de herramientas CAD para crear modelos y prototipos con impresión 3D.</li>
+  <li><strong>Taller Sistemas Operativos de Robots (ROS):</strong> Familiarízate con ROS, el sistema operativo para robots más utilizado en el mundo.</li>
+  <li><strong>Taller Hackeo Ético:</strong> Descubre las técnicas para evaluar la seguridad informática de sistemas y cómo protegerlos de ataques.</li>
+  <li><strong>Taller Diseño de PCB´s en Altium:</strong> Aprende a diseñar y fabricar placas de circuitos impresos utilizando Altium Designer.</li>
+</ul>
+`,
+  },
+];
+
 const bannerData: Prisma.BannerCreateInput[] = [
   {
     title: "Banner 1",
@@ -425,6 +477,16 @@ async function main() {
           data: banner,
         });
       }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  for (const workshop of workshops) {
+    try {
+      await prisma.workshop.create({
+        data: workshop,
+      });
     } catch (error) {
       console.log(error);
     }

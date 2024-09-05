@@ -7,6 +7,13 @@ import { technicalConferenceVisits } from "@/data/technical-visits";
 import ImageSlideshow from "@/components/imageSlideshow/ImageSlideshow";
 import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
 
+import img2 from "@/../public/images/chixoy.jpg";
+import img3 from "@/../public/images/horus.jpg";
+import img4 from "@/../public/images/jurun.png";
+import img6 from "@/../public/images/guatemala.png";
+
+const images = [img2, img3, img4, img6];
+
 const EventOverview = () => {
   return (
     <div className={`container ${classes.container}`} id="detallesEvento">
@@ -41,7 +48,7 @@ const EventOverview = () => {
           <div
             className={`${classes.image__container} ${classes.image__focus}`}
           >
-            <OverviewSlider />
+            <OverviewSlider images={images} />
           </div>
           <div className={classes.content__container}>
             <HomeSubHeading title="Enfoque" position="center" icon={FaStar} />
@@ -88,7 +95,7 @@ const EventOverview = () => {
                   key={`${visit.slug}-${visit.date}`}
                   href={`/visitas/${visit.slug}`}
                 >
-                  {visit.title}  <span>{visit.date}</span>
+                  {visit.title} <span>{visit.date}</span>
                 </Link>
               ))}
             </div>

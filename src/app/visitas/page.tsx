@@ -39,6 +39,21 @@ const page = async () => {
       />
       <section className={`container ${classes.container}`}>
         <div className={classes.container__bg}>
+          <h2 className={classes.heading}>Actividades para los congresos</h2>
+          <div className={classes.gallery}>
+            {congressTechnicalVisits.map((event) => (
+              <VisitsImageCard
+                key={event.title}
+                {...event}
+                date={event.date.toLocaleDateString("es-GT", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+                description={event.shortDescription}
+              />
+            ))}
+          </div>
           <h2 className={classes.heading}>Actividades Pre-Congreso</h2>
           <div className={classes.gallery}>
             {technicalVisits.map((event) => (
@@ -58,23 +73,7 @@ const page = async () => {
               />
             ))}
           </div>
-          <div>
-            <h2 className={classes.heading}>Actividades para los congresos</h2>
-            <div className={classes.gallery}>
-              {congressTechnicalVisits.map((event) => (
-                <VisitsImageCard
-                  key={event.title}
-                  {...event}
-                  date={event.date.toLocaleDateString("es-GT", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                  description={event.shortDescription}
-                />
-              ))}
-            </div>
-          </div>
+          <div></div>
         </div>
       </section>
     </>
