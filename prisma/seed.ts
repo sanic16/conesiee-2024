@@ -112,7 +112,7 @@ const technicalVisitData: Prisma.TechnicalVisitEventCreateInput[] = [
   },
   {
     title: "Planta Industrial Samboro",
-    slug: "planta-industrial-samboro",
+    slug: "planta-industrial-samboro-23",
     description:
       "Visita técnica a la Planta Industrial Samboro, donde se examinarán los procesos de producción industrial avanzados. Los participantes podrán observar las líneas de producción, las tecnologías empleadas y los procedimientos de control de calidad en esta instalación clave para el sector industrial en Guatemala.",
     shortDescription:
@@ -123,7 +123,7 @@ const technicalVisitData: Prisma.TechnicalVisitEventCreateInput[] = [
   },
   {
     title: "Subestación Guatemala Sur",
-    slug: "subestacion-guatemala-sur",
+    slug: "subestacion-guatemala-sur-23",
     description:
       "Visita técnica a la Subestación Guatemala Sur, una instalación crucial para la distribución de energía eléctrica en la región. La visita ofrecerá una visión detallada del funcionamiento de la subestación, incluyendo la gestión de cargas, la protección de sistemas y el mantenimiento de equipos.",
     shortDescription:
@@ -134,7 +134,7 @@ const technicalVisitData: Prisma.TechnicalVisitEventCreateInput[] = [
   },
   {
     title: "Subestación Guatemala Sur",
-    slug: "subestacion-guatemala-sur",
+    slug: "subestacion-guatemala-sur-24",
     description:
       "Visita técnica a la Subestación Guatemala Sur, una instalación crucial para la distribución de energía eléctrica en la región. La visita ofrecerá una visión detallada del funcionamiento de la subestación, incluyendo la gestión de cargas, la protección de sistemas y el mantenimiento de equipos.",
     shortDescription:
@@ -145,7 +145,7 @@ const technicalVisitData: Prisma.TechnicalVisitEventCreateInput[] = [
   },
   {
     title: "Planta Industrial Samboro",
-    slug: "planta-industrial-samboro",
+    slug: "planta-industrial-samboro-24",
     description:
       "Visita técnica a la Planta Industrial Samboro, donde se examinarán los procesos de producción industrial avanzados. Los participantes podrán observar las líneas de producción, las tecnologías empleadas y los procedimientos de control de calidad en esta instalación clave para el sector industrial en Guatemala.",
     shortDescription:

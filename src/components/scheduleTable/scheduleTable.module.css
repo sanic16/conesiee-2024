@@ -1,0 +1,76 @@
+.schedule__table {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 500;
+}
+
+.schedule__table a {
+  text-decoration: underline;
+  color: #000;
+}
+
+.row {
+  display: contents;
+}
+
+.cell {
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header .cell {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+.rowspan {
+  grid-row: span 5; /* Span across 4 rows (08:00 to 12:00) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.green {
+  background-color: lightgreen;
+}
+.dark__green {
+  background-color: darkgreen;
+  color: white;
+}
+
+.orange {
+  background-color: orangered;
+  color: white;
+}
+
+.yellow {
+  background-color: lightyellow;
+}
+.gray {
+  background-color: #ccc;
+}
+
+.rowspan__2 {
+  grid-row: span 2; /* Span across 1 row (08:00 to 09:00) */
+  background-color: lightblue;
+}
+
+.rowspan__9 {
+  grid-row: span 9; /* Span across 8 rows (08:00 to 16:00) */
+}
+
+.hidden {
+  display: none; /* Hide the cells that are spanned */
+}
