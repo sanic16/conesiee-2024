@@ -60,3 +60,15 @@ const WorkshopDetailsPage: React.FC<WorkshopDetailsPageProps> = async ({
 };
 
 export default WorkshopDetailsPage;
+
+export async function generateStaticParams() {
+  const paths = await prisma.workshop.findMany({
+    select: {
+      slug: true,
+    },
+  });
+
+  return paths.map((path) => ({
+    id: path.slug,
+  }));
+}
