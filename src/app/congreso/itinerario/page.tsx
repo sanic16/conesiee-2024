@@ -5,6 +5,13 @@ import Image from "next/image";
 import { cloudinaryUrl } from "@/utils/constants";
 import BackButton from "@/components/ui/backButton/BackButton";
 import ScheduleTable from "@/components/scheduleTable/ScheduleTable";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Itinerario | Congreso Internacional de Energía Renovable",
+  description:
+    "Descubre el itinerario del congreso y planifica tu participación.",
+};
 
 export default function CongressCalendar() {
   return (
@@ -14,10 +21,18 @@ export default function CongressCalendar() {
         description="Descubre el itinerario del congreso y planifica tu participación."
       />
 
-      <div className={classes.itinerario__container}>
+      <div
+        className={classes.itinerario__container}
+        style={{ overflow: "hidden" }}
+      >
         <BackButton />
 
-        <ScheduleTable />
+        <div
+          className={classes.itinerario__content}
+          style={{ overflow: "hidden" }}
+        >
+          <ScheduleTable />
+        </div>
       </div>
     </div>
   );

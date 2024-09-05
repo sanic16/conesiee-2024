@@ -1,8 +1,12 @@
+.schedule__wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
 .schedule__table {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   border-collapse: collapse;
-  width: 100%;
   font-weight: 500;
 }
 
