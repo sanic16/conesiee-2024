@@ -38,6 +38,29 @@ const WorkshopDetailsPage: React.FC<WorkshopDetailsPageProps> = async ({
           <div className={classes.details__info}>
             <h2>Los talleres que se impartirán son los siguientes:</h2>
             <div dangerouslySetInnerHTML={{ __html: workshop.description }} />
+            <p>
+              <strong>
+                Inscríbete :{" "}
+                <a
+                  href={workshop.registrationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.details__link}
+                >
+                  {workshop.registrationLink}
+                </a>
+              </strong>
+              . Antes de proceder a la visita técnica tienes que inscribirte al
+              congreso <Link href="/inscripciones">aquí.</Link>
+            </p>
+            <p>
+              <strong>Fecha:</strong>{" "}
+              {workshop.date.toLocaleDateString("es-GT", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
           </div>
           <div className={classes.details__image}>
             <Image

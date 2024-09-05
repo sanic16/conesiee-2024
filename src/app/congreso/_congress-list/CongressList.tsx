@@ -10,10 +10,10 @@ const CongressList = () => {
           <Link href="/congreso/itinerario">Itinerario</Link>
         </li>
         <li>
-          <Link href="/congreso/conferencias">Conferencias</Link>
+          <Link href="/congreso/talleres">Talleres</Link>
         </li>
         <li>
-          <Link href="/congreso/talleres">Talleres</Link>
+          <Link href="/congreso/conferencias">Conferencias</Link>
         </li>
         <li>
           <Link href="/congreso/documentos">Documentos</Link>
