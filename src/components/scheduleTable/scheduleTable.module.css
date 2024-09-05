@@ -68,7 +68,6 @@
 
 .rowspan__2 {
   grid-row: span 2; /* Span across 1 row (08:00 to 09:00) */
-  background-color: lightblue;
 }
 
 .rowspan__9 {
