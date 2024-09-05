@@ -64,9 +64,9 @@
   }
 }
 
-@media screen and (max-height: 300px) {
+@media screen and (max-height: 400px) {
   .details__image {
-    height: 10rem;
+    height: 12rem;
   }
 }
 
