@@ -20,7 +20,8 @@
 }
 
 .section__container {
-  margin-bottom: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .section__container.grid {
@@ -32,9 +33,9 @@
 
 .section__container.grid2 {
   display: grid;
-  grid-template-columns: 37% 57%;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 6%;
+  gap: 2rem;
 }
 
 .section__container p {
@@ -43,15 +44,18 @@
 
 .image__container {
   width: 100%;
-  height: 20rem;
+  height: 17rem;
   border: 0.25rem solid var(--primary-hover);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .image__container.image__focus {
-  height: 12rem;
+  height: 17rem;
   border: none;
+  order: 1;
+  max-width: 50%;
+  margin-inline: auto;
 }
 
 /* Visitas Tecnicas */
@@ -107,7 +111,8 @@
 
 @media screen and (max-width: 1024px) {
   .section__container {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
   }
 
   .section__container.grid {
@@ -124,6 +129,20 @@
     order: 1;
   }
 
+  .image__container {
+    height: 15rem;
+    max-width: 25rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .image__container.image__focus {
+    height: 15rem;
+    max-width: 25rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
   .visitas__container p {
     text-align: left;
   }
@@ -131,7 +150,11 @@
 
 @media screen and (max-width: 768px) {
   .image__container {
-    height: 15rem;
+    height: 12rem;
+  }
+
+  .image__container.image__focus {
+    height: 12rem;
   }
 
   .visitas {
@@ -143,5 +166,15 @@
   .visitas {
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     grid-auto-rows: 1fr;
+  }
+
+  .image__container {
+    height: 10rem;
+    max-width: 20rem;
+  }
+
+  .image__container.image__focus {
+    height: 10rem;
+    max-width: 20rem;
   }
 }

@@ -35,7 +35,12 @@ const Banner = async () => {
         <div className={classes.slideshow__wrapper}>
           {bannerImages.map((bannerImg) => (
             <div className={classes.slide} key={bannerImg.id}>
-              <Image src={bannerImg.imageUrl} alt="banner 1" fill />
+              <Image
+                src={bannerImg.imageUrl}
+                alt="banner 1"
+                fill
+                sizes="(max-width: 1024px) 100vw"
+              />
             </div>
           ))}
         </div>

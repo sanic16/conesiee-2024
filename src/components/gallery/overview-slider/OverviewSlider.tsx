@@ -33,7 +33,7 @@ const OverviewSlider: React.FC<OverviewSliderProps> = ({ images }) => {
         className={classes.swiper}
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        // autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
       >
         {isStringArray(images)
@@ -41,7 +41,12 @@ const OverviewSlider: React.FC<OverviewSliderProps> = ({ images }) => {
             images.map((img, index) => (
               <SwiperSlide key={index}>
                 <div className={classes.image__wrapper}>
-                  <Image src={img} alt={`slide-${index}`} fill />
+                  <Image
+                    src={img}
+                    alt={`slide-${index}`}
+                    fill
+                    sizes="(max-width: 1024px) 400px, (max-width: 576px) 320px"
+                  />
                 </div>
               </SwiperSlide>
             ))
@@ -52,7 +57,7 @@ const OverviewSlider: React.FC<OverviewSliderProps> = ({ images }) => {
                   <Image
                     src={img.src}
                     alt={`slide-${index}`}
-                    width={img.width}
+                    width={768}
                     height={img.height}
                     objectFit="cover"
                   />
