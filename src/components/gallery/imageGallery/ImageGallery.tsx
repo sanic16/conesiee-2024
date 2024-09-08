@@ -15,7 +15,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, path, href }) => {
       {images.map((img) => (
         <Link key={img} href={`${href}/${img}`} className={classes.image__link}>
           <div className={classes.image}>
-            <Image src={`${cloudinaryUrl}${path}${img}`} alt="gallery" fill />
+            <Image
+              src={`${cloudinaryUrl}${path}${img}`}
+              alt="gallery"
+              fill
+              sizes="(max-width: 1400px) 500px, 500px"
+            />
           </div>
         </Link>
       ))}

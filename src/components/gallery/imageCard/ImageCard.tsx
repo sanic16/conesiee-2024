@@ -31,7 +31,12 @@ const ImageCard: React.FC<GalleryData> = ({
         </Link>
       </div>
       <div className={classes.card__img}>
-        <Image src={`${cloudinaryUrl}${path}${images[0]}`} alt="gallery" fill />
+        <Image
+          src={`${cloudinaryUrl}${path}${images[0]}`}
+          alt="gallery"
+          fill
+          sizes="(max-width: 1280px) 300px, 300px"
+        />
       </div>
     </article>
   );
