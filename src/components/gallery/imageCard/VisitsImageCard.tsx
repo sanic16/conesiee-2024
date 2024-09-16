@@ -55,6 +55,7 @@ const VisitsImageCard: React.FC<GalleryData> = ({
         <Image
           src={`https://d34wp28s47tr6p.cloudfront.net${images[0]}`}
           alt="gallery"
+          sizes="(max-width: 1280px) 500px"
           fill
         />
       </div>

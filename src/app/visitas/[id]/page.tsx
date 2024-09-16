@@ -5,6 +5,7 @@ import prisma from "@/lib/prisma";
 import { TechnicalVisitEvent } from "@prisma/client";
 import BackButton from "@/components/ui/backButton/BackButton";
 import Image from "next/image";
+import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
 
 export default async function VisitasPageId({
   params,
@@ -64,13 +65,30 @@ export default async function VisitasPageId({
         <div className={classes.details__image}>
           <Image
             src={`https://d34wp28s47tr6p.cloudfront.net${
-              event?.images[1] || event?.images[0]
+              event?.slug.includes("planta-industrial-samboro")
+                ? event?.images[0]
+                : event?.images[1] || event?.images[0]
             }`}
             alt={event?.title || ""}
             fill
           />
         </div>
       </div>
+      {event?.images.length! > 2 && (
+        <div>
+          <div className={classes.details__gallery}>
+            <OverviewSlider
+              images={
+                event?.images
+                  .slice(2, event.images.length)!
+                  .map(
+                    (image) => `https://d34wp28s47tr6p.cloudfront.net${image}`
+                  )!
+              }
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

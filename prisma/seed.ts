@@ -118,7 +118,14 @@ const technicalVisitData: Prisma.TechnicalVisitEventCreateInput[] = [
     shortDescription:
       "Observa los procesos industriales y tecnologías avanzadas en la Planta Samboro.",
     date: new Date("2024-09-23"),
-    images: ["/visitas/samboro/logo.jpg", "/visitas/samboro/image_1.jpg"],
+    images: [
+      "/visitas/samboro/logo.jpg",
+      "/visitas/samboro/image_1.jpg",
+      "/visitas/samboro/image1.jpeg",
+      "/visitas/samboro/image2.jpeg",
+      "/visitas/samboro/image3.jpeg",
+      "/visitas/samboro/image4.jpeg",
+    ],
     registrationLink: "https://forms.gle/KRsyAbN6AW51RvWH6",
   },
   {
@@ -151,7 +158,14 @@ const technicalVisitData: Prisma.TechnicalVisitEventCreateInput[] = [
     shortDescription:
       "Observa los procesos industriales y tecnologías avanzadas en la Planta Samboro.",
     date: new Date("2024-09-24"),
-    images: ["/visitas/samboro/logo.jpg", "/visitas/samboro/image_1.jpg"],
+    images: [
+      "/visitas/samboro/logo.jpg",
+      "/visitas/samboro/image_1.jpg",
+      "/visitas/samboro/image1.jpeg",
+      "/visitas/samboro/image2.jpeg",
+      "/visitas/samboro/image3.jpeg",
+      "/visitas/samboro/image4.jpeg",
+    ],
     registrationLink: "https://forms.gle/t6R1f1c7j9QsoRun6",
   },
 ];
@@ -404,6 +418,7 @@ async function main() {
   await prisma.galleryEvent.deleteMany({});
   await prisma.route.deleteMany({});
   await prisma.banner.deleteMany({});
+  await prisma.workshop.deleteMany({});
 
   for (const technicalVisit of technicalVisitData) {
     try {

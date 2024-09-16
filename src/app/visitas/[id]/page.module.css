@@ -16,6 +16,7 @@
 
 .details__image {
   position: relative;
+  height: 350px;
 }
 
 .details__link {
@@ -23,6 +24,21 @@
   overflow-wrap: break-word; /* Modern browsers */
   word-break: break-all; /* Ensures long URLs are broken at any character */
   hyphens: auto; /* Optional: Adds hyphenation if necessary */
+}
+
+.details__gallery {
+  height: 30rem;
+  width: 40rem;
+  margin-top: 3rem;
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .details__gallery {
+    width: 30rem;
+    margin-top: 2rem;
+    margin-inline: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -39,5 +55,15 @@
 @media screen and (max-width: 576px) {
   .details__image {
     height: 200px;
+  }
+  .details__gallery {
+    height: 30rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .details__gallery {
+    height: 20rem;
   }
 }

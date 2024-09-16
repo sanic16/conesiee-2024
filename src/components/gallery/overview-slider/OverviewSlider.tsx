@@ -17,9 +17,13 @@ interface ImageObject {
 
 interface OverviewSliderProps {
   images: string[] | ImageObject[];
+  autoPlay?: boolean;
 }
 
-const OverviewSlider: React.FC<OverviewSliderProps> = ({ images }) => {
+const OverviewSlider: React.FC<OverviewSliderProps> = ({
+  images,
+  autoPlay,
+}) => {
   // Type guard to check if images is an array of strings
   const isStringArray = (arr: any[]): arr is string[] =>
     arr.every((item) => typeof item === "string");
@@ -33,7 +37,9 @@ const OverviewSlider: React.FC<OverviewSliderProps> = ({ images }) => {
         className={classes.swiper}
         spaceBetween={0}
         slidesPerView={1}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={
+          autoPlay ? { delay: 5000, disableOnInteraction: false } : false
+        }
         loop
       >
         {isStringArray(images)
@@ -53,7 +59,7 @@ const OverviewSlider: React.FC<OverviewSliderProps> = ({ images }) => {
           : // Handling images as an array of ImageObject
             images.map((img, index) => (
               <SwiperSlide key={index}>
-                <div className={classes.image__wrapper}>
+                <div className={classes.image__gallery}>
                   <Image
                     src={img.src}
                     alt={`slide-${index}`}
