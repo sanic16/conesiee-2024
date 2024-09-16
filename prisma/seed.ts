@@ -10,6 +10,88 @@ function generateSlug(title: string) {
     .replace(/\s+/g, "-"); // Replace spaces with hyphens
 }
 
+const conferenceData: Prisma.ConferenceCreateInput[] = [
+  {
+    speaker: "Ing. Marcelo Bobadilla",
+    speakerCV: `Ingeniero graduado de la Universidad de San Carlos de Guatemala; con cursos de
+especialización en mercadeo, ventas, administración, liderazgo, finanzas y tecnología, tanto
+en la Universidad Francisco Marroquín en Guatemala, como en INCAE en Costa Rica, en
+México, y en la Universidad de Negocios de AT&T en New Jersey, Estados Unidos.
+Con más de 30 años de experiencia laboral en diferentes empresas multinacionales,
+también ha desempeñado diversas funciones en Juntas Directivas de diversas
+organizaciones tanto a nivel nacional como internacional y fue Embajador de la Comunidad
+Internacional de Emprendedores ALFA.
+Actualmente es Director y Fundador de BC Soluciones Globales, empresa de Recursos
+Humanos en Guatemala; Gerente General de Wise2Win, empresa creadora de la Ciudad
+Digital Chapinisima.Com; es miembro de Junta Directiva de la Cámara de Comercio
+Guatemalteco-Americana, AMCHAM y Presidente Electo 2026 para Centroamérica, del
+Instituto de Ingenieros Eléctricos y Electrónicos, IEEE`,
+    title: "Inteligencia emocional",
+    day: "Lunes 23",
+    hour: "14:00 - 15:00",
+    company: "BC Solutions",
+    slug: generateSlug("Inteligencia emocional"),
+  },
+  {
+    speaker: "Ing. Josué Gómez",
+    speakerCV: `ingeniero electrónico con MBA de la Escuela Europea de Dirección y Negocios en Madrid-España, he desempeñado cargos directivos desde el año 2010, donde he tenido a mi cargo funciones como administración de múltiples equipos de gestión de tecnología, implementación y diseño de proyectos, redes e infraestructura, administración de equipos de comunicación, Identidad digital, herramientas de seguridad, continuidad de negocio y análisis de riesgos relacionados con la tecnología. Gracias a mi experiencia y preparación académica, mi carrera se ha fortalecido en el ámbito de la tecnología, durante los últimos 15 años, siendo parte de diferentes organizaciones donde he aportado mis conocimientos sobre riesgo tecnológico, seguridad, continuidad de negocio, software y transformación digital.`,
+    title: "Ciberseguridad",
+    day: "Lunes 23",
+    hour: "15:00 - 16:00",
+    company: "15:00 - 16:00",
+    slug: generateSlug("Ciberseguridad"),
+  },
+  {
+    speaker: "Inga. Andrea Lara",
+    speakerCV: `Andrea Lara es Doctora en Ingeniería Biomédica por la Universidad Tecnológica de Graz (TU Graz) en Austria. Posee una Maestría en Ingeniería Biomédica de la Universidad de Luebeck, Alemania, y es egresada de Ingeniería Electrónica de la Universidad Galileo. Ha trabajado en prestigiosos centros de investigación, como el Instituto Fraunhofer de Ingeniería Biomédica en Alemania (Fraunhofer IBMT) y el Instituto de Ingeniería Sanitaria con el Centro Europeo de Pruebas de Dispositivos Médicos en Austria (HCE). La Dra. Lara se especializa en la investigación y desarrollo de herramientas enfocadas en la salud, habiendo trabajado en proyectos que incluyen el procesamiento de señales biomédicas, el análisis de imágenes médicas utilizando inteligencia artificial, y la implementación de normativas y regulaciones. Actualmente, es directora del Instituto de Ingeniería Biomédica y del Laboratorio de Investigación BiomedLab de Universidad Galileo.`,
+    title: "Ingenieria Biomedica",
+    day: "Martes 24",
+    hour: "14:00 - 15:00",
+    company: "Universidad Galileo",
+    slug: generateSlug("Ingenieria Biomedica"),
+  },
+  {
+    speaker: "Ing. Hugo Elvira",
+    speakerCV:
+      "Hugo Elvira es ingeniero en Electrónica por la Universidad del Valle de Guatemala y perito en Electrónica por el Centro Educativo Técnico Laboral Kinal. Cuenta con experiencia en el desarrollo de proyectos tecnológicos, destacándose su participación en la elaboración del primer satélite guatemalteco, Quetzal-1. Es fundador y presidente general de la Fundación Amivalle, una institución que busca mejorar el acceso a la educación mediante becas universitarias, capacitación docente y apoyo a la investigación en diversas áreas como medicina, agricultura y arte. Fue finalista en el Galardón Guatemaltecos Ilustres en 2020. A finales de ese año, decidió ampliar su formación hacia la filosofía y la teología, obteniendo una licenciatura en ambas disciplinas por la Universidad Pontificia de la Santa Cruz en Roma, Italia, donde actualmente cursa un máster en Teología Pura o Teología Dogmática.",
+    title: "Satélite Quetzal-1 y proyectos nacionales",
+    day: "Martes 24",
+    hour: "15:00 - 16:00",
+    company: "Universidad del Valle de Guatemala",
+    slug: generateSlug("Satelite Quetzal-1 y proyectos nacionales"),
+  },
+  {
+    speaker: "Ing. Bryan Villela",
+    speakerCV: `Ingeniero electricista graduado de la Universidad de San Carlos de Guatemala, con una especialización en Mercados Eléctricos por la misma universidad. Actualmente cursa una maestría en Energía y Ambiente en la Universidad de San Carlos de Guatemala, y previamente completó una maestría en Administración de Empresas en la Universidad Rafael Landívar. Cuenta con una amplia experiencia en el sector eléctrico en Guatemala, El Salvador y Honduras, desempeñándose actualmente como coordinador de preventa y diseño en Legrand LCA, donde lidera el desarrollo de líneas de producto eléctrico de media tensión, diseñando e implementando estrategias para introducir soluciones innovadoras en proyectos emblemáticos. Anteriormente, fue asesor de diseño y especificación, donde desarrollaba capacitaciones técnicas y comerciales, además de proporcionar soporte a clientes clave en la implementación de productos eléctricos. En su etapa en EEGSA, gestionó proyectos de construcción de líneas de media y baja tensión, coordinando cuadrillas y supervisando la ejecución de mejoras y proyectos de coinversión.`,
+    title: "Transformadores secos",
+    day: "Miércoles 25",
+    hour: "15:00 - 16:00",
+    company: "Legrand",
+    slug: generateSlug("Transformadores secos"),
+  },
+  {
+    speaker: "Jose Algara",
+    speakerCV: `José Algara es un comunicador, locutor, presentador, asesor y capacitador con una amplia trayectoria en medios de comunicación y marketing de influenciadores. Comenzó su carrera como modelo a los 16 años, participando en múltiples comerciales para diversas marcas. Su incursión en la radio inició con el morning show "Los 3 Ratones" en Atmosfera, y luego pasó a la televisión con Guatevisión y Canal Antigua. Fue parte del equipo en la radio Más Música, donde co-creó el programa "Los Indomables". En televisión, participó en la cobertura del mundial con "Antigua Sports" en Canal Antigua.  Además de su experiencia en medios, José trabajó como asesor de influenciadores en una agencia de publicidad y regresó a la radio en RCN, donde también fue responsable de crear y desarrollar el área de Redes Sociales de las emisoras, expandiendo el alcance digital de las estaciones. Ha sido asesor de producción en una importante productora de ESPN, colaborando en la grabación de documentales y otros proyectos para la cadena.    Actualmente, José es especialista en capacitaciones, producción e influenciadores en Steren Guatemala, una empresa de tecnología. A lo largo de su carrera, ha trabajado con grandes marcas nacionales e internacionales, desarrollando un nicho en redes sociales como influenciador, lo que le ha permitido adquirir un profundo conocimiento en marketing de influenciadores y su impacto en la relación con clientes y audiencias.`,
+    title: "Marketing y tecnología",
+    day: "jueves 26",
+    hour: "11:00 - 12:00",
+    company: "Steren",
+    slug: generateSlug("Marketing y tecnologia"),
+  },
+  {
+    speaker: "Ing . Erick Sosa",
+    speakerCV:
+      "Erick Sosa es actualmente el Gerente de País para Guatemala y Gerente de Desarrollo de Socios para Centroamérica y el Caribe. En esta posición, lidera la estrategia comercial para Guatemala y gestiona las relaciones estratégicas con los socios comerciales en la región. Con 23 años de experiencia en Microsoft, ha desempeñado diversos roles, desde especialista en soluciones tecnológicas hasta consultor senior en el desarrollo de TI para Latinoamérica. Erick posee una licenciatura en Ingeniería de Sistemas por la Universidad Francisco Marroquín, y tres maestrías en administración de bases de datos, gestión de sistemas de información y telecomunicaciones. Actualmente, está cursando un doctorado (PhD) en Inteligencia Artificial y Computación Cognitiva. Además, Erick ha sido catedrático en la Universidad del Istmo durante los últimos 8 años, impartiendo clases en las carreras de Ingeniería en Sistemas y Electrónica.",
+    title: "Inteligencia artificial y sus aplicaciones en la industria",
+    day: "jueves 26",
+    hour: "14:00 - 15:00",
+    company: "Microsoft",
+    slug: generateSlug(
+      "Inteligencia artificial y sus aplicaciones en la industria"
+    ),
+  },
+];
+
 const userData: Prisma.UserCreateInput[] = [
   {
     email: "julio.sanic.gt.256@gmail.com",
@@ -419,6 +501,13 @@ async function main() {
   await prisma.route.deleteMany({});
   await prisma.banner.deleteMany({});
   await prisma.workshop.deleteMany({});
+  await prisma.conference.deleteMany({});
+
+  for (const conference of conferenceData) {
+    await prisma.conference.create({
+      data: conference,
+    });
+  }
 
   for (const technicalVisit of technicalVisitData) {
     try {

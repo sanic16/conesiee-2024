@@ -110,7 +110,9 @@ const ScheduleTable = () => {
           <div className={`${classes.cell} ${classes.hidden}`}></div>
           <div className={`${classes.cell} ${classes.hidden}`}></div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            MARKETING Y TECNOLOGÍA - José Algara
+            <Link href="/congreso/conferencias/marketing-y-tecnologia">
+              MARKETING Y TECNOLOGÍA - José Algara
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.hidden}`}></div>
           <div className={`${classes.cell} ${classes.hidden}`}></div>
@@ -150,17 +152,23 @@ const ScheduleTable = () => {
         <div className={classes.row}>
           <div className={`${classes.cell} ${classes.gray}`}>14:00</div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            INTELIGENCIA EMOCIONAL - Marcelo Bobadilla (BC Solutions)
+            <Link href="/congreso/conferencias/inteligencia-emocional">
+              INTELIGENCIA EMOCIONAL - Marcelo Bobadilla (BC Solutions)
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            INGENIERÍA BIOMÉDICA - Andrea Lara
+            <Link href="/congreso/conferencias/ingenieria-biomedica">
+              INGENIERÍA BIOMÉDICA - Andrea Lara
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.yellow}`}>
             LA BRECHA DIGITAL - Ing. Ricardo Valenzuela
           </div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            INTELIGENCIA ARTIFICAL Y SUS APLICACIONES EN LA INDUSTRIA - Erick
-            Sosa (Microsoft)
+            <Link href="/congreso/conferencias/inteligencia-artificial-y-sus-aplicaciones-en-la-industria">
+              INTELIGENCIA ARTIFICAL Y SUS APLICACIONES EN LA INDUSTRIA - Erick
+              Sosa (Microsoft)
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.rowspan}`}>
             TARDE DEPORTIVA INTECAP
@@ -171,13 +179,19 @@ const ScheduleTable = () => {
         <div className={classes.row}>
           <div className={`${classes.cell} ${classes.gray}`}>15:00</div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            CIBERSEGURIDAD - Josue Gómez (Banco GYT)
+            <Link href="/congreso/conferencias/ciberseguridad">
+              CIBERSEGURIDAD - Josue Gómez (Banco GYT)
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            SATÉLITE QUETZAL1 Y PROYECTOS NACIONALES - Hugo Elvira (Amivalle)
+            <Link href="/congreso/conferencias/satelite-quetzal-1-y-proyectos-nacionales">
+              SATÉLITE QUETZAL1 Y PROYECTOS NACIONALES - Hugo Elvira (Amivalle)
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.yellow}`}>
-            TRANSFORMADORES - Ing. Bryan Villela
+            <Link href="/congreso/conferencias/transformadores-secos">
+              TRANSFORMADORES - Ing. Bryan Villela
+            </Link>
           </div>
           <div className={`${classes.cell} ${classes.yellow}`}>
             INDUSTRIA 4.0 - Ing. Eddy Cumar (ENERGÍA ACTIVA)

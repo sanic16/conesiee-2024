@@ -127,3 +127,14 @@ model Workshop{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Conference{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String @unique
+  slug String @unique
+  day String
+  hour String
+  company String
+  speaker String
+  speakerCV String
+  }

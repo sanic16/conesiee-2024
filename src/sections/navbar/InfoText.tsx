@@ -15,9 +15,7 @@ const InfoText: React.FC<InfoTextProps> = ({ className }) => {
   });
   return (
     <div className={className}>
-      <Link href={`/visitas`}>
-        Visita Técnica - {text} <Cursor />
-      </Link>
+      <Link href={`/congreso/itinerario`}>ITINERARIO</Link>
     </div>
   );
 };

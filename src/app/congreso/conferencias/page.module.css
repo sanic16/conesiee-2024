@@ -1,0 +1,8 @@
+.conference__list {
+  margin-top: 2rem;
+}
+
+.conference__item a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
