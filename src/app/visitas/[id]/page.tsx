@@ -63,7 +63,7 @@ export default async function VisitasPageId({
         </div>
         <div className={classes.details__image}>
           <Image
-            src={`https://conesiee-static.codielectro.com${
+            src={`https://d34wp28s47tr6p.cloudfront.net${
               event?.images[1] || event?.images[0]
             }`}
             alt={event?.title || ""}
