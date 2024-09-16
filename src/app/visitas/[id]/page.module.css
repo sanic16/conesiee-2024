@@ -29,4 +29,15 @@
   .details__container {
     grid-template-columns: 1fr;
   }
+
+  .details__image {
+    order: -1;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .details__image {
+    height: 200px;
+  }
 }

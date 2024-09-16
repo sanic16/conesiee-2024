@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./imageCard.module.css";
+import Image from "next/image";
 
 interface GalleryData {
   title: string;
@@ -51,9 +52,10 @@ const VisitsImageCard: React.FC<GalleryData> = ({
         </div>
       </div>
       <div className={classes.card__img}>
-        <img
-          src={`https://conesiee-static.codielectro.com${images[0]}`}
+        <Image
+          src={`https://d34wp28s47tr6p.cloudfront.net${images[0]}`}
           alt="gallery"
+          fill
         />
       </div>
     </article>
