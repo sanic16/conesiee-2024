@@ -7,6 +7,23 @@ import BackButton from "@/components/ui/backButton/BackButton";
 import Image from "next/image";
 import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const event = await prisma.technicalVisitEvent.findFirst({
+    where: {
+      slug: params.id,
+    },
+  });
+
+  if (!event) {
+    return {};
+  }
+
+  return {
+    title: event.title,
+    description: event.description,
+  };
+}
+
 export default async function VisitasPageId({
   params,
 }: {

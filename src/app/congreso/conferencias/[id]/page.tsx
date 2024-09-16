@@ -2,10 +2,30 @@ import BackButton from "@/components/ui/backButton/BackButton";
 import classes from "./page.module.css";
 import prisma from "@/lib/prisma";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 interface ConferenceProps {
   params: {
     id: string;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: ConferenceProps): Promise<Metadata> {
+  const conference = await prisma.conference.findUnique({
+    where: {
+      slug: params.id,
+    },
+  });
+
+  if (!conference) {
+    return {};
+  }
+
+  return {
+    title: conference.title,
+    description: `${conference.title} impartida por ${conference.speaker} de la empresa ${conference.company}`,
   };
 }
 

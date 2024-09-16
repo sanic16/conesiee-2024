@@ -7,9 +7,29 @@ import React from "react";
 import prisma from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
+import { Metadata } from "next";
 
 interface WorkshopDetailsPageProps {
   params: { id: string };
+}
+
+export async function generateMetadata({
+  params,
+}: WorkshopDetailsPageProps): Promise<Metadata> {
+  const workshop = await prisma.workshop.findFirst({
+    where: {
+      slug: params.id,
+    },
+  });
+
+  if (!workshop) {
+    return {};
+  }
+
+  return {
+    title: `${workshop.title}`,
+    description: workshop.description,
+  };
 }
 
 const WorkshopDetailsPage: React.FC<WorkshopDetailsPageProps> = async ({

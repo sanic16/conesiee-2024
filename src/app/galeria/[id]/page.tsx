@@ -3,6 +3,23 @@ import PageHeading from "@/components/pageHeading/PageHeading";
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const event = await prisma.galleryEvent.findFirst({
+    where: {
+      slug: params.id,
+    },
+  });
+
+  if (!event) {
+    return {};
+  }
+
+  return {
+    title: event.title,
+    description: event.title,
+  };
+}
+
 export default async function GalleryImageIdPage({
   params,
 }: {
