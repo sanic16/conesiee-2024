@@ -4,6 +4,7 @@ import Link from "next/link";
 import prisma from "@/lib/prisma";
 import { TechnicalVisitEvent } from "@prisma/client";
 import BackButton from "@/components/ui/backButton/BackButton";
+import Image from "next/image";
 
 export default async function VisitasPageId({
   params,
@@ -61,11 +62,12 @@ export default async function VisitasPageId({
           </p>
         </div>
         <div className={classes.details__image}>
-          <img
+          <Image
             src={`https://conesiee-static.codielectro.com${
               event?.images[1] || event?.images[0]
             }`}
-            alt={event?.title}
+            alt={event?.title || ""}
+            fill
           />
         </div>
       </div>

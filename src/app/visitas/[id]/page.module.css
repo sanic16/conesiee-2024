@@ -14,6 +14,10 @@
   text-decoration: underline;
 }
 
+.details__image {
+  position: relative;
+}
+
 .details__link {
   word-wrap: break-word; /* Older browsers */
   overflow-wrap: break-word; /* Modern browsers */
