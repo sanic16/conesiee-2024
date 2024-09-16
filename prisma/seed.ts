@@ -38,7 +38,7 @@ Instituto de Ingenieros Eléctricos y Electrónicos, IEEE`,
     title: "Ciberseguridad",
     day: "Lunes 23",
     hour: "15:00 - 16:00",
-    company: "15:00 - 16:00",
+    company: "Banco G&T",
     slug: generateSlug("Ciberseguridad"),
   },
   {

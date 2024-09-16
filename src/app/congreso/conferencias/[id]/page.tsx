@@ -26,9 +26,7 @@ export default async function ConferenceDetails({ params }: ConferenceProps) {
       <div className={classes.conferencia}>
         <div className={classes.contenido}>
           <h2 className={classes.titulo}>{conference.title}</h2>
-          <h3 className={classes.subtitulo}>
-            Organizado por: {conference.company}
-          </h3>
+          <h3 className={classes.subtitulo}>Empresa: {conference.company}</h3>
 
           <div className={classes.info}>
             <h3 className={classes.infoTitulo}>Fecha y Hora:</h3>
