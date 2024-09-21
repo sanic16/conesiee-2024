@@ -26,10 +26,11 @@ const Info = () => {
                   <div className={classes.card__footer}>
                     <div className={classes.card__btn}>
                       <Link
-                        href={option.link}
+                        // href={option.link}
+                        href={'/inscripciones#warning'}
                         className="btn primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        // target="_blank"
+                        // rel="noopener noreferrer"
                       >
                         Inscribirse
                       </Link>

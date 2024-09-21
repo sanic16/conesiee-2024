@@ -1,0 +1,6 @@
+.info__box{
+    margin-top: 2rem;
+    padding-block: 1rem;
+    padding-inline: 0.5rem;
+    background-color: hsl(350, 68%, 72%);
+}
