@@ -29,7 +29,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={classes.footer__right}>
-          Diseñado y desarrollado por{" "}
+          Desarrollado por{" "}
           <a
             href="https://www.juliosanic.site"
             target="_blank"
@@ -37,7 +37,6 @@ const Footer = () => {
           >
             Julio Sanic
           </a>{" "}
-          en <a href="https://www.codielectro.com">Codielectro</a>
         </div>
       </div>
     </footer>
