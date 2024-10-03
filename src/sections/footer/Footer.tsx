@@ -28,7 +28,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={classes.footer__right}>
+        {/* <div className={classes.footer__right}>
           Desarrollado por{" "}
           <a
             href="https://www.juliosanic.site"
@@ -37,7 +37,7 @@ const Footer = () => {
           >
             Julio Sanic
           </a>{" "}
-        </div>
+        </div> */}
       </div>
     </footer>
   );
