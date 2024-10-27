@@ -6,8 +6,13 @@ import { TechnicalVisitEvent } from "@prisma/client";
 import BackButton from "@/components/ui/backButton/BackButton";
 import Image from "next/image";
 import OverviewSlider from "@/components/gallery/overview-slider/OverviewSlider";
+import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
   const event = await prisma.technicalVisitEvent.findFirst({
     where: {
       slug: params.id,
@@ -21,6 +26,13 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   return {
     title: event.title,
     description: event.description,
+    openGraph: {
+      images: [
+        {
+          url: `https://d34wp28s47tr6p.cloudfront.net${event.images[0]}`,
+        },
+      ],
+    },
   };
 }
 

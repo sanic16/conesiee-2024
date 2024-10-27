@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: [
       {
         hostname: "conesiee-static.codielectro.com",
-        url: "http://conesiee-static.codielectro.com/openGraph/conesiee.jpg",
+        url: "https://conesiee-static.codielectro.com/openGraph/conesiee.jpg",
         width: 1080,
         height: 810,
       },
@@ -48,9 +48,9 @@ export default function RootLayout({
     <html lang="es">
       <body className={inter.className}>
         <SessionProvider>
-        <Navbar />
-        {children}
-        <Footer />
+          <Navbar />
+          {children}
+          <Footer />
         </SessionProvider>
       </body>
     </html>
