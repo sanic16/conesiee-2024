@@ -57,7 +57,7 @@ const page = async ({
     <div className="container">
       <div className={`${classes.image__container}`}>
         <Image
-          src={`${process.env.CLOUDINARY_URL}${event.path}${imageSlug}`}
+          src={`${process.env.CLOUD_IMAGE_URL}${event.path}${imageSlug}`}
           alt="gallery"
           fill
         />

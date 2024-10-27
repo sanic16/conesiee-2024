@@ -36,7 +36,6 @@ export default auth((req) => {
   }
 
   if (!isLoggedIn && !isPublicRoute) {
-    console.log("REDIRECTING TO SIGN IN");
     return Response.redirect(new URL("/api/auth/signin", nextUrl));
   }
 
