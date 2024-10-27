@@ -1,9 +1,14 @@
 import ImageGallery from "@/components/gallery/imageGallery/ImageGallery";
 import PageHeading from "@/components/pageHeading/PageHeading";
 import prisma from "@/lib/prisma";
+import { Metadata } from "next";
 import Link from "next/link";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
   const event = await prisma.galleryEvent.findFirst({
     where: {
       slug: params.id,
@@ -17,6 +22,13 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   return {
     title: event.title,
     description: event.title,
+    openGraph: {
+      images: [
+        {
+          url: `https://d34wp28s47tr6p.cloudfront.net${event.images[3]}`,
+        },
+      ],
+    },
   };
 }
 
