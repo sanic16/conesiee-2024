@@ -1,6 +1,7 @@
 import ImageGallery from "@/components/gallery/imageGallery/ImageGallery";
 import PageHeading from "@/components/pageHeading/PageHeading";
 import prisma from "@/lib/prisma";
+import { cloudinaryUrl } from "@/utils/constants";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -18,14 +19,14 @@ export async function generateMetadata({
   if (!event) {
     return {};
   }
-
+  console.log("https://");
   return {
     title: event.title,
     description: event.title,
     openGraph: {
       images: [
         {
-          url: `https://d34wp28s47tr6p.cloudfront.net${event.images[3]}`,
+          url: `${cloudinaryUrl}${event.path}${event.images[3]}`,
         },
       ],
     },
