@@ -11,6 +11,7 @@ export const publicRoutes = [
   "/congreso",
   "/patrocinadores",
   "/search",
+  "/sitemap.xml",
 ];
 
 /**
