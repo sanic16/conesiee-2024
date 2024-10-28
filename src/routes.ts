@@ -12,6 +12,7 @@ export const publicRoutes = [
   "/patrocinadores",
   "/search",
   "/sitemap.xml",
+  "/robots.txt",
 ];
 
 /**
