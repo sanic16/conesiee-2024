@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import HomeHeading from "@/components/homeHeading/HomeHeading";
 import PricingInfo from "./PricingInfo";
 import BackButton from "@/components/ui/backButton/BackButton";
-import classes from './page.module.css'
 
 export const metadata: Metadata = {
   title: "CONESIEE | Inscripción",
@@ -14,9 +13,6 @@ export const metadata: Metadata = {
 const PaymentPage = () => {
   return (
     <>
-
-     
-
       <BannerCongress
         title="Inscripción"
         description="Asegura tu lugar en el congreso."
@@ -25,9 +21,9 @@ const PaymentPage = () => {
 
       <section className="container">
         <BackButton />
-         <div className={classes.info__box} id="warning">
+        {/* <div className={classes.info__box} id="warning">
           Actualmente se encuentra lleno el cupo de inscripciones. Estar atento a si se habilitan más cupos.
-        </div>
+        </div> */}
         <Info />
         <HomeHeading title="Precios de inscripción" description="" />
         <PricingInfo />
