@@ -37,11 +37,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${domain}/`,
       lastModified: new Date("2024-08-26"),
+      priority: 1,
+      changeFrequency: "yearly",
     },
     {
       url: `${domain}/nosotros`,
       lastModified: new Date("2024-08-26"),
       priority: 1,
+      changeFrequency: "yearly",
     },
     {
       url: `${domain}/galeria`,
@@ -50,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${domain}/inscripciones`,
       lastModified: new Date("2024-09-21"),
+      changeFrequency: "yearly",
     },
     {
       url: `${domain}/visitas`,

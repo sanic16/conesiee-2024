@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/sections/navbar/Navbar";
 import Footer from "@/sections/footer/Footer";
 import { SessionProvider } from "next-auth/react";
+import AdSense from "@/components/adsense/AdSense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,6 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <AdSense />
+      </head>
       <body className={inter.className}>
         <SessionProvider>
           <Navbar />
