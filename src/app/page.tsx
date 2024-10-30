@@ -1,3 +1,4 @@
+import AdBanner from "@/components/adsense/AdBanner";
 import Banner from "@/sections/banner/Banner";
 import Counter from "@/sections/counter/Counter";
 import EventOverview from "@/sections/eventOverview/EventOverview";
@@ -17,6 +18,7 @@ export default function HomePage() {
     <>
       <Banner />
       <Counter />
+      <AdBanner />
       <EventOverview />
       <Scope />
       <Sponsors />
