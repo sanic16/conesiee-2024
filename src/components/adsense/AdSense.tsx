@@ -3,7 +3,6 @@ import Script from "next/script";
 const pId = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
 const AdSense = () => {
-  console.log(pId);
   return (
     <Script
       async

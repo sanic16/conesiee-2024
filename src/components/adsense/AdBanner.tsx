@@ -4,11 +4,20 @@ import { useEffect } from "react";
 
 const AdBanner = () => {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(
-        {}
-      );
-    }
+    const initializeAds = () => {
+      if (typeof window !== "undefined" && (window as any).adsbygoogle) {
+        try {
+          ((window as any).adsbygoogle =
+            (window as any).adsbygoogle || []).push({});
+        } catch (error: any) {
+          console.error("Adsense error:", error.message);
+        }
+      }
+    };
+
+    // Delay to ensure the script has loaded
+    const timer = setTimeout(initializeAds, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
