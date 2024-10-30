@@ -5,10 +5,7 @@ import SimpleHeading from "@/components/simpleHeading/SimpleHeading";
 import Image from "next/image";
 import classes from "./page.module.css";
 import { Metadata } from "next";
-import PageHeading from "@/components/pageHeading/PageHeading";
-import HomeHeading from "@/components/homeHeading/HomeHeading";
 import Organization from "./Organization";
-import PageHeader from "@/components/pageHeader/PageHeader";
 import BannerCongress from "@/components/bannerCongress/BannerCongress";
 
 export const metadata: Metadata = {
@@ -21,24 +18,24 @@ const page = () => {
     {
       id: 1,
       title: "Académico",
-      desc: "Enriquecer el conocimiento de los estudiantes y aficionados a la tecnología, ciencia y otras ramas.",
+      desc: "Promover el aprendizaje y el desarrollo de habilidades en tecnología, ciencia y áreas relacionadas para estudiantes y entusiastas.",
     },
     {
       id: 2,
       title: "Social",
-      desc: "Generar convivencia entre estudiantes de distintas escuelas, facultades, universidades y de otras áreas en favor de la ingeniería.",
+      desc: "Fomentar la interacción y el intercambio de ideas entre estudiantes de diferentes escuelas, facultades y universidades para fortalecer la comunidad en pro de la ingeniería.",
     },
     {
       id: 3,
       title: "Laboral",
-      desc: "Enriquecer el conocimiento de los estudiantes y aficionados a la tecnología, ciencia y otras ramas.",
+      desc: "Impulsar el crecimiento profesional al conectar a estudiantes y aficionados con el mundo laboral en ingeniería y tecnología.",
     },
   ];
   return (
     <>
       <BannerCongress
         title="Nosotros"
-        description="Somos una organización sin fines de lucro que busca fomentar el desarrollo de la Ingenería Eléctrica y Electrónica en Guatemala."
+        description="Somos una entidad sin ánimo de lucro enfocada en impulsar el avance de la Ingeniería Eléctrica y Electrónica en Guatemala."
         image="conesiee/congress/jvnrrwip3brwjtwlptco"
       />
       <section className={`container ${classes.container}`}>
@@ -50,8 +47,7 @@ const page = () => {
           <div className={classes.box}>
             <SimpleHeading
               title="Misión"
-              description="Realizar un congreso en el cual los participantes amplíen sus conocimientos e
-interés en pro del medio ambiente y desarrollo tecnológico."
+              description="Organizar un congreso que permita a los participantes profundizar sus conocimientos y fortalecer su interés en favor del medio ambiente y el avance tecnológico, promoviendo iniciativas y prácticas sostenibles en el ámbito de la ingeniería y la innovación."
               className={classes.simpleHeading}
             />
             <div className={classes.img__wrapper}>
@@ -67,9 +63,7 @@ interés en pro del medio ambiente y desarrollo tecnológico."
           <div className={classes.box} id="vision">
             <SimpleHeading
               title="Visión"
-              description="Excelencia como comité organizador de congresos de la escuela de
-ingeniería mecánica eléctrica.
-"
+              description="Ser reconocidos por nuestra excelencia como comité organizador de congresos en la Escuela de Ingeniería Mecánica Eléctrica, destacándonos por nuestra dedicación, calidad y compromiso en la creación de eventos académicos y profesionales de alto impacto."
               className={classes.simpleHeading}
             />
             <div className={classes.img__wrapper}>
